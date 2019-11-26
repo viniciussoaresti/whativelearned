@@ -1,9 +1,9 @@
 # Angular:
 ## You know, study it. 
 https://angular.io/tutorial.
-##Creating Modules:
+## Creating Modules:
 ``` ng g c $modulename ```
-##About Dependencies:
+## About Dependencies:
 They are located on 2 files, package and package-lock.
 
 For upgrading them, use 'ng update --all'.
