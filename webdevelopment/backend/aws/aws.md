@@ -6,7 +6,7 @@ Starting my first work, on 23/12/19, I was asked to study a bunch of them: SAM, 
 
 ## AWS SAM:
 "It's an open-source framework that you can use to build serverless applications on AWS."
-Basically, it's Maven, but adapted for AWS.
+Basically, it's Maven, but adapted for AWS. Actually, it's an AWS Cloudformation abstraction, with simplified workflow and such.
 Docs:
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html
 
