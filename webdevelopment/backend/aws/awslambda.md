@@ -3,7 +3,7 @@
 A compute service that lets you run code without provisioning or managing servers.
 
 ## Using the AWS CLI to create a function:
-- An example function:
+ An example function:
 ``` exports.handler = async function(event, context) {
   console.log("ENVIRONMENT VARIABLES\n" + JSON.stringify(process.env, null, 2))
   console.log("EVENT\n" + JSON.stringify(event, null, 2))
