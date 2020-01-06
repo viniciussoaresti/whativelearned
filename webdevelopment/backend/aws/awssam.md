@@ -100,8 +100,9 @@ e.g. ``` sam package
 --template-file template.yml
 --output-template-file package.yml
 --s3-bucket bucketname  ```
+
 sam deploy – Use this command to deploy your serverless application to the AWS Cloud. It creates the AWS resources and sets permissions and other configurations that are defined in the AWS SAM template.
-e.g.: ``` sam deploy
+e.g.: ``` sam deploy (you can specify --region, output and profile)
 --template-file package.yml
 --stack-name stackname
 --capabilities CAPABILITY_IAM ```
@@ -115,6 +116,3 @@ AWS Secret Access Key [None]: ** same **
 Default region name [None]: ** the region where your requests go e.g. us-west-2 **
 Default output format [None]: ** options: json(default), yaml, text or table **
 ```
-
-When running any aws command, you can select the profile by putting --profile profilename on the end of it.
-
