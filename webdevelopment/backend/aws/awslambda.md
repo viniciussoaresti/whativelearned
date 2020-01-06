@@ -8,11 +8,14 @@ A compute service that lets you run code without provisioning or managing server
   console.log("ENVIRONMENT VARIABLES\n" + JSON.stringify(process.env, null, 2))
   console.log("EVENT\n" + JSON.stringify(event, null, 2))
   return context.logStreamName
-} ```
+} 
+```
 - Create it and zip it ( ``` zip function.zip index.js ``` ).
 - Upload it:
-``` aws lambda create-function --function-name my-function --zip-file fileb://function.zip --handler index.handler
---runtime nodejs12.x --role arn:aws:iam: **account id** :role/lambda-cli-role ```
+```
+ aws lambda create-function --function-name my-function --zip-file fileb://function.zip --handler index.handler
+--runtime nodejs12.x --role arn:aws:iam: **account id** :role/lambda-cli-role 
+```
 - Test it:
 ``` aws lambda invoke --function-name my-function out --log-type Tail ```
 - Retrieve it:
