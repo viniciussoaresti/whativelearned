@@ -25,3 +25,8 @@ https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html
 It's a nosql DB that's fast. And that's about it.
 Docs:
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html
+
+# Recommendations:
+While I was learning all this, it seemed like a lot of complex things to comprehend.
+But after the initial shock, it all makes sense to me.
+I recommend the sequence that is already put here, but I think that DynamoDB can be studied first, as it has almost no direct relations with the rest.
