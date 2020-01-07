@@ -7,4 +7,3 @@ Amazon Aurora (Aurora) is a fully managed relational database engine that's comp
 --Primary DB Instance: Performs the operations;
 
 --Aurora Replica: Only read operations, and can be located on different Availability Zones.
-
