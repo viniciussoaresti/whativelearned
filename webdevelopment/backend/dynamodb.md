@@ -211,3 +211,16 @@ There are two kinds:
     TableName: "Music"
 }
 ```
+## Node usage and integration:
+- 1: Install (SDK)[https://aws.amazon.com/sdk-for-node-js/]
+- 2: Use it:
+```
+var AWS = require("aws-sdk");
+AWS.config.update({
+  region: "your-region",
+  endpoint: "https://dynamodb.your-region.amazonaws.com""
+});
+var dynamodb = new AWS.DynamoDB();
+```
+From here, you can use dynamodb(the var) to use the methods described here.
+Follow the (tutorial)[https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.01.html] to test stuff.
