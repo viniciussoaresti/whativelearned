@@ -1,6 +1,6 @@
 # Git:
 ## Git commit standards:
-Example: fix(email back-end): corrected sender email
+Example: `fix(email back-end): corrected sender email`
 
 As described on: 
 https://www.conventionalcommits.org/en/v1.0.0-beta.2/#summary.
