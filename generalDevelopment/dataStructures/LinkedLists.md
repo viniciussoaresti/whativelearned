@@ -1,4 +1,4 @@
-# Linked List
+# Linked Lists
 That type of list consists of nodes, in which each one contains the data, and an indication of the next value.
 
 - Simple:
