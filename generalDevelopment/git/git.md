@@ -1,5 +1,5 @@
 # Git:
-Introduction.
+The version control software everybody loves.
 
 ## Tips:
 ### Git commit standards:
@@ -18,6 +18,5 @@ https://stackoverflow.com/questions/23401652/fatal-the-current-branch-master-has
 `git remote add origin (link)`
 
 To check the added remote, or to delete it:
-
 `git remote`
-`git remote rm (name)`
+`git remote rm (remote name)`
