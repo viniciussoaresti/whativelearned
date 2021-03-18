@@ -1,0 +1,2 @@
+# Hash Table
+Data scructure also known as Hash Map, basically a generalization on the array structure, but with a hash function that attributes an index to the element inserted, and the detail that makes this structure faster on some operations (such as read and search), that is: not ordering data.
