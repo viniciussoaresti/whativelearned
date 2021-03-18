@@ -1,4 +1,6 @@
 # Js:
+The client-sided loved language.
+
 ## Multi-paradigm:
 JS's a multi-paradigm language, and as such, has the ability to be coded on object-oriented programming, functional programming, and so on.
 
