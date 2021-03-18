@@ -1,9 +1,7 @@
 # Js:
-## I've got to study it a little bit more. Docs:
-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript;
-- https://developers.google.com/web.
+## Multi-paradigm:
+JS's a multi-paradigm language, and as such, has the ability to be coded on object-oriented programming, functional programming, and so on.
 
 ## Conditional operator:
+Basically, a very nice way to summarize short if-else expressions.
 ` condition ? value-if-true : value-if-false `
-
-- P.s.: Putting it on general because it's used on both ends.
