@@ -105,6 +105,23 @@ condition ? value-if-true : value-if-false;
 let a = 1;
 a === 1 ? console.log('equals 1') : console.log('different');
 ```
+- toFixed():
+"The toFixed() method formats a number using fixed-point notation", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed).
+
+```javascript
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// expected output: "123.46"
+
+console.log(financial(0.004));
+// expected output: "0.00"
+
+console.log(financial('1.23e+5'));
+// expected output: "123000.00"
+```
 
 - Spread Operator:
 
@@ -162,3 +179,60 @@ Object.defineProperty(obj, 'b', {
   }
 });
 ```
+
+- For of:
+
+Interesting concept, going only through enumerable values, not properties as does for in.
+
+``` javascript
+let arr = [3,5,7];
+arr.foo = "hello";
+
+for(let i in arr){
+  console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for(let i of arr){
+  console.log(i); // logs "3", "5", "7"
+}
+
+/* As seen on DIO'S Avanade Angular Developer Bootcamp*/
+```
+
+- Object.freeze and Object.seal:
+
+"The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed. In addition, freezing an object also prevents its prototype from being changed. freeze() returns the same object that was passed in", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
+
+``` javascript
+const obj = {
+  prop: 42
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// expected output: 42
+```
+
+"The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
+
+``` javascript
+const object1 = {
+  property1: 42
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// expected output: 33
+
+delete object1.property1; // cannot delete when sealed
+console.log(object1.property1);
+// expected output: 33
+```
+
+## Object-Oriented JS:
+
