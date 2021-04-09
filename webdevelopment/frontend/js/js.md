@@ -235,7 +235,7 @@ console.log(object1.property1);
 
 ## Object-Oriented JS:
 
-Every variable in JS has a 'hidden' inheritance, based on prototypes. For example, a:
+Every variable in JS has a 'hidden' inheritance, based on prototypes (variables that store the object's definitions). For example, a:
 
 ```javascript
 let a = "abcd";
@@ -261,3 +261,33 @@ a.__proto__.split === String.prototype.split;
 a.constructor === String;
 ```
 
+An example of a constructor function, and a object instantiation:
+
+```javascript
+function Animal(){
+  this.paws = 4;
+}
+
+let dog = new Animal();
+console.log(dog.paws); //4
+```
+
+There's also a very simple way to make some kind of inheritance in JS:
+
+```javascript
+function Animal(){
+  this.paws = 4;
+}
+
+function Dog(bites){}
+  Animal.call(this, 4);
+  this.bites = bites;
+}
+
+let rex = new Dog(false);
+console.log(rex); //Dog {paws: 4, bites: false}
+```
+
+A way to override methods and properties:
+
+![Image](./img/inheritanceJs.png)
