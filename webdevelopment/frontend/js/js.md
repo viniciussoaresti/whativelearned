@@ -28,9 +28,7 @@ init();
 
 - Currying
 
-"Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.
-
-Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).", [Javascript.info](https://javascript.info/currying-partials).
+"Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well. It's a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).", [Javascript.info](https://javascript.info/currying-partials).
 
 
 
@@ -49,6 +47,7 @@ soma2(4);
 soma2(5);
 /* As seen on DIO's bootcamp 'Avanade Angular Developer' */
 ```
+
 - Hoisting
 
 "[...] a strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase, but stay exactly where you typed them in your code.", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting).
@@ -235,4 +234,30 @@ console.log(object1.property1);
 ```
 
 ## Object-Oriented JS:
+
+Every variable in JS has a 'hidden' inheritance, based on prototypes. For example, a:
+
+```javascript
+let a = "abcd";
+a.split('');
+``` 
+
+Is, actually:
+
+```javascript
+let a = String("abcd");
+a.__proto__.split('');
+``` 
+
+There's some interesting concepts we can identify here:
+
+- Every variable is actually an instantiation of a global object, such as [String](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) or [Number](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number);
+- For that reason, they have a ```__proto__``` reference inside of them, and we're able to access all the inherited functions using it;
+- There's two hidden parts of the first code: the constructor (```String()```) and the ```__proto__``` when we're calling the split function;
+- For comparison:
+
+```javascript
+a.__proto__.split === String.prototype.split;
+a.constructor === String;
+```
 
