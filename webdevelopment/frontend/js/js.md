@@ -290,4 +290,15 @@ console.log(rex); //Dog {paws: 4, bites: false}
 
 A way to override methods and properties:
 
-![Image](https://github.com/viniciussoaresti/whativelearned/blob/master/img/inheritanceJs.png)
+```javascript
+function Animal(){
+  this.paws = 4;
+}
+
+function Dog(bites){}
+  Animal.call(this, 4);
+  this.bites = bites;
+}
+
+//12m
+```
