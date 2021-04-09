@@ -290,4 +290,4 @@ console.log(rex); //Dog {paws: 4, bites: false}
 
 A way to override methods and properties:
 
-![Image](./img/inheritanceJs.png)
+![Image](https://github.com/viniciussoaresti/whativelearned/blob/master/img/inheritanceJs.png)
