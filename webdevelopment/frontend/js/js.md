@@ -291,14 +291,71 @@ console.log(rex); //Dog {paws: 4, bites: false}
 A way to override methods and properties:
 
 ```javascript
-function Animal(){
-  this.paws = 4;
+function Animal(paws){
+  this.paws = paws;
+  this.movement = function();
 }
 
 function Dog(bites){}
   Animal.call(this, 4);
   this.bites = bites;
+  this.bark = function(){
+    console.log('Woof! Woof!');
+  }
+}
+```
+
+How to define methods and properties standards:
+
+```javascript
+function Animal(){}
+Animal.prototype.paws = 0;
+Animal.prototype.movement = function();
+
+function Dog(bites){}
+  this.paws = 4;
+  this.bites = bites;
+}
+Dog.prototype = Object.create(Animal);
+Dog.prototype.bark = function(){
+  console.log('Woof! Woof!');
+}
+```
+
+That was before ES6, where official Classes where introduced. Now we have a more 'classy' sintax, close to Java, that's an official Object-Oriented language, for example.
+
+```javascript
+class Animal{
+  constructor(paws){
+    this.paws = paws;
+  }
+
+  movement(){}
 }
 
-//12m
+class Dog extends Animal(){
+  constructor(bites){
+    super(4);
+    this.bites = bites;
+  }
+
+  bark(){
+    console.log('Woof! Woof!');
+  }
+}
+
+const poodle = new Dog(false);
+```
+
+There was no support for native private fields and methods until recent updates, so there is something called the underscore convention (```_variableName```), that doesn't prevent someone from accessingg the property (adapted from [Bitscr](https://blog.bitsrc.io/javascript-finally-has-support-for-native-private-fields-and-methods-d758fdcfd320)). Now, we can define a private property, and access/modify them through getters/setters, and if we try to access them directly, we get an undefined.
+
+Defining an private static field:
+
+```javascript
+class Class{
+  static #privateField;
+}
+
+let a = new Class();
+condole.log(a.privateField); //undefined
 ```

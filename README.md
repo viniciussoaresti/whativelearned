@@ -2,7 +2,7 @@
   &#xa0;
 </div>
 
-<h1 align="center">What I've Learned Test</h1>
+<h1 align="center">What I've Learned</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/viniciussoaresti/whativelearned?color=56BEB8">
