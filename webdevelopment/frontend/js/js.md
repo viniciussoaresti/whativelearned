@@ -195,8 +195,11 @@ To be able to get a symbol property, there's ```Object.getOwnPropertySymbols(obj
 
 - Arrow Functions:
 
-Just a note: Arrow functions do not have their own this.
+Arrow functions have the same context as the upper context.
+Examples for a better understanding:
+
 ```javascript
+//Arrow function does not have the object scope
 var obj = {
   a: 10
 };
@@ -207,6 +210,23 @@ Object.defineProperty(obj, 'b', {
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   }
 });
+
+//Arrow function has the function scope, as seen on on DIO's Bootcamp
+
+let obj = {
+  showContext: function showContext(){
+    setTimeout(() => {
+      this.log('after 1000ms');
+    }, 1000);
+  }
+
+  log: function log(value){
+    console.log(value);
+  }
+}
+
+obj.showContext(); //returns 'after 1000ms', after 1000ms
+
 ```
 
 - For of:
