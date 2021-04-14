@@ -94,6 +94,36 @@ array.reverse();
 let a = [1,2,3];
 console.log(a.reverse()); //result == [3, 2, 1]
 ```
+
+- Array' shift and unshift methods:
+
+Didn't know about these either.
+
+```javascript
+array.shift();
+//Example
+let a = [1,2,3];
+a.shift(); //returns the removed element (1)
+console.log(a); //result == [2, 3]
+```
+
+```javascript
+array.unshift('item');
+//Example
+let a = [1,2,3];
+a.unshift(4); //returns the array's new size (4)
+console.log(a); //result == [4, 1, 2, 3]
+```
+
+- Array.from():
+
+Receives an array-like or an iterable object, and transforms it into an object.
+
+```javascript
+let divs = document.querySelectorAll('div'); //returns a NodeList
+let divsArray = Array.from(divs); //returns an array with 'divs' content
+```
+
 - Conditional Operator:
 
 Basically, a very nice way to summarize short if-else expressions.
@@ -166,7 +196,7 @@ To be able to get a symbol property, there's ```Object.getOwnPropertySymbols(obj
 - Arrow Functions:
 
 Just a note: Arrow functions do not have their own this.
-``` javascript
+```javascript
 var obj = {
   a: 10
 };
@@ -183,7 +213,7 @@ Object.defineProperty(obj, 'b', {
 
 Interesting concept, going only through enumerable values, not properties as does for in.
 
-``` javascript
+```javascript
 let arr = [3,5,7];
 arr.foo = "hello";
 
@@ -202,7 +232,7 @@ for(let i of arr){
 
 "The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed. In addition, freezing an object also prevents its prototype from being changed. freeze() returns the same object that was passed in", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
-``` javascript
+```javascript
 const obj = {
   prop: 42
 };
@@ -218,7 +248,7 @@ console.log(obj.prop);
 
 "The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
-``` javascript
+```javascript
 const object1 = {
   property1: 42
 };
