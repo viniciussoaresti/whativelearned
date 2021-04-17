@@ -233,6 +233,42 @@ console.log(object1.property1);
 // expected output: 33
 ```
 
+- Default Function Arguments (ES6+):
+
+If an argument is not passed through the function call, you can pass an default value (or default values) through the function declaration, including another function's return, for example.
+
+``` javascript
+function multiply(a, b = 1){
+  return a*b;
+}
+
+multiply(2); //Returns 2
+multiply(5, undefined); //Returns 5
+```
+
+- Enhanced Object Literals (ES6+):
+
+Pass an argument to an object, that's also the name of the property. Functions included.
+
+``` javascript
+let text = "I'm a text!";
+let aSimpleFunction = function(){
+  console.log("I'm a function!");
+};
+
+let object = {
+  text,
+  aSimpleFunction,
+  otherFunction(){
+    console.log("I'm a function also!");
+  },
+  [text]: "what?"
+};
+
+console.log(object); /*{text: "I'm a text!", aSimpleFunction: (the function's description),
+otherFunction: (the function's description), I'm a text!: "what?"}*/
+```
+
 ## Object-Oriented JS:
 
 Every variable in JS has a 'hidden' inheritance, based on prototypes (variables that store the object's definitions). For example, a:
