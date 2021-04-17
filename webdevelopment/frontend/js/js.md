@@ -94,6 +94,36 @@ array.reverse();
 let a = [1,2,3];
 console.log(a.reverse()); //result == [3, 2, 1]
 ```
+
+- Array' shift and unshift methods:
+
+Didn't know about these either.
+
+```javascript
+array.shift();
+//Example
+let a = [1,2,3];
+a.shift(); //returns the removed element (1)
+console.log(a); //result == [2, 3]
+```
+
+```javascript
+array.unshift('item');
+//Example
+let a = [1,2,3];
+a.unshift(4); //returns the array's new size (4)
+console.log(a); //result == [4, 1, 2, 3]
+```
+
+- Array.from():
+
+Receives an array-like or an iterable object, and transforms it into an object.
+
+```javascript
+let divs = document.querySelectorAll('div'); //returns a NodeList
+let divsArray = Array.from(divs); //returns an array with 'divs' content
+```
+
 - Conditional Operator:
 
 Basically, a very nice way to summarize short if-else expressions.
@@ -165,8 +195,11 @@ To be able to get a symbol property, there's ```Object.getOwnPropertySymbols(obj
 
 - Arrow Functions:
 
-Just a note: Arrow functions do not have their own this.
-``` javascript
+Arrow functions have the same context as the upper context.
+Examples for a better understanding:
+
+```javascript
+//Arrow function does not have the object scope
 var obj = {
   a: 10
 };
@@ -177,13 +210,30 @@ Object.defineProperty(obj, 'b', {
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   }
 });
+
+//Arrow function has the function scope, as seen on on DIO's Bootcamp
+
+let obj = {
+  showContext: function showContext(){
+    setTimeout(() => {
+      this.log('after 1000ms');
+    }, 1000);
+  }
+
+  log: function log(value){
+    console.log(value);
+  }
+}
+
+obj.showContext(); //returns 'after 1000ms', after 1000ms
+
 ```
 
 - For of:
 
 Interesting concept, going only through enumerable values, not properties as does for in.
 
-``` javascript
+```javascript
 let arr = [3,5,7];
 arr.foo = "hello";
 
@@ -202,7 +252,7 @@ for(let i of arr){
 
 "The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed. In addition, freezing an object also prevents its prototype from being changed. freeze() returns the same object that was passed in", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
-``` javascript
+```javascript
 const obj = {
   prop: 42
 };
@@ -218,7 +268,7 @@ console.log(obj.prop);
 
 "The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
-``` javascript
+```javascript
 const object1 = {
   property1: 42
 };
@@ -327,14 +377,71 @@ console.log(rex); //Dog {paws: 4, bites: false}
 A way to override methods and properties:
 
 ```javascript
-function Animal(){
-  this.paws = 4;
+function Animal(paws){
+  this.paws = paws;
+  this.movement = function();
 }
 
 function Dog(bites){}
   Animal.call(this, 4);
   this.bites = bites;
+  this.bark = function(){
+    console.log('Woof! Woof!');
+  }
+}
+```
+
+How to define methods and properties standards:
+
+```javascript
+function Animal(){}
+Animal.prototype.paws = 0;
+Animal.prototype.movement = function();
+
+function Dog(bites){}
+  this.paws = 4;
+  this.bites = bites;
+}
+Dog.prototype = Object.create(Animal);
+Dog.prototype.bark = function(){
+  console.log('Woof! Woof!');
+}
+```
+
+That was before ES6, where official Classes where introduced. Now we have a more 'classy' sintax, close to Java, that's an official Object-Oriented language, for example.
+
+```javascript
+class Animal{
+  constructor(paws){
+    this.paws = paws;
+  }
+
+  movement(){}
 }
 
-//12m
+class Dog extends Animal(){
+  constructor(bites){
+    super(4);
+    this.bites = bites;
+  }
+
+  bark(){
+    console.log('Woof! Woof!');
+  }
+}
+
+const poodle = new Dog(false);
+```
+
+There was no support for native private fields and methods until recent updates, so there is something called the underscore convention (```_variableName```), that doesn't prevent someone from accessingg the property (adapted from [Bitscr](https://blog.bitsrc.io/javascript-finally-has-support-for-native-private-fields-and-methods-d758fdcfd320)). Now, we can define a private property, and access/modify them through getters/setters, and if we try to access them directly, we get an undefined.
+
+Defining an private static field:
+
+```javascript
+class Class{
+  static #privateField;
+}
+
+let a = new Class();
+condole.log(a.privateField); //undefined
 ```
