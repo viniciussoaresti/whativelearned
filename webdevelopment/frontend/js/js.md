@@ -95,7 +95,7 @@ let a = [1,2,3];
 console.log(a.reverse()); //result == [3, 2, 1]
 ```
 
-- Array' shift and unshift methods:
+- Array's shift and unshift methods:
 
 Didn't know about these either.
 
@@ -135,6 +135,7 @@ let a = 1;
 a === 1 ? console.log('equals 1') : console.log('different');
 ```
 - toFixed():
+
 "The toFixed() method formats a number using fixed-point notation", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed).
 
 ```javascript
