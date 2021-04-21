@@ -201,6 +201,32 @@ alert(surname);  // Smith
 
 let [a, b, c] = "abc"; // ["a", "b", "c"]
 let [one, two, three] = new Set([1, 2, 3]);
+
+//And also with objects
+let obj = {a: 1, b: 2, c: 3};
+let {a, b, c: number3 } = obj; //the value 3 is attributed to the number3 variable
+
+// For being able to get nested values:
+let options = {
+  size: {
+    width: 100,
+    height: 200
+  }
+};
+let {size: {width, height}} = options;
+
+const color = ['#FF00FF', [255, 0, 255], 'rgb(255, 0, 255)'];
+
+// Use nested destructuring to assign red, green and blue -- as seen on codeburst.io
+const [hex, [red, green, blue]] = color;
+
+//And finishing, a function example with default values:
+function sum([a, b] = [0, 0]){
+  return a+b;
+}
+
+sum();//0
+sum([1, 2]);//3
 ```
 
 - Template Strings:
@@ -464,7 +490,7 @@ class Dog extends Animal(){
 const poodle = new Dog(false);
 ```
 
-There was no support for native private fields and methods until recent updates, so there is something called the underscore convention (```_variableName```), that doesn't prevent someone from accessingg the property (adapted from [Bitscr](https://blog.bitsrc.io/javascript-finally-has-support-for-native-private-fields-and-methods-d758fdcfd320)). Now, we can define a private property, and access/modify them through getters/setters, and if we try to access them directly, we get an undefined.
+There was no support for native private fields and methods until recent updates, so there is something called the underscore convention (```_variableName```), that doesn't prevent someone from accessing the property (adapted from [Bitscr](https://blog.bitsrc.io/javascript-finally-has-support-for-native-private-fields-and-methods-d758fdcfd320)). Now, we can define a private property, and access/modify them through getters/setters, and if we try to access them directly, we get an undefined.
 
 Defining an private static field:
 
