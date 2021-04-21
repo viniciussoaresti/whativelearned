@@ -152,7 +152,7 @@ console.log(financial('1.23e+5'));
 // expected output: "123000.00"
 ```
 
-- Spread Operator:
+- Spread and Rest Operators:
 
 "Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
@@ -170,6 +170,37 @@ myFunction(...args);
 Any argument in the argument list can use spread syntax,
 and the spread syntax can be used multiple times.
 */
+```
+
+The same syntax can also be interpreted as a rest operator, that, does the opposite: transform many arguments into a single array, passing many function arguments, for example.
+
+```javascript
+function sum(...args){
+  return args.reduce((acc, value) => acc + value);
+}
+
+sum(5, 5, 5, 2, 3); //20
+```
+
+- Destructuring Assignment:
+
+"Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient", [Javascript.info](https://javascript.info/destructuring-assignment).
+
+```javascript
+let arr = ["John", "Smith"]
+
+// destructuring assignment
+// sets firstName = arr[0]
+// and surname = arr[1]
+let [firstName, surname] = arr;
+
+alert(firstName); // John
+alert(surname);  // Smith
+
+//Works with any iterable on the right-side
+
+let [a, b, c] = "abc"; // ["a", "b", "c"]
+let [one, two, three] = new Set([1, 2, 3]);
 ```
 
 - Template Strings:
