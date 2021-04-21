@@ -152,7 +152,7 @@ console.log(financial('1.23e+5'));
 // expected output: "123000.00"
 ```
 
-- Spread and Rest Operators:
+- Spread and Rest Operators (ES6+):
 
 "Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
@@ -182,7 +182,7 @@ function sum(...args){
 sum(5, 5, 5, 2, 3); //20
 ```
 
-- Destructuring Assignment:
+- Destructuring Assignment (ES6+):
 
 "Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient", [Javascript.info](https://javascript.info/destructuring-assignment).
 
@@ -216,15 +216,93 @@ not ${2 * a + b}.`);
 // not 20."
 ```
 
-- Symbols:
+- Symbols (ES6+):
 
-"Symbol is a built-in object whose constructor returns a symbol primitive — also called a Symbol value or just a Symbol — that’s guaranteed to be unique. Symbols are often used to add unique property keys to an object that won’t collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding.",  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
+"Symbol is a built-in object whose constructor returns a symbol primitive — also called a Symbol value or just a Symbol — that’s guaranteed to be unique. Symbols are often used to add unique property keys to an object that won’t collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding",  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
-Key points: Symbol-keyed properties will be completely ignored when using JSON.stringify(), or for-in loops.
+```javascript
+const uniqueId = Symbol('Hello');
+const uniqueId2 = Symbol('Hello');
+uniqueId === uniqueId2; //false
+```
+
+Symbol-keyed properties will be completely ignored when using JSON.stringify(), or for-in loops.
 
 To be able to get a symbol property, there's ```Object.getOwnPropertySymbols(object)``` and ```Reflect.ownKeys(object)```.
 
-- Arrow Functions:
+We can also use a Symbol.iterator to be able to iterate over an object in any way that we need:
+
+```javascript
+const obj = {
+  values: [1,2,3,4],
+  [Symbol.iterator](){
+    let i = 0;
+    return{
+      next: () => {
+        i++;
+        return{
+          value: this.values[i - 1],
+          done: i > this.values.length
+        }
+      }
+    };
+  }
+}
+
+const it = obj[Symbol.iterator]();
+it.next(); //{value: 1, done: false}
+
+for (let value of obj){
+  console.log(value);
+}
+//1 2 3 4
+
+const arr = [...obj]; //[1,2,3,4]
+```
+
+- Generator:
+
+"The Generator object is returned by a generator function and it conforms to both the iterable protocol and the iterator protocol", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator).
+
+```javascript
+function* generator() {
+  //You could put some code here too
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = generator(); // "Generator { }"
+
+console.log(gen.next().value); // 1
+console.log(generator().next().value); // 1
+console.log(generator().next().value); // 1
+```
+
+Using generators, we're able to summarize the previous Symbol.iterator example:
+
+```javascript
+const obj = {
+  values: [1,2,3,4],
+  *[Symbol.iterator](){
+    for(let i = 0; i< this.values.length; i++){
+      yield this.values[i];
+    }
+  }
+}
+
+const it = obj[Symbol.iterator]();
+it.next(); //{value: 1, done: false}
+
+for (let value of obj){
+  console.log(value);
+}
+//1 2 3 4
+
+const arr = [...obj]; //[1,2,3,4]
+```
+
+- Arrow Functions (ES6+):
 
 Arrow functions have the same context as the upper context.
 Examples for a better understanding:
