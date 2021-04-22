@@ -423,7 +423,7 @@ console.log(object1.property1);
 
 If an argument is not passed through the function call, you can pass an default value (or default values) through the function declaration, including another function's return, for example.
 
-``` javascript
+```javascript
 function multiply(a, b = 1){
   return a*b;
 }
@@ -436,7 +436,7 @@ multiply(5, undefined); //Returns 5
 
 Pass an argument to an object, that's also the name of the property. Functions included.
 
-``` javascript
+```javascript
 let text = "I'm a text!";
 let aSimpleFunction = function(){
   console.log("I'm a function!");
@@ -453,6 +453,38 @@ let object = {
 
 console.log(object); /*{text: "I'm a text!", aSimpleFunction: (the function's description),
 otherFunction: (the function's description), I'm a text!: "what?"}*/
+```
+
+- Export and import:
+
+"The export statement is used when creating JavaScript modules to export live bindings to functions, objects, or primitive values from the module so they can be used by other programs with the import statement. Bindings that are exported can still be modified locally; when imported, although they can only be read by the importing module the value updates whenever it is updated by the exporting module", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export).
+
+As MDN also describes, named exports are useful to export several values. During the import, it is mandatory to use the same name of the corresponding object. But a default export can be imported with any name, and with no conflicts, as only one Default Export can exist per module.
+
+```javascript
+//NAMED EXPORTS
+
+// export features declared earlier
+export { myFunction, myVariable };
+
+// export individual features (can export var, let,
+// const, function, class)
+export let myVariable = Math.sqrt(2);
+export function myFunction() { ... };
+
+
+//DEFAULT EXPORTS
+
+// file test.js
+let k; 
+export default k = 12;
+
+// some other file
+import m from './test'; 
+/* note that we have the freedom to
+use import m instead of import k, because k was default 
+export*/
+console.log(m);        // will log 12
 ```
 
 ## Object-Oriented JS:
