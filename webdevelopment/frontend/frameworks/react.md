@@ -174,6 +174,14 @@ If you want to create a react app with next:
 
 ```npx create-next-app podcastr```
 
+Adding typescript:
+
+```yarn add typescript @types/react @types/node -D```
+
+Adding SASS:
+
+```yarn add sass```
+
 ## Next.js
 
 Gatsby and Next.js are frameworks that enable SSR (server-side rendering) and SSG (static-site generation). This is required for SEO (Search Engine Optimization), for Google, Bing, DuckDuckGo and other search engines to be able to index pages, for social media apps to generate some info cards, and so on.
@@ -185,3 +193,30 @@ As the name implies, the HTML is rendered by the server. In this case, not by th
 ### SSG (static-site generation)
 
 A static-site is basically a render that was cached, with a predefined time, to avoid rendering the application again, having many benefits, such as lower server usage.
+
+### Tips:
+
+- _document.tsx:
+
+In this file you can define the base configuration for your app, that is not reloaded every time, different from a situation in which you've had put it on the _app.tsx file. For example:
+
+```typescript
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+export default class MyDocument extends Document {
+    render(){
+        return(
+            <Html>
+                <Head>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap" rel="stylesheet" />
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
+}
+```
