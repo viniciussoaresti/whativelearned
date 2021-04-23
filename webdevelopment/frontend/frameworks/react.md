@@ -220,3 +220,36 @@ export default class MyDocument extends Document {
     }
 }
 ```
+
+- css/scss modules:
+
+When you define a css/scss module with next, for example: `styles.module.scss`, this specific css definition only applies to the specific component you're working on. That is, if you have other css classes named the same through your application, there's no problem.
+
+Example importing the module's styles:
+
+```javascript
+//Header/styles.module.scss
+.headerContainer {
+    background: var(--white);
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+//Header/index.tsx
+import styles from './styles.module.scss';
+
+export function Header() {
+    return (
+        <header className={styles.headerContainer}>
+            <img src="/logo.svg" alt="Podcastr"></img>
+
+            <p>O melhor para você ouvir, sempre</p>
+
+            <span>Qui, 8 Abril</span>
+        </header>
+    );
+}
+```
