@@ -253,3 +253,28 @@ export function Header() {
     );
 }
 ```
+
+- Consuming API's:
+
+There's three different ways to consume an API, using each "metodology": SPA, SSR and SSG.
+
+SPA:
+
+```javascript
+import { useEffect } from "react"
+
+export default function Home() {
+  useEffect(() => {
+    fetch('http://localhost:3333/episodes')
+    .then(response => response.json())
+    .then(data => console.log(data));
+  }, []); 
+  /*In this way, the fetch happens every time
+    the component is loaded. Problem? Crawlers will
+    not wait for the request to complete.*/
+
+  return (
+    <h1>Index</h1>
+  )
+}
+```
