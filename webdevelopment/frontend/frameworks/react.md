@@ -256,7 +256,7 @@ export function Header() {
 
 - Consuming API's:
 
-There's three different ways to consume an API, using each "metodology": SPA, SSR and SSG.
+There's three different ways to consume an API, using each "methodology": SPA, SSR and SSG.
 
 SPA:
 
@@ -269,12 +269,68 @@ export default function Home() {
     .then(response => response.json())
     .then(data => console.log(data));
   }, []); 
-  /*In this way, the fetch happens every time
-    the component is loaded. Problem? Crawlers will
-    not wait for the request to complete.*/
 
   return (
     <h1>Index</h1>
   )
 }
+
+/*In this way, the fetch happens every time
+the component is loaded. Problem? Crawlers will
+not wait for the request to complete.*/
+```
+
+SSR:
+
+```javascript
+export default function Home(props) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>{JSON.stringify(props.episodes)}</p>
+    </div>
+  )
+}
+
+export async function getServerSideProps() {
+  const response = await fetch('http://localhost:3333/episodes')
+  const data = await response.json()
+  return {
+    props: {
+      episodes: data,
+    }
+  }
+}
+
+/*In this way, the fetch happens every time
+a person accesses the app. Problem? Many server
+requests, unnecessarily.*/
+```
+
+SSR:
+
+```javascript
+export default function Home(props) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>{JSON.stringify(props.episodes)}</p>
+    </div>
+  )
+}
+
+export async function getStaticProps() {
+  const response = await fetch('http://localhost:3333/episodes')
+  const data = await response.json()
+  return {
+    props: {
+      episodes: data,
+    },
+    revalidate: 28800 // 60 * 60 * 8 -- seconds in 8h
+  }
+}
+
+/*Literally changing the method's name.
+In this way, the fetch happens on the defined
+revalidate specified time (on seconds).*/
 ```
