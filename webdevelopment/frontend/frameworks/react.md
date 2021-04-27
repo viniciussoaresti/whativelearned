@@ -200,7 +200,7 @@ A static-site is basically a render that was cached, with a predefined time, to 
 
 In this file you can define the base configuration for your app, that is not reloaded every time, different from a situation in which you've had put it on the _app.tsx file. For example:
 
-```typescript
+```javascript
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
@@ -307,7 +307,7 @@ a person accesses the app. Problem? Many server
 requests, unnecessarily.*/
 ```
 
-SSR:
+SSG:
 
 ```javascript
 export default function Home(props) {
@@ -333,4 +333,12 @@ export async function getStaticProps() {
 /*Literally changing the method's name.
 In this way, the fetch happens on the defined
 revalidate specified time (on seconds).*/
+```
+
+- Image:
+
+Next's Image, doing all the magic:
+
+```javascript
+<Image width={192} height={192} src={episode.thumbnail} alt={episode.title} />
 ```
