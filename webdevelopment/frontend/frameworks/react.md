@@ -342,3 +342,55 @@ Next's Image, doing all the magic:
 ```javascript
 <Image width={192} height={192} src={episode.thumbnail} alt={episode.title} />
 ```
+
+- Routing:
+
+The rest of the url, that is, the part that comes after the domain extension, is called slug. To avoid making the common query parameters routing, we're able to specify 'paths' on our application, with next. 
+
+On the pages folder, just create a folder with the desired path, create the corresponding 'parameter' you wish to receive inside brackets ([]) and you're done. Example:
+
+```javascript
+/*
+/pages/episodes/[slug].tsx
+*/
+
+import { useRouter } from 'next/router';
+
+export default function Episode() {
+    const router = useRouter();
+
+    return (
+        <h1>{router.query.slug}</h1>
+    );
+}
+
+/*
+Then, we're able to access it by the following url:
+(application domain, for example localhost:3000)/episodes/slugText.
+
+Then, the page should show exactly 'slugText', inside a h1.
+Or some other text/'path';
+
+For an easy routing, you could do something like:
+*/
+
+<a href={`/episodes/${episode.id}`}>{episode.title}</a>
+```
+
+But that is not a silver bullet, as it changes the page and reloads all necessary files. To be able to optimize this:
+
+```javascript
+/*
+/pages/index.tsx
+*/
+
+import Link from 'next/link';
+
+/*
+Instead of <a href={`/episodes/${episode.id}`}>{episode.title}</a>:
+*/
+
+<Link href={`/episodes/${episode.id}`}>
+  <a>{episode.title}</a>
+</Link>
+```
