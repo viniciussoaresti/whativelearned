@@ -394,3 +394,7 @@ Instead of <a href={`/episodes/${episode.id}`}>{episode.title}</a>:
   <a>{episode.title}</a>
 </Link>
 ```
+
+- Incremental static regeneration:
+
+https://nextjs.org/docs/basic-features/data-fetching
