@@ -397,4 +397,76 @@ Instead of <a href={`/episodes/${episode.id}`}>{episode.title}</a>:
 
 - Incremental static regeneration:
 
-https://nextjs.org/docs/basic-features/data-fetching
+Incremental static regeneration is, as Diego Fernandes' said (NLW #5), a 'dynamic static pages' technique that allow us to control how new static pages are generated with dynamic content.
+
+"With getStaticProps you don't have to stop relying on dynamic content, as static content can also be dynamic. Incremental Static Regeneration allows you to update existing pages by re-rendering them in the background as traffic comes in.
+
+Inspired by stale-while-revalidate, background regeneration ensures traffic is served uninterruptedly, always from static storage, and the newly built page is pushed only after it's done generating.", [Next.js](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration).
+
+For it to be also able to dynamically generate static routes, we're able to control it like that:
+
+```javascript
+export const getStaticPaths: GetStaticPaths = async () => {
+    return ({
+        paths: [
+            {
+                params: {
+                    slug: 'a-importancia-da-contribuicao-em-open-source'
+                    //it will only render this route/page
+                }
+            }
+        ],
+        fallback: 'false' // returns a 404 error
+        /*
+        fallback: 'true' -- tries to get the data required to render the page,
+        making the request client-side
+
+        fallback: 'blocking' -- tries to get the data required to render the page, making the request server-side (on next's server), and the user's
+        only redirected after the page has rendered
+        */
+    });
+};
+```
+
+While using fallback true, we can be presented with an error, as Next tries to render the page with undefined values. This can be solved using the useRouter import, as seen below:
+
+```javascript
+import { useRouter } from 'next/router';
+
+export default function Episode({ episode }: EpisodeProps) {
+    const router = useRouter();
+
+    if(router.isFallback){
+      return (
+        <p>Carregando...</p>
+      );
+    }
+
+    return (
+        <div className={styles.episode}>
+            <div className={styles.thumbnailContainer}>
+                <Link href="/">
+                    <button type="button">
+                        <img src="/arrow-left.svg" alt="Voltar" />
+                    </button>
+                </Link>
+                <Image width={700} height={160} src={episode.thumbnail}
+                    objectFit="cover"></Image>
+                <button type="button">
+                    <img src="/play.svg" alt="Tocar Episódio" />
+                </button>
+            </div>
+
+            <header>
+                <h1>{episode.title}</h1>
+                <span>{episode.members}</span>
+                <span>{episode.publishedAt}</span>
+                <span>{episode.durationAsString}</span>
+            </header>
+
+            <div className={styles.description}
+                dangerouslySetInnerHTML={{ __html: episode.description }} />
+        </div>
+    );
+}
+```
