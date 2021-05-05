@@ -158,6 +158,10 @@ export default function SomeComponent(props){
 }
 ```
 
+### Context API:
+
+When developing a react application, there's often the need to share information between components, for example on the podcastr project, between a 'play' action on the episode description component, and the player component.
+
 ## Starting:
 
 There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
@@ -181,6 +185,10 @@ Adding typescript:
 Adding SASS:
 
 ```yarn add sass```
+
+## Tips:
+
+Lorem ipsum dolor sit amet, consectetur adipis.
 
 ## Next.js
 
@@ -423,6 +431,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
         fallback: 'blocking' -- tries to get the data required to render the page, making the request server-side (on next's server), and the user's
         only redirected after the page has rendered
+
+        both fallback true and blocking are examples of incremental static regeneration
         */
     });
 };
