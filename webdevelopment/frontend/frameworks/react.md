@@ -160,7 +160,39 @@ export default function SomeComponent(props){
 
 ### Context API:
 
-When developing a react application, there's often the need to share information between components, for example on the podcastr project, between a 'play' action on the episode description component, and the player component.
+When developing a react application, there's often the need to share information between components, for example on the podcastr project, between a 'play' action on the episode description component, and the player component. This can be solved using the context API:
+
+```javascript
+//src.pages._app.tsx
+import '../styles/global.scss'
+import { Header } from '../components/Header';
+import { Player } from '../components/Player';
+import { PlayerContext } from '../contexts/PlayerContext';
+import styles from '../styles/app.module.scss'
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <PlayerContext.Provider value={'Diego'}>
+      <div className={styles.wrapper}>
+        <main>
+          <Header />
+          <Component {...pageProps} />
+        </main>
+        <Player />
+      </div>
+    </PlayerContext.Provider>
+  );
+}
+
+export default MyApp
+
+//src.contexts.PlayerContext
+import { createContext } from 'react';
+
+export const PlayerContext = createContext('Diego');
+/*The createContext argument just defines how the data's
+supposed to be like*/
+```
 
 ## Starting:
 
