@@ -487,6 +487,48 @@ export*/
 console.log(m);        // will log 12
 ```
 
+- Promises:
+
+"A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future", [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
+
+myPromise
+  .then(handleResolvedA, handleRejectedA)
+  //You can nest promises when they return another promise
+  .then(handleResolvedB, handleRejectedB)
+  .then(handleResolvedC, handleRejectedC)
+  .catch(error => console.log('Ops', error));
+```
+
+We're also able to resolve multiple promises at the same time.
+
+Awaiting them all:
+
+```javascript
+//The resolved promises will then be returned also inside an array:
+Promise.all([promise1(), promise2(), promise3()]).then(
+  data => {
+    console.log(data); //[promise1Data, promise2Data, promise3Data]
+  }
+);
+```
+
+Or doing something with the first promise resolved:
+
+```javascript
+Promise.race([promise1(), promise2(), promise3()]).then(
+  data => {
+    console.log(data); //data from the first promise resolved
+  }
+);
+```
+
 - Fetch:
 
 "The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network", [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
@@ -496,6 +538,8 @@ fetch('http://example.com/movies.json')
   .then(response => response.json())
   .then(data => console.log(data));
 ```
+
+It is important to know that the error is only displayed when network.
 
 ## Object-Oriented JS:
 
