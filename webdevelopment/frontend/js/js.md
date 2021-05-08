@@ -539,7 +539,32 @@ fetch('http://example.com/movies.json')
   .then(data => console.log(data));
 ```
 
-It is important to know that the error is only displayed when network.
+It is important to know that a provided catch, after all "then's", only catches network errors (like a 500 status). So, for example, if the url is valid, and the response is not parsed right, this error is not intercepted by it. Thus, for a better example:
+
+```javascript
+fetch('http://example.com/movies.json')
+  .then(response => if(response.status === 200){
+    return response.json()
+  } else{
+    throw new Error('Request Error');
+  })
+  .then(data => console.log(data));
+```
+
+The fetch method also allow us to better specify the request:
+
+```javascript
+fetch('http://example.com/movies.json', {
+  method: 'post',
+  body: JSON.stringify({}) //[...]
+})
+  .then(response => if(response.status === 200){
+    return response.json()
+  } else{
+    throw new Error('Request Error');
+  })
+  .then(data => console.log(data));
+```
 
 ## Object-Oriented JS:
 
