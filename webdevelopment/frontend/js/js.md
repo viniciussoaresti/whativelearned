@@ -566,6 +566,59 @@ fetch('http://example.com/movies.json', {
   .then(data => console.log(data));
 ```
 
+- Async/await:
+
+'Async' transforms any function into a Promise, and 'await' only proceeds with more code after the promise is resolved (can only be used inside an async function).
+
+```javascript
+const asyncTimer = () => new Promise((resolve, reject) => {
+  setTimeout(() =>{
+    resolve(12345);
+  }, 1000);
+})
+
+const simpleFunc = async () => {
+  const data = await asyncTimer();
+  return data;
+}
+
+simpleFunc()
+  .then(data => {
+    console.log(data); //after 1000ms, returns 12345
+  })
+  .catch(err => {
+    console.log(err);
+  });
+```
+
+Just a note, for being able to handle requests at the same time, we can apply the Promise.all method, which we saw earlier (introduced a fetch to the code):
+
+```javascript
+const asyncTimer = () => new Promise((resolve, reject) => {
+  setTimeout(() =>{
+    resolve(12345);
+  }, 1000);
+})
+
+const simpleFunc = async () => {
+  const data = await Promise.all([
+    asyncTimer(),
+    fetch('/data.json').then(resStream => resStream.json())]);
+  return data;
+}
+
+simpleFunc()
+  .then(data => {
+    console.log(data); 
+    /*after all requests, returns an Array
+    containing all resolved promises:
+    [12345, {data:1}]*/
+  })
+  .catch(err => {
+    console.log(err);
+  });
+```
+
 ## Object-Oriented JS:
 
 Every variable in JS has a 'hidden' inheritance, based on prototypes (variables that store the object's definitions). For example, a:
