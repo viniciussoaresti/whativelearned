@@ -50,7 +50,7 @@ soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
 </soap:Envelope>
 ```
 
-### WSDL:
+#### WSDL:
 
 "Web Services Description Language (WSDL) is an XML-based interface description language that is used for describing the functionality offered by a web service", [Wikipedia](https://en.wikipedia.org/wiki/Web_Services_Description_Language). There's some tools to make it easier to read, like SoapUI.
 
@@ -112,7 +112,7 @@ soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
 </description>
 ```
 
-### XSD:
+#### XSD:
 
 "XSD (XML Schema Definition), a recommendation of the World Wide Web Consortium (W3C), specifies how to formally describe the elements in an Extensible Markup Language (XML) document. It can be used by programmers to verify each piece of item content in a document, to assure it adheres to the description of the element it is placed in", [Wikipedia](https://en.wikipedia.org/wiki/XML_Schema_(W3C)).
 
@@ -142,3 +142,35 @@ xsi:noNamespaceSchemaLocation="shiporder.xsd">
   </item>
 </shiporder>
 ```
+
+### REST:
+
+"REST (Representational State Transfer) refers to a group of software architecture design constraints that bring about efficient, reliable and scalable distributed systems.
+
+The basic idea of REST is that a resource, e.g. a document, is transferred via well-recognized, language-agnostic, and reliably standardized client/server interactions. Services are deemed RESTful when they adhere to these constraints.
+
+HTTP APIs in general are sometimes colloquially referred to as RESTful APIs, RESTful services, or REST services, although they don't necessarily adhere to all REST constraints. Beginners can assume a REST API means an HTTP service that can be called using standard web libraries and tools", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/REST).
+
+It is able to work with both XML and JSON (and other types of response formats), but it's more common to see it working with JSON. It's easier to learn and develop, compared with SOAP.
+
+#### API:
+
+"An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.
+
+In Web development, an API is generally a set of code features (e.g. methods, properties, events, and URLs) that a developer can use in their apps for interacting with components of a user's web browser, or other software/hardware on the user's computer, or third party websites and services", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/API).
+
+#### HTTP Methods:
+
+- (C) Post: Creates something;
+
+- (R) Get: Gets something;
+
+- (U) Put: Updates something;
+
+- (D) Delete: Deletes something.
+
+#### JSON:
+
+"JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.
+
+JSON can represent numbers, booleans, strings, null, arrays (ordered sequences of values), and objects (string-value mappings) made up of these values (or of other arrays and objects).  JSON does not natively represent more complex data types like functions, regular expressions, dates, and so on.  (Date objects by default serialize to a string containing the date in ISO format, so the information isn't completely lost.) If you need JSON to represent additional data types, transform values as they are serialized or before they are deserialized", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/JSON).
