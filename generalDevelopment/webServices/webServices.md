@@ -169,6 +169,19 @@ In Web development, an API is generally a set of code features (e.g. methods, pr
 
 - (D) Delete: Deletes something.
 
+#### HTTP Status Codes:
+
+- 1xx - Information;
+
+- 2xx - Success;
+
+- 3xx - Redirecting;
+
+- 4xx - Client Error;
+
+- 5xx - Server Error.
+
+See more at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 #### JSON:
 
 "JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.
