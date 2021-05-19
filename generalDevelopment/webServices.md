@@ -153,13 +153,13 @@ HTTP APIs in general are sometimes colloquially referred to as RESTful APIs, RES
 
 It is able to work with both XML and JSON (and other types of response formats), but it's more common to see it working with JSON. It's easier to learn and develop, compared with SOAP.
 
-#### API:
+### API:
 
 "An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.
 
 In Web development, an API is generally a set of code features (e.g. methods, properties, events, and URLs) that a developer can use in their apps for interacting with components of a user's web browser, or other software/hardware on the user's computer, or third party websites and services", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/API).
 
-#### HTTP Methods:
+### HTTP Methods:
 
 - (C) Post: Creates something;
 
@@ -169,7 +169,7 @@ In Web development, an API is generally a set of code features (e.g. methods, pr
 
 - (D) Delete: Deletes something.
 
-#### HTTP Status Codes:
+### HTTP Status Codes:
 
 - 1xx - Information;
 
@@ -182,7 +182,8 @@ In Web development, an API is generally a set of code features (e.g. methods, pr
 - 5xx - Server Error.
 
 See more at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
-#### JSON:
+
+### JSON:
 
 "JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.
 
