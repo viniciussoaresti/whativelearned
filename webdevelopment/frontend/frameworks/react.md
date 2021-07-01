@@ -194,6 +194,58 @@ export const PlayerContext = createContext('Diego');
 supposed to be like*/
 ```
 
+### Refs:
+
+"In the typical React dataflow, props are the only way that parent components interact with their children. To modify a child, you re-render it with new props. However, there are a few cases where you need to imperatively modify a child outside of the typical dataflow. The child to be modified could be an instance of a React component, or it could be a DOM element. For both of these cases, React provides an escape hatch", [React's Refs](https://reactjs.org/docs/refs-and-the-dom.html).
+
+```javascript
+//src.components.Player.index.tsx
+export function Player() {
+  const audioRef = useRef <HTMLAudioElement> (null);
+  //...
+  <audio
+    src={episode.url}
+    ref={audioRef}
+    autoPlay
+    onPlay={() => setPlayingState(true)}
+    onPause={() => setPlayingState(false)}
+  />
+}
+```
+
+### Side Effects:
+
+"The Effect Hook lets you perform side effects in function components. Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you’re used to calling these operations “side effects” (or just “effects”), you’ve likely performed them in your components before.
+
+What does useEffect do? By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates. In this effect, we set the document title, but we could also perform data fetching or call some other imperative API", [React's Effect Hook](https://reactjs.org/docs/hooks-effect.html).
+
+Based on the previous example:
+
+```javascript
+//src.components.Player.index.tsx
+export function Player() {
+  const audioRef = useRef <HTMLAudioElement> (null);
+
+  useEffect(() => {
+        if (!audioRef.current) {
+            return;
+        }
+
+        if (isPlaying) {
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+        }
+    }, [isPlaying]);
+  //...
+  <audio
+    src={episode.url}
+    ref={audioRef}
+    autoPlay 
+  />
+}
+```
+
 ## Starting:
 
 There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
