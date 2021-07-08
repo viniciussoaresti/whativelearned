@@ -246,6 +246,24 @@ export function Player() {
 }
 ```
 
+### React Node:
+
+"The primary type or value that is created when using React is known as a React node. A React node is defined as a light, stateless, immutable, virtual representation of a DOM node", [React Enlightenment](https://www.reactenlightenment.com/react-nodes/4.1.html).
+
+Basically a type you can refer to compare if an element is an React/Html element. Usage example:
+
+```javascript
+import { ReactNode } from 'react';
+
+interface ComponentProps {
+    children: ReactNode;
+};
+
+export function Component (ComponentProps: ComponentProps){
+  //doSomething
+}
+```
+
 ## Starting:
 
 There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
