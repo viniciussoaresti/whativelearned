@@ -582,3 +582,16 @@ export default function Episode({ episode }: EpisodeProps) {
     );
 }
 ```
+
+- Using dynamic page titles:
+
+"We expose a built-in component for appending elements to the head of the page", [Next.js](https://nextjs.org/docs/api-reference/next/head).
+
+```javascript
+import Head from 'next/head';
+
+//on any function that returns html (React Node's)
+<Head>
+  <title>Home | Podcastr</title>
+</Head>
+```
