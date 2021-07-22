@@ -40,22 +40,26 @@ namespace HelloWorld {
 }
 ```
 
+Here we see the namespace, where we're able to access all classes within it.
+
+The 'using' keyword, as you could infer, is basically an import of another namespace, so you're able to use another namespace's classes.
+
 ## Project Layout:
 
 Under a "Solution", there will exist one or many more projects, each with the following layout:
 
 ### Properties:
 
-A folder that has the `AssemblyInfo.cs` file. This is the info that will be used to mount the assembly that will be produced as a result of the compilation.
+A folder that has the `AssemblyInfo.cs` file. This is the info that will be used to mount the assembly that will be produced as a result of the compilation, like version, name, etc.
 
 ### References:
 
-To add.
+Any assemblies that are referenced in the project, on an basic example, part of the .NET framework.
 
 ### App.config:
 
-To add.
+An XML file that contains configuration data for the project, as the .NET framework version, connection to the database, etc.
 
 ### Program.cs:
 
-To add.
+The program/code itself.
