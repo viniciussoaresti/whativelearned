@@ -1,12 +1,12 @@
-# Js:
+# Javascript:
 The client-sided loved language.
 
-JS's a multi-paradigm language, and as such, has the ability to be coded on object-oriented programming, functional programming, and so on.
+Javascript's a multi-paradigm language, and as such, has the ability to be coded on object-oriented programming, functional programming, and so on.
 
 ## Concepts:
 - First-class functions:
 
-Javascript's a language that has first-class functions.
+JS's a language that has first-class functions.
 
 That is, functions can be treated as any other variable, as described on [MDN](https://developer.mozilla.org/pt-BR/docs/Glossary/First-class_Function). Thus, beign able to be manipulated as an argument, returned by other funtions, and assigned to another variable.
 
