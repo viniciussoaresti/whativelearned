@@ -67,3 +67,37 @@ The program/code itself.
 ## Variables and Types:
 
 ![Primitives](https://github.com/viniciussoaresti/whativelearned/blob/master/programmingLanguages/c%23Assets/primitives.png?raw=true)
+
+(Programming with Mosh)
+
+### Type conversion:
+
+A float can receive a double as a parameter:
+
+```c#
+int i = 1;
+float f = i;
+```
+
+But an int can't be cast to a byte automatically:
+
+```c#
+int i = 1;
+byte b = i; //won't compile
+```
+
+Just manually:
+
+```c#
+int i = 1;
+byte b = (byte)i;
+```
+
+For casting a string to a number, for example:
+
+```c#
+string s = "1";
+int i = Convert.ToInt32(s);
+//or
+int i = int.Parse(s);
+```
