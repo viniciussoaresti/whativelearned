@@ -63,3 +63,7 @@ An XML file that contains configuration data for the project, as the .NET framew
 ### Program.cs:
 
 The program/code itself.
+
+## Variables and Types:
+
+![Primitives](https://github.com/viniciussoaresti/whativelearned/tree/master/programmingLanguages/c%23Assets/primitives.png)
