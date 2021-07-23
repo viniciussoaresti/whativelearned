@@ -20,3 +20,6 @@ https://stackoverflow.com/questions/23401652/fatal-the-current-branch-master-has
 To check the added remote, or to delete it:
 `git remote`
 `git remote rm (remote name)`
+
+### Correcting last commit message:
+`git commit --amend -m "New commit message."`
