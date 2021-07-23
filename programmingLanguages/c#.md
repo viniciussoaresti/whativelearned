@@ -66,4 +66,4 @@ The program/code itself.
 
 ## Variables and Types:
 
-![Primitives](https://github.com/viniciussoaresti/whativelearned/tree/master/programmingLanguages/c%23Assets/primitives.png)
+![Primitives](https://github.com/viniciussoaresti/whativelearned/blob/master/programmingLanguages/c%23Assets/primitives.png?raw=true)
