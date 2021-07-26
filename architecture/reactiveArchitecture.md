@@ -22,4 +22,4 @@ Just a sidenote, differentiating messages and events:
 
 "A Message is some data sent to a specific address. In Message Driven systems, each component has a unique address other components can send messages to. Each of these components, or recipients, awaits messages and reacts to them.
 
-An Event is some data emitted from a component for anyone listening to consume", [Lightbend](https://developer.lightbend.com/docs/akka-platform-guide/concepts/message-driven-event-driven.htmlhttps://developer.lightbend.com/docs/akka-platform-guide/concepts/message-driven-event-driven.html).
+An Event is some data emitted from a component for anyone listening to consume", [Lightbend](https://developer.lightbend.com/docs/akka-platform-guide/concepts/message-driven-event-driven.html).
