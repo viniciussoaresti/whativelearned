@@ -1,0 +1,3 @@
+# Architecture:
+
+"Software architecture refers to the fundamental structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations", [Wikipedia](https://en.wikipedia.org/wiki/Software_architecture#:~:text=Software%20architecture%20refers%20to%20the,of%20both%20elements%20and%20relations).

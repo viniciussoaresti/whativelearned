@@ -1,0 +1,5 @@
+### Reactive Architecture
+
+"Cloud-native systems need to be responsive. Designing these systems requires architects to think differently, in order to build software that can be both resilient and elastic. These Reactive Systems are built on a message-driven foundation. As microservices have emerged as the gold standard of developing modern software applications, every team needs to develop a deep understanding of how to design, build, and operate software in a Reactive world if they want to remain relevant", [Cognitive Class](https://cognitiveclass.ai/learn/reactive-architecture-foundations).
+
+Reactive architecture focus on delivering an outstanding experience to the user, that now requires that systems respond quickly and are up 24/7. No delay to page refreshes, no "system down for maintenance" messages, etc.
