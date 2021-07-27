@@ -21,3 +21,13 @@ The [Reactive Manifesto](https://www.reactivemanifesto.org/https://www.reactivem
 Just a sidenote, differentiating messages and events:
 
 "A Message is some data sent to a specific address. In Message Driven systems, each component has a unique address other components can send messages to. Each of these components, or recipients, awaits messages and reacts to them. An Event is some data emitted from a component for anyone listening to consume", [Lightbend](https://developer.lightbend.com/docs/akka-platform-guide/concepts/message-driven-event-driven.html).
+
+### Reactive Architecture vs Reactive Programming
+
+It's good to separate the differences between Reactive Architecture and Reactive Programming. 
+
+While the Reactive Architecture, which is basically defined by the Reactive Manifesto, builds Reactive Systems, Reactive Programming <b>can</b> be used to support the construction of Reactive Systems, but just because you are using it, your system isn't necessarily a Reactive System.
+
+Reactive Programming takes a problem and breaks it up into small, discrete steps, that are executed in an async/non-blocking fashion, usually via a callback mechanism. Examples include Promises, Streams, RxJava, etc.
+
+But if you deploy a system using Reactive Programming onto one node, for example, you've not built a Reactive System.
