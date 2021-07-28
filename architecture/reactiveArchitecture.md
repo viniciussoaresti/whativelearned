@@ -31,3 +31,35 @@ While the Reactive Architecture, which is basically defined by the Reactive Mani
 Reactive Programming takes a problem and breaks it up into small, discrete steps, that are executed in an async/non-blocking fashion, usually via a callback mechanism. Examples include Promises, Streams, RxJava, etc.
 
 But if you deploy a system using Reactive Programming onto one node, for example, you've not built a Reactive System.
+
+### The Actor Model
+
+It's a programming paradigm that supports the construction of reactive systems. It's principles:
+
+- All your computation will occur inside of one of those actors or across many off those actors;
+
+- Each of those actors is addressable, having an unique address;
+
+- All communication between actors is done using asynchronous non-blocking messages, which introduces us to location transparency:
+
+#### Location transparency:
+
+The actors communicate using the same technique regardless of location, as they don't know the location of where the message is going to go. So either a local or remote connection should be done the same way, let's put "with the same API". That is the essene of location transparency.
+
+This should not be confused with transparent remoting.
+
+##### Location Transparency vs Transparent Remoting
+
+![Location transparency image](https://i.imgur.com/J2qDGAf.png)
+
+"The two are actually opposites.
+
+"Transparent Remoting" is about making remote calls look like local calls. "Location transparency" is about making local calls look like remote calls.
+
+While this may not sound like a big deal—it is. It is all about the assumptions you can make. Typically local invocations have a much higher fidelity as there is a lot fewer possible error and failure modes. By embracing those failure and error modes in "Location transparency" it does no longer matter technically where the sender and receiver is located.
+
+With "Transparent Remoting" it is not evident that you are crossing a asynchronous and binary boundary, and as such, whether the calling thread will be able to make progress, whether there will be a notification on communication problems or information loss or corruption", [Victor Klang](https://stackoverflow.com/questions/37043288/difference-between-transparent-remoting-and-location-transparency/37050040).
+
+It's also possible to build Reactive Systems without actors, while adding components, rather than making them be built in:
+
+![Reactive Systems without actors image](./reactiveArchitectureAssets/withoutActors.png?raw=true)
