@@ -63,3 +63,5 @@ With "Transparent Remoting" it is not evident that you are crossing a asynchrono
 It's also possible to build Reactive Systems without actors, while adding components, rather than making them be built in:
 
 ![Reactive Systems without actors image](./reactiveArchitectureAssets/withoutActors.png?raw=true)
+
+But the actor model can be reactive at the level of actors, which can be inserted into a microservice, as opposed to being reactive at the level of microservices. It's also possible with this approach, but harder.
