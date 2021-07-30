@@ -20,5 +20,25 @@ Data should be stored anonymously where possible, and if something happens with 
 
 All data processing should be registered and there should be a report with the impacts of each data stored within the system.
 
+Some of the principles of the LGPD are:
+
+- Goal: "Why should this data be collected and processed?";
+- Adequacy: "Is the collected data aligned with the app's purpose?";
+- Need: "Am I using only the data I need?";
+- Free access: "Can the user data be accessed easily by them?";
+- Data Quality: "Are all the data exact and updated?";
+- Transparency: "Are all processes regarding data use clear for the users?";
+- Safety: "Are there administrative and technical measures to secure the data well?";
+- Prevention: "Are there well-defined preventive methods to avoid accidents?";
+- Non-Discrimination: "Could the data be used/is the data being used to discriminate the users?";
+- Accountability: "Is the software (and its organization) informing the government regulators?";
+
+### Personal vs Sensitive Data
+
+Basically, when we're talking about Privacy by Design, personal data is data that can be used to identify the user, such as the name, social security number, address, etc.
+
+Sensitive data, on the other hand, could be used to cause harm or embarrassment for the user, such as ethnical origin, religious beliefs, political opinions, sexual life information, biometrical data, and so on.
+
+
 - Proactive, not reactive while designing and developing software;
 - Positive sum, not zero sum (avoid unnecessary trade-offs);
