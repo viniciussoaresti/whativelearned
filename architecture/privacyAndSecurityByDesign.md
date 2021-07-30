@@ -33,6 +33,15 @@ Some of the principles of the LGPD are:
 - Non-Discrimination: "Could the data be used/is the data being used to discriminate the users?";
 - Accountability: "Is the software (and its organization) informing the government regulators?";
 
+### Actors:
+
+Actors involved in all the process:
+
+- User: Users which concede the data.
+- Controller: Physical or juridical person that controls all decisions related to the form and purpose of personal data;
+- Operator: Who handles the data process, ordered by the controller;
+- Person in charge: Handles the communication between all parties (controller, operator, users and ANPD);
+- ANPD: Brazil's regulatory institution ("Autoridade Nacional de Proteção de Dados"), that is responsible for fiscalization, rule defining and penalty application;
 ### Personal vs Sensitive Data
 
 Basically, when we're talking about Privacy by Design, personal data is data that can be used to identify the user, such as the name, social security number, address, etc.
@@ -42,3 +51,11 @@ Sensitive data, on the other hand, could be used to cause harm or embarrassment 
 
 - Proactive, not reactive while designing and developing software;
 - Positive sum, not zero sum (avoid unnecessary trade-offs);
+
+### Consent:
+
+Consent is a term that needs to be clarified, so that we can obtain it from the user abiding the laws. Definition:
+
+"Free, informed and unambiguous statement by which the holder agrees with the processing of their personal data for a certain purpose".
+
+Can be given by written manifestation or other ways that prove the users want to consent. Can be revoked or excluded anytime.
