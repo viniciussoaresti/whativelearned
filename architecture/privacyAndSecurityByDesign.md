@@ -59,3 +59,17 @@ Consent is a term that needs to be clarified, so that we can obtain it from the 
 "Free, informed and unambiguous statement by which the holder agrees with the processing of their personal data for a certain purpose".
 
 Can be given by written manifestation or other ways that prove the users want to consent. Can be revoked or excluded anytime.
+
+### Punishment:
+
+There are many punishments when breaking this law, such as a 2% penalty on all the company's revenue.
+
+### Developing an app:
+
+So, to develop an app, abiding to the LGPD, there should:
+
+- Exist an analysis of the privacy impact (data inventory, data flowchart, risks);
+- Be kept in mind the Privacy and Security by Design concepts and principles;
+- Be defined an secure development cycle (security tests, DevSecOps, best practices);
+- Exist an Privacy Policy that the users are informed about;
+- Be consent, given by the user, to data and cookie collection.
