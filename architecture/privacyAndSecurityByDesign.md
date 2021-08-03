@@ -8,6 +8,18 @@ First of all, since around 2016, a lot of discussions about personal data privac
 
 There's been a lot of system attacks, including ransomware cases, and they're even worse in this pandemic context we're living (2020-2021). So there's even more focus to this topic than it already had, specially when we're talking about designing new components and systems. So we should, by design (not only on our implementation), protect the user's privacy.
 
+Even earlier, Ann Cavoukian thought about privacy, and created the metodology we're talking about (Privacy by Design). In 2009 she formalized seven great principles to follow, which were made popular when adopted by the International Assembly of Privacy Comissioners and Data Protection Authorities in 2010, and since when it became a reference regarding many discussions regarding the GDPR, in 2016.
+
+- 1: Proactive not Reactive; Preventative not Remedial;
+- 2: Privacy as the Default Setting;
+- 3: Privacy Embedded into Design;
+- 4: Full Functionality – Positive-Sum, not Zero-Sum;
+- 5: End-to-End Security – Full Lifecycle Protection;
+- 6: Visibility and Transparency – Keep it Open;
+- 7: Respect for User Privacy – Keep it User-Centric;
+
+They can be further explained by the very [International Association of Privacy Professionals (IAPP) - (open page 6 for a TL;DR)](https://iapp.org/media/pdf/resource_center/pbd_implement_7found_principles.pdf).
+
 ## LGPD:
 
 In our case (Brazil), all people, as well as all companies (public or private), are under the law's jurisdiction.
