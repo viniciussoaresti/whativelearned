@@ -1,6 +1,6 @@
 # DynamoDB:
 ## Introduction:
-It's a nosql DB that's fast. And that's about it. Yes, i've just copied and pasted the 'aws.md' text.
+It's a NoSQL DB that's fast. And that's about it. Yes, i've just copied and pasted the 'aws.md' text.
 ## Inside DynamoDB:
 It works with tables (e.g. people), items (e.g. person) and attributes (e.g. name).
 Each item has a primary key.
