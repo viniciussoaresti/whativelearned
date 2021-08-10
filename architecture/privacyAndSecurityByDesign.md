@@ -102,18 +102,24 @@ There's also the important Microsoft SSDL and OWASP principles:
 
 "The Microsoft Secure Software Development Lifecycle (SSDL) is a software development process designed and published by Microsoft back in January 2004. It was based on the spiral model of the SDLC. In the initial period of development, it was manly benefited the company to reduce the maintenance costs of the software, and improve the reliability", [Mr. Vic](https://faun.pub/microsofts-top-12-secure-software-development-lifecycle-ssdl-practices-for-software-developers-f54176667fb5).
 
-- Stage 1: Education and Awareness (Training).
-- Stage 2: Product requirement (security and privacy).
-- Stage 3: Define and follow Design requirements (Best practices, protocols, - tools, documents).
-- Stage 4: Define security features with cryptography standards.
-- Stage 5: Metrics, Criteria, and compliance reporting.
-- Stage 6: Product risk assessment (Define context, risk identification, risk - analysis, risk treatment).
-- Stage 7: Manage and understand the Security Risk of Using Third-Party - Components.
-- Stage 8: List of approved SDL tools.
-- Stage 9: Static Analysis Security Testing (SAST).
-- Stage 10: DynamicAnalysis Security Testing (DAST).
-- Stage 11: Penetration Testing.
+- Stage 1: Education and Awareness (Training);
+- Stage 2: Product requirement (security and privacy);
+- Stage 3: Define and follow Design requirements (Best practices, protocols, - tools, documents);
+- Stage 4: Define security features with cryptography standards;
+- Stage 5: Metrics, Criteria, and compliance reporting;
+- Stage 6: Product risk assessment (Define context, risk identification, risk - analysis, risk treatment);
+- Stage 7: Manage and understand the Security Risk of Using Third-Party - Components;
+- Stage 8: List of approved SDL tools;
+- Stage 9: Static Analysis Security Testing (SAST);
+- Stage 10: DynamicAnalysis Security Testing (DAST);
+- Stage 11: Penetration Testing;
 - Stage 12: Establish a Standard Incident Response Process (planning, Execution).
+
+#### Agile Method for SSDL:
+
+- Every-Sprint: critical SDL requirements, the application can't be deployed without their realization;
+- Bucket: needs to be done sometime between the application's lifecycle;
+- One-Time: just once.
 
 ### OWASP:
 
