@@ -38,7 +38,7 @@ Development and Operations teams, includes Crowdsourced Security Program;
 
 ### Why:
 
-Cloud Security Top 10:
+Cloud Security Top 10, [Sans](https://www.sans.org/):
 
 - 1: Insecure Use of Developer Credentials:
 Like a password stored on github.
@@ -56,35 +56,82 @@ Least privilege principles not followed.
 Not using methods do control network access beyond simple IP address-based rules.
 
 - 6: Inadequate Monitoring and Logging:
-
+Not considering a risk-based logging strategy.
 
 - 7: Lack of Inventory Management:
-
+Not considering strategies to enrich your environment with additional information around ownership, use-case and sensitivity.
 
 - 8: Domain Hijacking:
-
+Not reviewing the DNS and cloud configurations to prevent take-over situations.
 
 - 9: Lack of a Disaster Recovery Plan:
-
+Not having it is a real problem, as cloud environments do not automatically solve disaster recovery concerns.
 
 - 10: Manual Account Configuration:
-
+Doing things by hand limits your ability to scale and leverage cloud-native security tools and controls.
 
 ### How to:
 
-CALMS Framework:
+#### CALMS Framework:
 
 - Culture:
-
+Break down barriers between Development, Security and Operations through education and outreach;
 
 - Automation:
-
+Embed self-service automated security scanning and teting  in continuous delivery;
 
 - Lean:
-
+Value stream analysis of security and compliance processes to optimize flow;
 
 - Measurement:
-
+Use metrics to shape design and drive decisions;
 
 - Share:
+Share threats, risks and vulnerabilities, by adding them to engineering backlogs.
 
+#### Pre-commit security activities:
+- Threat Modeling/Attack Mapping:
+Like evil user stories.
+
+- Security & Privacy Stories:
+Like OWASP ASVS.
+
+- Manual and Peer Reviews:
+Like on the github pull request, review board.
+
+- Security Hooks:
+Like git-hound and git-secrets.
+
+- IDE Security Plugins:
+Like DevSkim and Puma Scan.
+
+- Secure Coding Standards:
+Like CERT Secure Coding Standards and OWASP Proactive Controls.
+
+#### Commit (Continuous Integration):
+- Static Analysis:
+Like Brakeman and ESLint.
+
+- Kubernetes Security:
+Like kube-audit and kube-hunter.
+
+- Infrastructure as Code Analysis:
+Like ansible-lint and Terrascan.
+
+- Container Hardening:
+Like Bane and CIS Benchmarks.
+
+- Dependency Management:
+Like Bundler-Audit and Github security alerts.
+
+- Security Unit Tests:
+Done for example on JUnit or Mocha.
+
+- Containet Security:
+Like Actuary, Docker Bench and Falco.
+
+#### Acceptance:
+
+#### Production:
+
+#### Operations:
