@@ -70,7 +70,7 @@ Not having it is a real problem, as cloud environments do not automatically solv
 - 10: Manual Account Configuration:
 Doing things by hand limits your ability to scale and leverage cloud-native security tools and controls.
 
-### How to:
+### How to (mostly tips on cloud development):
 
 #### CALMS Framework:
 
@@ -127,11 +127,80 @@ Like Bundler-Audit and Github security alerts.
 - Security Unit Tests:
 Done for example on JUnit or Mocha.
 
-- Containet Security:
+- Container Security:
 Like Actuary, Docker Bench and Falco.
 
 #### Acceptance:
+- Infrastructure as code:
+Like Ansible and Vagrant.
+
+- Security Testing:
+Like Arachni and Cloud Container Attack Tool.
+
+- Cloud Configuration Management:
+Like AWS CloudFormation and Azure Resource Manager.
+
+- Security Acceptance Testing:
+Like BDD-Security and Gauntlt.
+
+- Infrastructure Tests:
+Like CIS and Terratest.
+
+- Infrastructure Compliance Checks:
+Like InSpec and Open Policy Agent.
+
+- Vulnerability Management:
+Like Archerysec and JackHammer.
 
 #### Production:
+- Security Smoke Tests:
+Like ZAP Baseline Scan and Nmap.
+
+- Cloud Secrets Management:
+Like AWS KMS and Google Cloud KMS.
+
+- Configuration Safety Checks:
+Like AWS Config and Microsoft Azure Advisor.
+
+- Cloud Security Testing:
+Like CloudSploit and Nimbostratus.
+
+- Secrets Management:
+Like Ansible Vault and Chef Vault.
+
+- Serverless Protection:
+Like FunctionShield.
+
+- Server Hardening:
+Like CIS and dev-sec.io.
+
+- Host Intrusion Detection System:
+Like fail2ban and OSSEC.
 
 #### Operations:
+- Fault Injection:
+Like Chaos Monkey and pumba.
+
+- Cyber Simulations:
+Like Game day exercises and tabletop scenarios.
+
+- Blameless Postmortems:
+Like Etsy Morgue.
+
+- Cloud Monitoring:
+Like AWS Security Hub and Google Cloud Security Command Center.
+
+- Penetration Testing:
+Like Attack-driven defense and red team exercises.
+
+- Threat Intelligence:
+Like Diamond Model and STIX.
+
+- Cloud Compliance:
+Like CIS AWS/Azure Benchmark and Netflix Repokid.
+
+- Continuous Monitoring:
+Like alerta and MozDef.
+
+- Continuous Scanning:
+Like Cloud Custodian and Netflix Aadvark.
