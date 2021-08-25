@@ -204,3 +204,57 @@ Like alerta and MozDef.
 
 - Continuous Scanning:
 Like Cloud Custodian and Netflix Aadvark.
+
+
+### OWASP:
+
+It's basically an entity that serves to create and enforce security guidelines.
+
+#### OWASP Top 10 - 2017:
+
+Update based on [this](https://owasp.org/www-project-top-ten/2017/Top_10).
+
+- Injection:
+
+Inject code directly inside an application. Needs to be prevented by checking variables content and sql calls.
+
+- Broken Authentication and Session Management:
+
+Obtain information about login information. For example, intercepting JWT login data.
+
+- Cross-Site Scripting (XSS):
+
+
+
+- Broken Access Control:
+
+
+
+- Security Misconfiguration:
+
+
+
+- Sensitive Data Exposure:
+
+Stealing keys and executing man-in-the-middle attacks, for example.
+
+- Insufficient Attack Protection:
+
+
+
+- Cross-Site Request Forgery:
+
+
+
+- Using Components with Known Vulnerabilities:
+
+
+
+- Underprotected APIs:
+
+
+Dica de repo: install all a1 to a5
+
+
+https://github.com/globocom/secDevLabs
+https://portswigger.net/web-security
