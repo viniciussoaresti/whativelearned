@@ -234,10 +234,6 @@ Like Cloud Custodian and Netflix Aadvark.
 
 "Restrictions on what authenticated users are allowed to do are often not properly enforced. Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users’ accounts, view sensitive files, modify other users’ data, change access rights, etc."
 
-- Sensitive Data Exposure:
-
-Stealing keys and executing man-in-the-middle attacks, for example.
-
 - A6:2017-Security Misconfiguration:
 
 "Security misconfiguration is the most commonly seen issue. This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information. Not only must all operating systems, frameworks, libraries, and applications be securely configured, but they must be patched/upgraded in a timely fashion."
