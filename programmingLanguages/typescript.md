@@ -2,9 +2,11 @@
 
 ## Introduction:
 
-Putting it on js because... it basically is JS, only with some special features.
-
 "TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions", [Typescript Lang](https://www.typescriptlang.org/).
+
+The main goal of TypeScript is to add better type definitions and checking, and object-orientation to javascript, making code more readable and upgradable for developers, avoiding errors.
+
+### Code example:
 
 ```typescript
 type User = {
@@ -16,7 +18,7 @@ type User = {
 }
 
 function createWelcomeMessage(user: User){
-    return `Boas-vindas, ${user.name}. Cidade: ${user.address} - ${user.address.state}`;
+    return `Welcome, ${user.name}. City: ${user.address} - ${user.address.state}`;
 }
 
 const welcomeMessage = createWelcomeMessage({
@@ -25,7 +27,7 @@ const welcomeMessage = createWelcomeMessage({
         city: 'Rio do Sul',
         state: 'SC'
     }
-});
+}); //Go Rocketseat!
 ```
 
 ## Concepts:
