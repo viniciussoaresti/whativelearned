@@ -58,7 +58,7 @@ interface IAdmin extends IUser = {
 }
 ```
 
-And types are commonly used to specify interfaces 'merging':
+And types are commonly used to specify intersections between interfaces:
 
 ```typescript
 interface IAnimal = {
@@ -74,7 +74,7 @@ interface ICat extends IUser = {
 }
 
 type IDomesticAnimal =  IDog | ICat;
-// IDomesticAnimal =  IDog & ICat is also possible
+// IDomesticAnimal =  IDog & ICat definition is also possible
 ```
 
 You can read about an example of that [here](https://stackoverflow.com/questions/37688318/typescript-interface-possible-to-make-one-or-the-other-properties-required).
