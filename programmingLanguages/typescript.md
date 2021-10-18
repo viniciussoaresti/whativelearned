@@ -97,6 +97,23 @@ let someValue: unknown = "this is a string";
 let strLength: number = (<string>someValue).length;
 ```
 
+### (HTML) Web APIs and Interfaces:
+
+"When writing code for the Web, there are a large number of Web APIs available. Below is a list of all the APIs and interfaces (object types) that you may be able to use while developing your Web app or site. Web APIs are typically used with JavaScript, although this doesn't always have to be the case", [MDN](https://developer.mozilla.org/en-US/docs/Web/API).
+
+#### HTMLInputElement:
+
+"The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of <input> elements", [MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement).
+
+Practical example:
+```typescript
+const input = document.getElementById('input') as HTMLInputElement;
+
+input.addEventListener('input', (event) => {
+    console.log((event.currentTarget as HTMLInputElement).value);
+});
+```
+
 ## Tips:
 
 ### Question mark:
