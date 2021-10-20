@@ -21,5 +21,5 @@ To check the added remote, or to delete it:
 `git remote`
 `git remote rm (remote name)`
 
-### Correcting last commit message:
+### Correcting last commit message (you should avoid correcting other commit messages):
 `git commit --amend -m "New commit message."`
