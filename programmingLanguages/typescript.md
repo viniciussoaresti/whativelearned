@@ -146,3 +146,33 @@ function point(x?: number, y?: number){
         console.log('Value of Y coordinate not given');
 }
 ```
+
+### Handling read only and multiple keys manipulation with types using keyof:
+
+```typescript
+interface Dog {
+    name: string;
+    age: number;
+    favoritePark?: string;
+}
+
+type ReadOnlyDog = {
+    readonly [K in keyof Dog]: Dog[K];
+    /*We can remove the optional keys with the following syntax:
+    readonly [K in keyof Dog]-?: Dog[K];
+    And improve readability with the following one:
+    +readonly [K in keyof Dog]: Dog[K];*/
+}
+
+class Dog implements ReadOnlyDog {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+const myDog = new Dog('Doggy', 6);
+```
