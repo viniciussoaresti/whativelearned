@@ -34,6 +34,10 @@ const welcomeMessage = createWelcomeMessage({
 
 ## Concepts:
 
+### TSConfig:
+
+"The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project. The tsconfig.json file specifies the root files and the compiler options required to compile the project", [Typescript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+
 ### Interfaces vs Types:
 
 "The difference between types and interfaces in TypeScript used to be more clear, but with the latest versions of TypeScript, they’re becoming more similar.
@@ -128,6 +132,64 @@ function addValueToAllList<T>(array: any[], value: T) {
 addValueToAllList([1, 2, 3], 1);
 ```
 
+### Declaration References:
+
+From what I've understood until now, when we need to extend a library, for example, we can create an `typings.d.ts` file in which we can safely extend interfaces and declarations. I need to read more [here](https://www.typescriptlang.org/docs/handbook/declaration-files/library-structures.html). Example:
+
+```typescript
+/*Wrong example*/
+//index.ts
+import $ from 'jquery';
+
+$.fn.extend({
+    newFunction() {
+        console.log('hi');
+    }
+});
+
+$('input'). //cannot identify the newFunction for usage
+
+/*Right example*/
+//typings.d.ts
+interface JQuery {
+    newFunction(): void;
+}
+
+//index.ts
+import $ from 'jquery';
+
+$.fn.extend({
+    newFunction() {
+        console.log('hi');
+    }
+});
+
+$('input').newFunction(); //runs smoothly, provided you run 'npm i --save-dev @types/jquery'
+```
+
+### Utility Types:
+
+"TypeScript provides several utility types to facilitate common type transformations. These utilities are available globally", [Typescript](https://www.typescriptlang.org/docs/handbook/utility-types.html).
+
+#### Omit:
+
+```typescript
+interface Person {
+    name: string;
+    age: number;
+    boring: boolean;
+}
+
+interface Cearense extends Omit<Person, 'boring'> { //as people born in Ceará are not boring, they're great people
+
+}
+
+const myCearense: Cearense = {
+    name: 'Someone',
+    age: 36,
+}
+```
+
 ## Tips:
 
 ### Question mark:
@@ -176,3 +238,18 @@ class Dog implements ReadOnlyDog {
 
 const myDog = new Dog('Doggy', 6);
 ```
+
+### Generating tsconfig file:
+
+As described [here](https://stackoverflow.com/questions/36916989/how-can-i-generate-a-tsconfig-json-file):
+
+Generating the file:
+`$ tsc --init`
+
+If it doesn't work, try to run in your console the following to check the version:
+`$ tsc -v`
+
+If the version is older than 1.6 you will need to update:
+`$ npm install -g typescript`
+
+Remember that you need to install node.js to use npm.
