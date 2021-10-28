@@ -120,40 +120,47 @@ export default function SomeComponent(props){
 }
 ```
 
-### State:
+### State and Effect Hook:
 
 React uses the useState method for dynamic variable changes, for example, in contrast with Angular, that uses the famous two-way data bind concept. Adding this with the previous example, we've got:
 
 ```javascript
-function App(){
-    return(
-        <>
-        <SomeComponent>prop1</>
-        <SomeComponent>prop2</>
-        <SomeComponent>prop3</>
-        <SomeComponent>prop4</>
-        </>
-    );
-}
+//index.js
+import React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 
 ```javascript
-import {useState} from 'react';
+//App.js
+import React, { useState } from 'react';
 
-export default function SomeComponent(props){
-    const [counter, setCounter] = useState(1);
-
-    function increment(){
-        setCounter(counter + 1);
-    }
-
-    return(
-        <>
-        <span>{counter}</span>
-        <someTag>{props.children}</someTag>
-        </>
+export default function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+  if (count % 2 === 0) {
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+          Click me (we have an even number)
+        </button>
+      </div>
     );
+  } else {
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+          Click me (we have an odd number)
+        </button>
+      </div>
+    );
+  }
 }
 ```
 
