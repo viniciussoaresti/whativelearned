@@ -1,6 +1,6 @@
 # React:
 
-Open-source front-end javascript library, developed initially by Facebook, with focus on dynamic components.
+Open-source front-end javascript library, developed initially by Facebook, with focus on dynamic components. I've put it on frameworks because with its ecosystem integration, and many libraries being almost 'mandatory' on an actual project, it basically turns it into a framework.
 
 ## Concepts:
 
