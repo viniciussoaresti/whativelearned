@@ -2,6 +2,30 @@
 
 Open-source front-end javascript library, developed initially by Facebook, with focus on dynamic components. I've put it on frameworks because with its ecosystem integration, and many libraries being almost 'mandatory' on an actual project, it basically turns it into a framework.
 
+## Starting:
+
+There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
+
+Create-react-app:
+
+```npx create-react-app app-name```
+
+And then, for starting your app:
+
+```npm start```
+
+If you want to create a react app with next (note that the project will have some different configurations, including the index.html not necessarily existing, and yarn usage by default):
+
+```npx create-next-app podcastr```
+
+Adding typescript with yarn:
+
+```yarn add typescript @types/react @types/node -D```
+
+Adding SASS with yarn:
+
+```yarn add sass```
+
 ## Concepts:
 
 ### Introduction:
@@ -52,6 +76,14 @@ export default App;
 ```
 
 There, we can see that the ReactDOM (React's Document Object Model) renders the component App (components are functions that return html, as we can see), on `Index.js`, inside the 'root' html element. Thus, the `App.js` content, that is, `<h1>Hello World</h1>`, renders through this structure.
+
+### JSX:
+
+"JSX is a syntax extension to JavaScript. React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages", [JSX](https://reactjs.org/docs/introducing-jsx.html).
+
+```jsx
+const element = <h1>Hello, world!</h1>;
+```
 
 ### Fragment:
 
@@ -269,30 +301,6 @@ export function Component (ComponentProps: ComponentProps){
   //doSomething
 }
 ```
-
-## Starting:
-
-There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
-
-When you install node, it comes with npx, the package executor, so you can simply use:
-
-```npx create-react-app podcastr```
-
-And then, for starting your app, after installing yarn:
-
-```yarn start```
-
-If you want to create a react app with next (note that the project will have some different configurations, including the index.html not necessarily existing):
-
-```npx create-next-app podcastr```
-
-Adding typescript:
-
-```yarn add typescript @types/react @types/node -D```
-
-Adding SASS:
-
-```yarn add sass```
 
 ## Tips:
 
