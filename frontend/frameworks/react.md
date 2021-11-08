@@ -282,7 +282,7 @@ And then, for starting your app, after installing yarn:
 
 ```yarn start```
 
-If you want to create a react app with next:
+If you want to create a react app with next (note that the project will have some different configurations, including the index.html not necessarily existing):
 
 ```npx create-next-app podcastr```
 
@@ -312,7 +312,7 @@ A static-site is basically a render that was cached, with a predefined time, to 
 
 ### Tips:
 
-- _document.tsx:
+#### _document.tsx:
 
 In this file you can define the base configuration for your app, that is not reloaded every time, different from a situation in which you've had put it on the _app.tsx file. For example:
 
@@ -337,7 +337,7 @@ export default class MyDocument extends Document {
 }
 ```
 
-- css/scss modules:
+#### css/scss modules:
 
 When you define a css/scss module with next, for example: `styles.module.scss`, this specific css definition only applies to the specific component you're working on. That is, if you have other css classes named the same through your application, there's no problem.
 
@@ -370,7 +370,7 @@ export function Header() {
 }
 ```
 
-- Consuming API's:
+#### Consuming API's:
 
 There's three different ways to consume an API, using each "methodology": SPA, SSR and SSG.
 
@@ -451,7 +451,7 @@ In this way, the fetch happens on the defined
 revalidate specified time (on seconds).*/
 ```
 
-- Image:
+#### Image:
 
 Next's Image, doing all the magic:
 
@@ -459,7 +459,7 @@ Next's Image, doing all the magic:
 <Image width={192} height={192} src={episode.thumbnail} alt={episode.title} />
 ```
 
-- Routing:
+#### Routing:
 
 The rest of the url, that is, the part that comes after the domain extension, is called slug. To avoid making the common query parameters routing, we're able to specify 'paths' on our application, with next. 
 
@@ -511,7 +511,7 @@ Instead of <a href={`/episodes/${episode.id}`}>{episode.title}</a>:
 </Link>
 ```
 
-- Incremental static regeneration:
+#### Incremental static regeneration:
 
 Incremental static regeneration is, as Diego Fernandes' said (NLW #5), a 'dynamic static pages' technique that allow us to control how new static pages are generated with dynamic content.
 
@@ -589,7 +589,7 @@ export default function Episode({ episode }: EpisodeProps) {
 }
 ```
 
-- Using dynamic page titles:
+#### Using dynamic page titles:
 
 "We expose a built-in component for appending elements to the head of the page", [Next.js](https://nextjs.org/docs/api-reference/next/head).
 
