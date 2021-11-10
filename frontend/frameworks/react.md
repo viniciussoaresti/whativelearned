@@ -85,6 +85,12 @@ There, we can see that the ReactDOM (React's Document Object Model) renders the 
 const element = <h1>Hello, world!</h1>;
 ```
 
+### React DOM:
+
+"The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+
+This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app", [React DOM](https://reactjs.org/docs/faq-internals.html).
+
 ### Fragment:
 
 Fragments are a fun concept, on which a 'blank' html tag is created inside a component, to encapsulate other components/html tags (components/tags cannot be inserted multiple times if not inside another element, such as a div).
