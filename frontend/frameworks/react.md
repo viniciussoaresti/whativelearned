@@ -79,7 +79,7 @@ There, we can see that the ReactDOM (React's Document Object Model) renders the 
 
 ### JSX:
 
-"JSX is a syntax extension to JavaScript. React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages", [JSX](https://reactjs.org/docs/introducing-jsx.html).
+"JSX is a syntax extension to JavaScript. React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages", [React](https://reactjs.org/docs/introducing-jsx.html).
 
 ```jsx
 const element = <h1>Hello, world!</h1>;
@@ -89,22 +89,41 @@ const element = <h1>Hello, world!</h1>;
 
 "The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
 
-This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app", [React DOM](https://reactjs.org/docs/faq-internals.html).
+This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app", [React](https://reactjs.org/docs/faq-internals.html).
 
-### Fragment:
+### Components (Function and Class Components):
 
-Fragments are a fun concept, on which a 'blank' html tag is created inside a component, to encapsulate other components/html tags (components/tags cannot be inserted multiple times if not inside another element, such as a div).
+"Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-```javascript
-function App(){
-    return(
-        <>
-        <SomeComponent />
-        <SomeComponent />
-        <SomeComponent />
-        <SomeComponent />
-        </>
-    );
+The simplest way to define a component is to write a JavaScript function:
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.
+
+You can also use an ES6 class to define a component:
+
+```jsx
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+The above two components are equivalent from React’s point of view", [React](https://reactjs.org/docs/components-and-props.html).
+
+They can also compose, and be rendered as many times as we want, but React puts as a good practice to have a component be as small as we possibly can, so they become more reusable.
+
+Also, react recommends that all React components must act like pure functions with respect to their props. Example of an impure function (changes its input):
+
+```jsx
+function withdraw(account, amount) {
+  account.total -= amount;
 }
 ```
 
@@ -157,6 +176,27 @@ export default function SomeComponent(props){
     );
 }
 ```
+
+### Fragment:
+
+Fragments are a fun concept, on which a 'blank' html tag is created inside a component, to encapsulate other components/html tags (components/tags cannot be inserted multiple times if not inside another element, such as a div).
+
+```javascript
+function App(){
+    return(
+        <>
+        <SomeComponent />
+        <SomeComponent />
+        <SomeComponent />
+        <SomeComponent />
+        </>
+    );
+}
+```
+
+### State and Lifecycle:
+
+
 
 ### State and Effect Hook:
 
