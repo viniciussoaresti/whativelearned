@@ -651,6 +651,12 @@ console.log(adventurer.someNonExistentMethod?.());
 // expected output: undefined
 ```
 
+- Interval methods: 
+
+I've know until now about the setTimeout function, but the setInterval function also exists. 
+
+"The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds). The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.", [W3schools](https://www.w3schools.com/jsref/met_win_setinterval.asp).
+
 ## Object-Oriented JS:
 
 Every variable in JS has a 'hidden' inheritance, based on prototypes (variables that store the object's definitions). For example, a:
