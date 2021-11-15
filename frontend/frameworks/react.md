@@ -472,7 +472,17 @@ export function Component (ComponentProps: ComponentProps){
 
 ## Tips:
 
-Lorem ipsum dolor sit amet, consectetur adipis.
+### Nice libraries to keep in mind:
+
+- [React Router](https://reactrouter.com/) - React Router is a fully-featured client and server-side routing library for React, and it runs anywhere React runs, on the web, on the server with node.js, and on React Native;
+- [Redux](https://redux.js.org/) - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.;
+- [Material UI](https://mui.com/) - MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.;
+- [Ant-Design](https://ant.design/docs/react/introduce) - A design system for enterprise-level products. Create an efficient and enjoyable work experience.;
+- [Storybook](https://storybook.js.org/) - Storybook is an open source tool for building UI components and pages in isolation. It streamlines UI development, testing, and documentation.;
+- [Gatsby](https://www.gatsbyjs.com/) - Performance. SEO. Security. Integrations. Accessibility. We’ve got it covered for you. Gatsby makes the hardest parts of building an amazing digital experience simple, leaving you more time focusing on your business.;
+- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.;
+- [React i18Next](https://react.i18next.com/) - react-i18next is a powerful internationalization framework for React / React Native which is based on i18next.;
+- [Styled Components](https://styled-components.com/) - Use the best bits of ES6 and CSS to style your apps without stress 💅🏾;
 
 ## Next.js
 
