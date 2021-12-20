@@ -2,6 +2,35 @@
 
 "The World Wide Web, commonly known as the Web, is an information system where documents and other web resources are identified by Uniform Resource Locators (URL's), which may be interlinked by hyperlinks, and are accessible over the Internet", [Wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web).
 
+## Web Concepts:
+
+### HTTP:
+
+"Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a stateless protocol, meaning that the server does not keep any data (state) between two requests", [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP).
+
+### URL:
+
+"Uniform Resource Locator (URL) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.
+
+In the context of HTTP, URLs are called "Web address" or "link". Your browser displays URLs in its address bar, for example: https://developer.mozilla.org Some browsers display only the part of a URL after the "//", that is, the Domain name.
+
+URLs can also be used for file transfer (FTP) , emails (SMTP), and other applications", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/URL).
+
+### TCP:
+
+"TCP (Transmission Control Protocol) is a Transport Layer host-to-host protocol for connection-oriented communication between two computers on an IP network. TCP uses virtual ports to create a virtual end-to-end connection that can reuse the physical connections between two computers. TCP encapsulates higher level protocol data such as HTTP and, SMTP (email)", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)).
+
+### "IP":
+
+"An IP address is a number assigned to every device connected to a network that uses the Internet protocol.
+
+"IP address" typically still refers to 32-bit IPv4 addresses until IPv6 is deployed more broadly", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/IP_Address).
+
+### "DNS":
+
+"DNS (Domain Name System) is a hierarchical and decentralized naming system for Internet connected resources. DNS maintains a list of domain names along with the resources, such as IP addresses, that are associated with them.
+
+The most prominent function of DNS is the translation of human-friendly domain names (such as mozilla.org) to a numeric IP address (such as 151.106.5.172); this process of mapping a domain name to the appropriate IP address is known as a DNS lookup. By contrast, a reverse DNS lookup (rDNS) is used to determine the domain name associated with an IP address", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/DNS).
 
 ## Web Services:
 
