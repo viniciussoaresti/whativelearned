@@ -8,7 +8,9 @@
 
 C# is a programming language, whereas .NET is a framework for building applications on Windows. For example, F# can be used with .NET.
 
-.NET basically consists of two components, the Common Language Runtime (CLR) and the Class Library.
+.NET basically consists of two components, the Common Language Runtime (CLR) and the Class Library (all classes available through .NET).
+
+The .NET Core framework is an implementation of the .NET framework designed to be cross-platform, and it's more used in server applications, as the GUI provided in base .NET projects, and some specific functionalities (like WMI) are not available.
 
 ### CLR:
 
@@ -26,7 +28,7 @@ Namespaces are containers of related classes.
 
 Assemblies are containers of related namespaces. Physically, a file on the disk, as an DLL (Dynamically Linked Library) or executable file. So, an complete application can consist of one or many assemblies bundled together, depending on how the app's structured.
 
-## Hello World:
+### Hello World:
 
 ```C#
 using System;
@@ -44,33 +46,33 @@ Here we see the namespace, where we're able to access all classes within it.
 
 The 'using' keyword, as you could infer, is basically an import of another namespace, so you're able to use another namespace's classes.
 
-## Project Layout:
+### Project Layout:
 
 Under a "Solution", there will exist one or many more projects, each with the following layout:
 
-### Properties:
+#### Properties:
 
 A folder that has the `AssemblyInfo.cs` file. This is the info that will be used to mount the assembly that will be produced as a result of the compilation, like version, name, etc.
 
-### References:
+#### References:
 
 Any assemblies that are referenced in the project, on an basic example, part of the .NET framework.
 
-### App.config:
+#### App.config:
 
 An XML file that contains configuration data for the project, as the .NET framework version, connection to the database, etc.
 
-### Program.cs:
+#### Program.cs:
 
 The program/code itself.
 
-## Variables and Types:
+### Variables and Types:
 
 ![Primitives](./cSharpAssets/primitives.png?raw=true)
 
 (Programming with Mosh)
 
-### Type conversion:
+#### Type conversion:
 
 A float can receive a double as a parameter:
 
@@ -101,6 +103,10 @@ int i = Convert.ToInt32(s);
 //or
 int i = int.Parse(s);
 ```
+
+## Nuget:
+
+"NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages. The NuGet Gallery is the central package repository used by all package authors and consumers", [Nuget](https://www.nuget.org/).
 
 ## Tips:
 
