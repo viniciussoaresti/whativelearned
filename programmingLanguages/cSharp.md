@@ -18,7 +18,7 @@ First, C# borrows from Java, and translates the code to Intermediate Language Co
 
 ### Classes:
 
-Classes are containers that hold data (attributes) and methods (functions).
+Classes are containers that hold data (attributes) and methods (functions). All that is contained in a class is considered a "member".
 
 ### Namespaces:
 
@@ -28,7 +28,7 @@ Namespaces are containers of related classes.
 
 Assemblies are containers of related namespaces. Physically, a file on the disk, as an DLL (Dynamically Linked Library) or executable file. So, an complete application can consist of one or many assemblies bundled together, depending on how the app's structured.
 
-### Hello World:
+### Hello World and Importing Classes from Namespaces:
 
 ```C#
 using System;
@@ -44,7 +44,11 @@ namespace HelloWorld {
 
 Here we see the namespace, where we're able to access all classes within it.
 
-The 'using' keyword, as you could infer, is basically an import of another namespace, so you're able to use another namespace's classes.
+The 'using' keyword, as you could infer, is basically an import of another namespace, so you're able to use another namespace's classes. We can use the imported classes by just calling them, or by using the complete notation, such as:
+
+```C#
+System.Console.WriteLine("Hello World!");
+```
 
 ### Project Layout:
 
@@ -154,6 +158,22 @@ class Program
 }
 ```
 
+Or you can use the specific way of declaring it when needed:
+
+```C#
+public int Salary  
+{  
+    get  
+    {  
+        return _salary;  
+    }  
+    set  
+    {  
+        _salary = value;  
+    }  
+} 
+```
+
 ### Tests
 
 With Visual Studio, you can automatically create unit tests right-clicking the class you'd like to test. So we'll get something like this:
@@ -169,3 +189,7 @@ var result = testClass.Soma(a, b);
 Assert.AreEqual(a+b, result);
 }
 ```
+
+### Visual Studio shortcuts:
+
+- Prop: write 'prop' and two-tab it to make a new property fast.
