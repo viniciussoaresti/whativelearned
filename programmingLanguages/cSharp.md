@@ -147,3 +147,19 @@ class Program
     }
 }
 ```
+
+### Tests
+
+With Visual Studio, you can automatically create unit tests right-clicking the class you'd like to test. So we'll get something like this:
+
+```c#
+[TestMethod()]
+public void SomaTest()
+{
+var a = 1;
+var b = 1;
+var testClass = new Class1();
+var result = testClass.Soma(a, b);
+Assert.AreEqual(a+b, result);
+}
+```
