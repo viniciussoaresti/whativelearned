@@ -80,38 +80,6 @@ The program/code itself.
 
 (Programming with Mosh)
 
-#### Type conversion:
-
-A float can receive a double as a parameter:
-
-```c#
-int i = 1;
-float f = i;
-```
-
-But an int can't be cast to a byte automatically:
-
-```c#
-int i = 1;
-byte b = i; //won't compile
-```
-
-Just manually:
-
-```c#
-int i = 1;
-byte b = (byte)i;
-```
-
-For casting a string to a number, for example:
-
-```c#
-string s = "1";
-int i = Convert.ToInt32(s);
-//or
-int i = int.Parse(s);
-```
-
 ### Nuget:
 
 "NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages. The NuGet Gallery is the central package repository used by all package authors and consumers", [Nuget](https://www.nuget.org/).
@@ -192,6 +160,37 @@ var testClass = new Class1();
 var result = testClass.Soma(a, b);
 Assert.AreEqual(a+b, result);
 }
+```
+### Type conversion:
+
+A float can receive a double as a parameter:
+
+```c#
+int i = 1;
+float f = i;
+```
+
+But an int can't be cast to a byte automatically:
+
+```c#
+int i = 1;
+byte b = i; //won't compile
+```
+
+Just manually:
+
+```c#
+int i = 1;
+byte b = (byte)i;
+```
+
+For casting a string to a number, for example:
+
+```c#
+string s = "1";
+int i = Convert.ToInt32(s);
+//or
+int i = int.Parse(s);
 ```
 
 ### Visual Studio shortcuts:
