@@ -10,11 +10,15 @@ C# is a programming language, whereas .NET is a framework for building applicati
 
 .NET basically consists of two components, the Common Language Runtime (CLR) and the Class Library (all classes available through .NET).
 
-The .NET Core framework is an implementation of the .NET framework designed to be cross-platform, and it's more used in server applications, as the GUI provided in base .NET projects, and some specific functionalities (like WMI) are not available.
+For the CLR, C# is similar to Java, and translates the code to the Common Intermediate Language (CIL), more or less what in Java is called ByteCode. Then, compared to Java where the ByteCode is interpreted by the JVM, the IL Code is interpreted by the CLR. The latter process utilizes a just-in-time compiler (JIT) to turn it into machine code.
 
-### CLR:
+There's a lot of .NET terms to get to know:
 
-First, C# borrows from Java, and translates the code to Intermediate Language Code, more or less what in Java is called ByteCode. Then, compared to Java where the ByteCode is interpreted by the JVM, the IL Code is interpreted by the CLR. The latter process is called Just-in-time Compilation (JIT).
+First, **.NET** (no add-ons), is an open-source, cross-platform framework. It came to life after .NET Core.
+
+The .NET **Core** framework is an implementation of the .NET framework designed to be cross-platform, and it's more used in server applications, as the GUI provided in base .NET projects, and some specific functionalities (like WMI) are not available.
+
+There's the .NET **Framework**, which is a framework for building applications specifically on Windows, providing access to features available only on this OS, and **Xamarin/Mono**, that is for building applications across different mobile OS's.
 
 ### Classes:
 
