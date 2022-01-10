@@ -2,10 +2,10 @@
 
 "C# is a modern, object-oriented, component-oriented and type-safe programming language, and it provides language constructs to directly support these concepts, making C# a natural language in which to create and use software components. Since its origin, it has added features to support new workloads and emerging software design practices, enabling developers to build many types of secure and robust applications that run in the .NET ecosystem. C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers", [Microsoft on C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/).
 
-## Contents:
+# Contents:
 
 - [C](#c)
-  - [Contents:](#contents)
+- [Contents:](#contents)
   - [Concepts:](#concepts)
     - [C# and .NET:](#c-and-net)
     - [Classes:](#classes)
