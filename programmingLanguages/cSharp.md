@@ -21,6 +21,7 @@
     - [Nuget:](#nuget)
     - [Structs:](#structs)
     - [Inheritance in C#:](#inheritance-in-c)
+    - [Overriding methods in C#?](#overriding-methods-in-c)
   - [Tips:](#tips)
     - [Getters and setters:](#getters-and-setters)
     - [Tests](#tests)
@@ -125,6 +126,21 @@ namespace namespace
 {
     public class Class2 : Class1{ //Class 2 is child of Class 1
         //Other Properties
+    }
+}
+```
+
+### Overriding methods in C#?
+
+To use methods overriding in C#, we use the 'override' notation:
+
+```c#
+namespace namespace
+{
+    public class Class2 : Class1{ //Class 2 is child of Class 1
+        public override MethodName(){
+            Console.WriteLine("Override!");
+        }
     }
 }
 ```
