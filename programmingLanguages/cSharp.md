@@ -20,6 +20,7 @@
     - [Variables and Types:](#variables-and-types)
     - [Nuget:](#nuget)
     - [Structs:](#structs)
+    - [Inheritance in C#:](#inheritance-in-c)
   - [Tips:](#tips)
     - [Getters and setters:](#getters-and-setters)
     - [Tests](#tests)
@@ -114,6 +115,19 @@ The program/code itself.
 "Structs are similar to classes in that they represent data structures that can contain data members and function members. However, unlike classes, structs are value types and do not require heap allocation. A variable of a struct type directly contains the data of the struct, whereas a variable of a class type contains a reference to the data, the latter known as an object.
 
 Structs are particularly useful for small data structures that have value semantics. Complex numbers, points in a coordinate system, or key-value pairs in a dictionary are all good examples of structs", [C# Reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/structs).
+
+### Inheritance in C#:
+
+To use inheritance in C#, we use the ':' notation:
+
+```c#
+namespace namespace
+{
+    public class Class2 : Class1{ //Class 2 is child of Class 1
+        //Other Properties
+    }
+}
+```
 
 ## Tips:
 

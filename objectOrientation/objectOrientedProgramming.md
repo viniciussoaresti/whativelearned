@@ -10,6 +10,7 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
     - [1.1. Abstraction:](#11-abstraction)
     - [1.2. Encapsulation:](#12-encapsulation)
     - [1.3. Inheritance:](#13-inheritance)
+    - [1.4. Polymorphism:](#14-polymorphism)
 
 ## 1. Concepts:
 
@@ -24,3 +25,7 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
 ### 1.3. Inheritance:
 
 "Inheritance is one of the core concepts of object-oriented programming (OOP) languages. It is a mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods. You can use it to declare different kinds of exceptions, add custom logic to existing frameworks, and even map your domain model to a database", [Stackify](https://stackify.com/oop-concept-inheritance/).
+
+### 1.4. Polymorphism:
+
+"Polymorphism is one of the core concepts of object-oriented programming (OOP) and describes situations in which something occurs in several different forms. In computer science, it describes the concept that you can access objects of different types through the same interface. Each type can provide its own independent implementation of this interface", [Stackify](https://stackify.com/oop-concept-inheritance/).
