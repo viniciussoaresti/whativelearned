@@ -84,6 +84,12 @@ The program/code itself.
 
 "NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages. The NuGet Gallery is the central package repository used by all package authors and consumers", [Nuget](https://www.nuget.org/).
 
+### Structs:
+
+"Structs are similar to classes in that they represent data structures that can contain data members and function members. However, unlike classes, structs are value types and do not require heap allocation. A variable of a struct type directly contains the data of the struct, whereas a variable of a class type contains a reference to the data, the latter known as an object.
+
+Structs are particularly useful for small data structures that have value semantics. Complex numbers, points in a coordinate system, or key-value pairs in a dictionary are all good examples of structs", [C# Reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/structs).
+
 ## Tips:
 
 ### Getters and setters:
