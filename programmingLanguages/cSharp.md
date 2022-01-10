@@ -2,6 +2,31 @@
 
 "C# is a modern, object-oriented, component-oriented and type-safe programming language, and it provides language constructs to directly support these concepts, making C# a natural language in which to create and use software components. Since its origin, it has added features to support new workloads and emerging software design practices, enabling developers to build many types of secure and robust applications that run in the .NET ecosystem. C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers", [Microsoft on C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/).
 
+## Contents:
+
+- [C](#c)
+  - [Contents:](#contents)
+  - [Concepts:](#concepts)
+    - [C# and .NET:](#c-and-net)
+    - [Classes:](#classes)
+    - [Namespaces:](#namespaces)
+    - [Assembly:](#assembly)
+    - [Hello World and Importing Classes from Namespaces:](#hello-world-and-importing-classes-from-namespaces)
+    - [Project Layout:](#project-layout)
+      - [Properties:](#properties)
+      - [References:](#references)
+      - [App.config:](#appconfig)
+      - [Program.cs:](#programcs)
+    - [Variables and Types:](#variables-and-types)
+    - [Nuget:](#nuget)
+    - [Structs:](#structs)
+  - [Tips:](#tips)
+    - [Getters and setters:](#getters-and-setters)
+    - [Tests](#tests)
+    - [Type conversion:](#type-conversion)
+    - [Visual Studio shortcuts:](#visual-studio-shortcuts)
+      - [Prop:](#prop)
+
 ## Concepts:
 
 ### C# and .NET:
@@ -201,4 +226,6 @@ int i = int.Parse(s);
 
 ### Visual Studio shortcuts:
 
-- Prop: write 'prop' and two-tab it to make a new property fast.
+#### Prop:
+
+Write 'prop' and two-tab it to make a new property fast.
