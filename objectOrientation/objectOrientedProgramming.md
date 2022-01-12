@@ -13,6 +13,7 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
     - [1.4. Polymorphism:](#14-polymorphism)
       - [1.4.1. Overload or Early Binding:](#141-overload-or-early-binding)
       - [1.4.2. Override or Late Binding:](#142-override-or-late-binding)
+    - [1.5 Abstract Classes:](#15-abstract-classes)
 
 ## 1. Concepts:
 
@@ -39,3 +40,30 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
 #### 1.4.2. Override or Late Binding:
 
 "Overriding a method simply means that a subclass redefines its inherited method(s) when it needs to change or extend the behavior of that method", [Medium](https://medium.com/@atandaoluchiaminat/overload-vs-override-in-object-oriented-programming-oop-a38ca0ccaf40).
+
+### 1.5 Abstract Classes:
+
+Abstract classes are templates of a class, that can't be instantiated. They can represent a general concept, that serves as a model for other classes to inherit. For example:
+
+```java
+abstract class Shape{  
+  abstract void draw();  
+}  
+//In a real scenario, implementation is provided by others i.e. unknown by end user  
+class Rectangle extends Shape{  
+  void draw(){System.out.println("drawing rectangle");}  
+} 
+
+class Circle1 extends Shape{  
+  void draw(){System.out.println("drawing circle");}  
+}  
+
+//In a real scenario, the method is called by the programmer or user  
+class TestAbstraction1{  
+  public static void main(String args[]){  
+    Shape s = new Circle1();//In a real scenario, object is provided through method, e.g., getShape() method  
+    s.draw();  
+  }  
+}  
+//Source: https://www.javatpoint.com/abstract-class-in-java (adapted)
+```
