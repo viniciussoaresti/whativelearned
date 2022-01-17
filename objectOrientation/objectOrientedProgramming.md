@@ -13,7 +13,8 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
     - [1.4. Polymorphism:](#14-polymorphism)
       - [1.4.1. Overload or Early Binding:](#141-overload-or-early-binding)
       - [1.4.2. Override or Late Binding:](#142-override-or-late-binding)
-    - [1.5 Abstract Classes:](#15-abstract-classes)
+      - [1.4.3 Abstract Classes:](#143-abstract-classes)
+      - [1.4.4 Interfaces:](#144-interfaces)
 
 ## 1. Concepts:
 
@@ -41,7 +42,7 @@ The goal for OOP is having a good abstraction level, encapsulation, inheritance 
 
 "Overriding a method simply means that a subclass redefines its inherited method(s) when it needs to change or extend the behavior of that method", [Medium](https://medium.com/@atandaoluchiaminat/overload-vs-override-in-object-oriented-programming-oop-a38ca0ccaf40).
 
-### 1.5 Abstract Classes:
+#### 1.4.3 Abstract Classes:
 
 Abstract classes are templates of a class, that can't be instantiated. They can represent a general concept, that serves as a model for other classes to inherit. For example:
 
@@ -67,3 +68,6 @@ class TestAbstraction1{
 }  
 //Source: https://www.javatpoint.com/abstract-class-in-java (adapted)
 ```
+
+#### 1.4.4 Interfaces:
+
