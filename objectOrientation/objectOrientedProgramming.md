@@ -71,3 +71,7 @@ class TestAbstraction1{
 
 #### 1.4.4 Interfaces:
 
+"To sum it up:
+When you write an interface, you're basically saying: 'I need something that...'", [Yehuda Shapira](https://stackoverflow.com/questions/2866987/what-is-the-definition-of-interface-in-object-oriented-programming).
+
+We can define just attributes/method signatures, or we can have a default implementation.
