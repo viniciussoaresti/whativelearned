@@ -21,7 +21,8 @@
     - [Nuget:](#nuget)
     - [Structs:](#structs)
     - [Inheritance in C#:](#inheritance-in-c)
-    - [Overriding methods in C#?](#overriding-methods-in-c)
+    - [Overriding methods in C#:](#overriding-methods-in-c)
+    - [Sealed classes in C#:](#sealed-classes-in-c)
   - [Tips:](#tips)
     - [Getters and setters:](#getters-and-setters)
     - [Tests](#tests)
@@ -130,7 +131,7 @@ namespace namespace
 }
 ```
 
-### Overriding methods in C#?
+### Overriding methods in C#:
 
 To use methods overriding in C#, we use the 'override' notation:
 
@@ -142,6 +143,40 @@ namespace namespace
             Console.WriteLine("Override!");
         }
     }
+}
+```
+
+### Sealed classes in C#:
+
+"When applied to a class, the sealed modifier prevents other classes from inheriting from it.
+
+You can also use the sealed modifier on a method or property that overrides a virtual method or property in a base class. This enables you to allow classes to derive from your class and prevent them from overriding specific virtual methods or properties", [C# Reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed). Example:
+
+```c#
+class A {}
+sealed class B : A {} //no other class can inherit B
+
+//and
+
+class X
+{
+    protected virtual void F() { Console.WriteLine("X.F"); }
+    protected virtual void F2() { Console.WriteLine("X.F2"); }
+}
+
+class Y : X
+{
+    sealed protected override void F() { Console.WriteLine("Y.F"); }
+    protected override void F2() { Console.WriteLine("Y.F2"); }
+}
+
+class Z : Y
+{
+    // Attempting to override F causes compiler error CS0239.
+    // protected override void F() { Console.WriteLine("Z.F"); }
+
+    // Overriding F2 is allowed.
+    protected override void F2() { Console.WriteLine("Z.F2"); }
 }
 ```
 
