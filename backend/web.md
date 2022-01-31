@@ -9,8 +9,9 @@
     - [HTTP:](#http)
     - [URL:](#url)
     - [TCP:](#tcp)
-    - ["IP":](#ip)
-    - ["DNS":](#dns)
+    - [IP:](#ip)
+    - [DNS:](#dns)
+    - [Proxy:](#proxy)
   - [Web Services:](#web-services)
     - [Concepts:](#concepts)
       - [XML:](#xml)
@@ -39,19 +40,23 @@ URLs can also be used for file transfer (FTP) , emails (SMTP), and other applica
 
 ### TCP:
 
-"TCP (Transmission Control Protocol) is a Transport Layer host-to-host protocol for connection-oriented communication between two computers on an IP network. TCP uses virtual ports to create a virtual end-to-end connection that can reuse the physical connections between two computers. TCP encapsulates higher level protocol data such as HTTP and, SMTP (email)", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)).
+"TCP (Transmission Control Protocol) is an important network protocol that lets two hosts connect and exchange data streams.  TCP guarantees the delivery of data and packets in the same order as they were sent. TCP's role is to ensure the packets are reliably delivered, error free.  TCP has concurrence control, which means the initial requests start small, increasing in size to the levels of bandwidth the computers, servers, and network can support", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)).
 
-### "IP":
+### IP:
 
-"An IP address is a number assigned to every device connected to a network that uses the Internet protocol.
+"The Internet Protocol (IP) is a protocol, or set of rules, for routing and addressing packets of data so that they can travel across networks and arrive at the correct destination. Data traversing the Internet is divided into smaller pieces, called packets. IP information is attached to each packet, and this information helps routers to send packets to the right place. Every device or domain that connects to the Internet is assigned an IP address, and as packets are directed to the IP address attached to them, data arrives where it is needed", [Cloudfare](https://www.cloudflare.com/learning/network-layer/internet-protocol/#:~:text=The%20Internet%20Protocol%20(IP)%20is%20a%20protocol%2C%20or%20set,into%20smaller%20pieces%2C%20called%20packets.&text=The%20most%20common%20transport%20protocols%20are%20TCP%20and%20UDP.).
 
-"IP address" typically still refers to 32-bit IPv4 addresses until IPv6 is deployed more broadly", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/IP_Address).
-
-### "DNS":
+### DNS:
 
 "DNS (Domain Name System) is a hierarchical and decentralized naming system for Internet connected resources. DNS maintains a list of domain names along with the resources, such as IP addresses, that are associated with them.
 
 The most prominent function of DNS is the translation of human-friendly domain names (such as mozilla.org) to a numeric IP address (such as 151.106.5.172); this process of mapping a domain name to the appropriate IP address is known as a DNS lookup. By contrast, a reverse DNS lookup (rDNS) is used to determine the domain name associated with an IP address", [MDN](https://developer.mozilla.org/en-US/docs/Glossary/DNS).
+
+### Proxy:
+
+"A proxy server, or just proxy for short, is like having another computer that your internet requests get sent to before going to the real website. It's a server that takes all of the information you've sent out, like a request to buy new shirts on H&M, and routes it through a different IP address.
+
+That's what makes a proxy so powerful. They can make all of your internet activity appear as if it's coming from a completely different location", [Free Code Camp](https://www.freecodecamp.org/news/what-is-a-proxy-server-in-english-please/).
 
 ## Web Services:
 
