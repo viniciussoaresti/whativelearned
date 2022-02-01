@@ -5,13 +5,16 @@
 # Contents:
 - [Web](#web)
 - [Contents:](#contents)
-  - [Web Concepts:](#web-concepts)
+  - [Web Basic Concepts:](#web-basic-concepts)
     - [HTTP:](#http)
     - [URL:](#url)
     - [TCP:](#tcp)
     - [IP:](#ip)
     - [DNS:](#dns)
     - [Proxy:](#proxy)
+  - [Web Pages:](#web-pages)
+    - [Dynamic Web Pages:](#dynamic-web-pages)
+  - [Web Applications:](#web-applications)
   - [Web Services:](#web-services)
     - [Concepts:](#concepts)
       - [XML:](#xml)
@@ -24,7 +27,7 @@
       - [HTTP Status Codes:](#http-status-codes)
       - [JSON:](#json)
 
-## Web Concepts:
+## Web Basic Concepts:
 
 ### HTTP:
 
@@ -57,6 +60,17 @@ The most prominent function of DNS is the translation of human-friendly domain n
 "A proxy server, or just proxy for short, is like having another computer that your internet requests get sent to before going to the real website. It's a server that takes all of the information you've sent out, like a request to buy new shirts on H&M, and routes it through a different IP address.
 
 That's what makes a proxy so powerful. They can make all of your internet activity appear as if it's coming from a completely different location", [Free Code Camp](https://www.freecodecamp.org/news/what-is-a-proxy-server-in-english-please/).
+
+## Web Pages:
+### Dynamic Web Pages:
+
+Dynamic web pages differ from static pages in that they are modified based on database connections, for example. Instead of just consulting the server for a static page through a specified path, the path generated instead generates some (or all) parts of the page based on dynamic data, thus, making the web page dynamic.
+
+Real world example: an user page can have the same structure (html+css+js), but the returned data depends on the path specified (e.g. https://example.com/user/1). 
+
+## Web Applications:
+
+Web applications are the next step, after web pages. The server actually runs a software that provides web pages, and the access for the end user is most of the times the same, but the software actually can communicate with databases and web services, manages access and such.
 
 ## Web Services:
 
