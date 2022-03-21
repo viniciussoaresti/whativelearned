@@ -11,6 +11,7 @@ The standard for web pages.
     - [Hidden:](#hidden)
     - [Tabindex:](#tabindex)
     - [Title:](#title)
+  - [Reserved characters:](#reserved-characters)
   - [Tips:](#tips)
 
 ## Global Attributes:
@@ -34,6 +35,10 @@ We can order the tab button indexes on the page.
 ### Title:
 
 We can define a title to be shown when hovering over an element.
+
+## Reserved characters:
+
+Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla' way, we can put them using [this](https://dev.w3.org/html5/html-author/charref) reference, for example.
 
 ## Tips:
 
