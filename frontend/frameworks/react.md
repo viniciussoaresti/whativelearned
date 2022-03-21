@@ -2,6 +2,38 @@
 
 Open-source front-end javascript library, developed initially by Facebook, with focus on dynamic components. I've put it on frameworks because with its ecosystem integration, and many libraries being almost 'mandatory' on an actual project, it basically turns it into a framework.
 
+# Summary:
+
+- [React:](#react)
+- [Summary:](#summary)
+  - [Starting:](#starting)
+  - [Concepts:](#concepts)
+    - [Introduction:](#introduction)
+    - [JSX:](#jsx)
+    - [React DOM:](#react-dom)
+    - [Components (Function and Class Components):](#components-function-and-class-components)
+    - [Props:](#props)
+    - [Fragment:](#fragment)
+    - [State and Lifecycle:](#state-and-lifecycle)
+    - [State and Effect Hook:](#state-and-effect-hook)
+    - [Context API:](#context-api)
+    - [Refs:](#refs)
+    - [Side Effects:](#side-effects)
+    - [React Node:](#react-node)
+  - [Tips:](#tips)
+    - [Nice libraries to keep in mind:](#nice-libraries-to-keep-in-mind)
+  - [Next.js](#nextjs)
+    - [SSR (server-side rendering)](#ssr-server-side-rendering)
+    - [SSG (static-site generation)](#ssg-static-site-generation)
+    - [Tips:](#tips-1)
+      - [_document.tsx:](#_documenttsx)
+      - [css/scss modules:](#cssscss-modules)
+      - [Consuming API's:](#consuming-apis)
+      - [Image:](#image)
+      - [Routing:](#routing)
+      - [Incremental static regeneration:](#incremental-static-regeneration)
+      - [Using dynamic page titles:](#using-dynamic-page-titles)
+
 ## Starting:
 
 There's two easy ways to create a new React application. [Create React App](https://create-react-app.dev/) (template) and [Next.js](https://nextjs.org/) (framework).
