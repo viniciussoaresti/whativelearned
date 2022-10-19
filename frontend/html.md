@@ -19,7 +19,7 @@ The standard for web pages.
       - [Address:](#address)
       - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
       - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
-  - [Tips:](#tips)
+    - [Working with links:](#working-with-links)
 
 ## Global Attributes:
 
@@ -106,6 +106,22 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </pre>
 ```
 
-## Tips:
+### Working with links:
 
-- Always try to specify elements, not throw it all around with some divs. This helps with SEO and accessibility.
+```html
+<p>Know more:</p>
+    <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#history">My History</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+    </ul>
+    <h1 id='about'>About me</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora obcaecati illum magni animi deserunt nesciunt alias
+    qui amet voluptatum, doloribus rem nam. Cupiditate ab id dignissimos, voluptatibus velit sit maiores.
+    <h2 id='history'>My History</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae quod perferendis totam corporis perspiciatis
+    minima est voluptatum molestiae ullam, quis suscipit consequuntur quas hic, ut maxime sint reprehenderit aspernatur.
+    <h2 id='jobs'>Jobs</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iste quidem in porro! Placeat numquam fugit
+    corporis praesentium officia natus! Modi fugiat aperiam quod, soluta aspernatur voluptatum corporis eveniet maiores.
+```
