@@ -17,8 +17,8 @@ The standard for web pages.
       - [Blockquote and quote (q):](#blockquote-and-quote-q)
       - [Abbreviation:](#abbreviation)
       - [Address:](#address)
-      - [DL and DT:](#dl-and-dt)
-      - [Pre and code:](#pre-and-code)
+      - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
+      - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
   - [Tips:](#tips)
 
 ## Global Attributes:
@@ -57,7 +57,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 
 ```html
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-    O <strong>Elemento HTML <code>&lt;blockquote&gt;</code> </strong> (ou <em>HTML Block
+    O <strong>Elemento HTML <code> <blockquote> </code> </strong> (ou <em>HTML Block
     Quotation Element</em>) indica que um texto externo foi citado.
 </blockquote> <!-- This can also be done on a short way using quote (q), for small texts !--> 
 ```
@@ -77,7 +77,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </address>
 ```
 
-#### DL and DT:
+#### DL, DT and DD (lists with key-value pairs usualy):
 
 ```html
 <h2>Glossary</h2>
@@ -93,7 +93,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </dl>
 ```
 
-#### Pre and code:
+#### Pre (preformatted) and code  :
 
 ```html
 <pre>
