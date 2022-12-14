@@ -7,19 +7,22 @@ The standard for web pages.
 - [Contents:](#contents)
   - [Global Attributes:](#global-attributes)
     - [Contenteditable:](#contenteditable)
-    - [Data-*:](#data-)
+    - [Data-\*:](#data-)
     - [Hidden:](#hidden)
     - [Tabindex:](#tabindex)
     - [Title:](#title)
   - [Reserved characters:](#reserved-characters)
   - [SEO and Semantics:](#seo-and-semantics)
-    - [Interesting tags I've not seen before:](#interesting-tags-ive-not-seen-before)
-      - [Blockquote and quote (q):](#blockquote-and-quote-q)
-      - [Abbreviation:](#abbreviation)
-      - [Address:](#address)
-      - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
-      - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
-    - [Working with links:](#working-with-links)
+  - [Interesting tags I've not seen before:](#interesting-tags-ive-not-seen-before)
+    - [Blockquote and quote (q):](#blockquote-and-quote-q)
+    - [Abbreviation:](#abbreviation)
+    - [Address:](#address)
+    - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
+    - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
+  - [Working with links:](#working-with-links)
+  - [Meta tag:](#meta-tag)
+    - [Meta SEO:](#meta-seo)
+    - [Meta Social Media:](#meta-social-media)
 
 ## Global Attributes:
 
@@ -51,9 +54,9 @@ Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla'
 
 Writing a semantic HTML page can drastically improve SEO. Check [this](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) link for further explanation, and [this](https://www.w3schools.com/TAgs/default.asp) one for the full elements reference.
 
-### Interesting tags I've not seen before:
+## Interesting tags I've not seen before:
 
-#### Blockquote and quote (q):
+### Blockquote and quote (q):
 
 ```html
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
@@ -61,13 +64,13 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
     Quotation Element</em>) indica que um texto externo foi citado.
 </blockquote> <!-- This can also be done on a short way using quote (q), for small texts !--> 
 ```
-#### Abbreviation:
+### Abbreviation:
 
 ```html
 <p>We use <abbr title="Hypertext Markup Language">HTML</abbr>  to make web pages.</p>
 ```
 
-#### Address:
+### Address:
 
 ```html
 <address>
@@ -77,7 +80,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </address>
 ```
 
-#### DL, DT and DD (lists with key-value pairs usualy):
+### DL, DT and DD (lists with key-value pairs usualy):
 
 ```html
 <h2>Glossary</h2>
@@ -93,7 +96,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </dl>
 ```
 
-#### Pre (preformatted) and code  :
+### Pre (preformatted) and code  :
 
 ```html
 <pre>
@@ -106,7 +109,7 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 </pre>
 ```
 
-### Working with links:
+## Working with links:
 
 ```html
 <p>Know more:</p>
@@ -125,3 +128,24 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iste quidem in porro! Placeat numquam fugit
     corporis praesentium officia natus! Modi fugiat aperiam quod, soluta aspernatur voluptatum corporis eveniet maiores.
 ```
+
+## Meta tag:
+
+"The `<meta>` tag defines metadata about an HTML document", [w3schools](https://www.w3schools.com/tags/tag_meta.asp).
+
+### Meta SEO:
+
+We can use some tags for SEO:
+`<meta name="author" content="Vinicius Soares">`
+`<meta name="description" content="My personal web developer website.">`
+`<meta name="robots" content="index, follow"> //default` 
+
+### Meta Social Media:
+
+We can use some configuration for specific social media sharing, like Facebook, for example:
+`<meta property="og:image" content="https://image.link.jpeg">`
+`<meta name="og:description" content="Searching for a web dev on facebook? Finally found.">`
+`<meta name="og:title" content="Vinicius Soares WebDev">`
+
+And for twitter:
+`<meta name="twitter:title" content="Vinicius Soares Web Developer">`
