@@ -23,6 +23,7 @@ The standard for web pages.
   - [Meta tag:](#meta-tag)
     - [Meta SEO:](#meta-seo)
     - [Meta Social Media:](#meta-social-media)
+  - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
 
@@ -149,3 +150,8 @@ We can use some configuration for specific social media sharing, like Facebook, 
 
 And for twitter:
 `<meta name="twitter:title" content="Vinicius Soares Web Developer">`
+
+## Visual code shortcuts:
+
+- div#id generates a div with the "id" id;
+- div.class generates a div with the "class" class;

@@ -6,6 +6,7 @@ The standard Cascading Style Sheet for web pages.
 - [CSS](#css)
 - [Contents](#contents)
   - [Example code on CSS:](#example-code-on-css)
+  - [CSS selectors:](#css-selectors)
   - [Tips:](#tips)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
@@ -20,6 +21,14 @@ h1  {
     background: gray;
 }
 ```
+
+## CSS selectors:
+
+- `*` (Global);
+- `h1, div, p` (Element selector);
+- `#div-01` (Id selector);
+- `.textDivs` (Class selector);
+- Attribute, pseudo-class, pseudo-element, and many more selectors;
 
 ## Tips:
 
