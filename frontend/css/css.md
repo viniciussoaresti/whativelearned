@@ -16,6 +16,9 @@ The standard Cascading Style Sheet for web pages.
   - [At rules:](#at-rules)
   - [Shorthand:](#shorthand)
   - [Vendor prefixes:](#vendor-prefixes)
+  - [Relative units:](#relative-units)
+  - [Accessing the root element:](#accessing-the-root-element)
+  - [Cool thing about the percentage:](#cool-thing-about-the-percentage)
   - [Tips:](#tips)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
@@ -217,7 +220,58 @@ h1  {
 }
 ```
 
-We can check this with some tools like [CanIUse]().
+We can check this with some tools like [CanIUse](https://caniuse.com/).
+
+## Relative units:
+
+"% (percentage): relative to the size of the parent element;
+em (font size): relative to the size of the font;
+rem (root em): relative to the font size of the root element;
+vw (viewport width): relative to the width of the viewport;
+vh (viewport height): relative to the height of the viewport", [FreeCodeCamp](https://www.freecodecamp.org/news/absolute-and-relative-css-units/).
+
+## Accessing the root element:
+
+```css
+:root{
+
+}
+
+/* or */
+
+html {
+
+}
+```
+
+## Cool thing about the percentage:
+
+```html
+<!-- html -->
+<ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three
+        <ul>
+            <li>Three A</li>
+            <li>Three B
+                <ul>
+                    <li>Three B 1</li>
+                    <li>Three B 2</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+```
+
+```css
+/* css */
+li {
+    font-size: 80%;
+}
+/* so every <li/> will be inheriting 80% from its parent */
+```
 
 ## Tips:
 
