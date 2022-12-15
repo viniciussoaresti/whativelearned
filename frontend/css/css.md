@@ -19,6 +19,9 @@ The standard Cascading Style Sheet for web pages.
   - [Relative units:](#relative-units)
   - [Accessing the root element:](#accessing-the-root-element)
   - [Cool thing about the percentage:](#cool-thing-about-the-percentage)
+  - [Box model:](#box-model)
+    - [Box sizing:](#box-sizing)
+    - [Inline vs Block display:](#inline-vs-block-display)
   - [Tips:](#tips)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
@@ -272,6 +275,40 @@ li {
 }
 /* so every <li/> will be inheriting 80% from its parent */
 ```
+
+## Box model:
+
+The boxes that compose the html, on which we can work by using css, have the following properties:
+
+- Width/Height;
+- Content;
+- Border;
+- Padding;
+- Margin.
+
+<img src="https://media.gcflearnfree.org/content/5ef2084faaf0ac46dc9c10be_06_23_2020/box_model.png" alt="drawing" width="600"/>
+
+### Box sizing:
+
+The boxes usually add padding for example adding to the width, on content-box mode, but we can define it to border-box
+mode for it to always respect the sizing defined.
+
+```css
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin: 10%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+```
+
+### Inline vs Block display:
+
+Most of html tags have a block display, which means that they occupy all the line and push the other elements down,
+they have width and height respected and padding, margin and border work normally, whereas inline puts elements one
+alongside the other, width and height doesn't work and only horizontal margin, padding and border values work. 
 
 ## Tips:
 
