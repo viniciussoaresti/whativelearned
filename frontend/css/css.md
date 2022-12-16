@@ -24,6 +24,7 @@ The standard Cascading Style Sheet for web pages.
     - [Inline vs Block display:](#inline-vs-block-display)
   - [Margin:](#margin)
   - [Tips:](#tips)
+    - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
 
@@ -335,6 +336,21 @@ div {
 ```
 
 ## Tips:
+
+### Base css for all projects:
+```css
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /*
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: ease-in-out 1s; 
+  */
+}
+```
 
 ### Project done on base DIO's class:
 [Html and CSS Intro](https://github.com/viniciussoaresti/htmlCssIntro)
