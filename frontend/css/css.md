@@ -23,6 +23,9 @@ The standard Cascading Style Sheet for web pages.
     - [Box sizing:](#box-sizing)
     - [Inline vs Block display:](#inline-vs-block-display)
   - [Margin:](#margin)
+  - [Padding:](#padding)
+  - [Border:](#border)
+  - [Outline:](#outline)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -339,6 +342,23 @@ div {
 
 Careful with margin collapsing, which happens when for example two display-blocked divs have the same bottom and top
 values.
+
+## Padding:
+
+The same margin rules, but careful as it can change elements width.
+
+## Border:
+
+"The border shorthand CSS property sets an element's border", [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+
+## Outline:
+
+The outline differs to a border because:
+
+1. It doesn't modify the box size;
+2. Can be different than rectangular;
+3. Doesn't allow for individual adjustments;
+4. It's mostly used by the user agent for accessibility.
 
 ## Tips:
 
