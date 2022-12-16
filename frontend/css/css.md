@@ -326,6 +326,8 @@ span {
 
 ## Margin:
 
+We can define it in numbers, percentages and with the automatic value (tries to divide horizontally into the middle).
+
 ```css
 div {
     margin: 12px 16px 10px 4px; /* top, right, bottom, left */
@@ -334,6 +336,9 @@ div {
     margin: 8px; /* all 4 sides */
 }
 ```
+
+Careful with margin collapsing, which happens when for example two display-blocked divs have the same bottom and top
+values.
 
 ## Tips:
 
