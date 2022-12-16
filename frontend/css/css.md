@@ -22,6 +22,7 @@ The standard Cascading Style Sheet for web pages.
   - [Box model:](#box-model)
     - [Box sizing:](#box-sizing)
     - [Inline vs Block display:](#inline-vs-block-display)
+  - [Margin:](#margin)
   - [Tips:](#tips)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
@@ -308,7 +309,30 @@ div {
 
 Most of html tags have a block display, which means that they occupy all the line and push the other elements down,
 they have width and height respected and padding, margin and border work normally, whereas inline puts elements one
-alongside the other, width and height doesn't work and only horizontal margin, padding and border values work. 
+alongside the other, width and height doesn't work and only horizontal margin, padding and border values work.
+
+We can define the way a tag behaves like that:
+
+```css
+div {
+    display: inline;
+}
+
+span {
+    display: block;
+}
+```
+
+## Margin:
+
+```css
+div {
+    margin: 12px 16px 10px 4px; /* top, right, bottom, left */
+    margin: 12px 16px 0; /* top, sides, bottom */
+    margin: 8px 16px; /* top and bottom, sides */
+    margin: 8px; /* all 4 sides */
+}
+```
 
 ## Tips:
 
