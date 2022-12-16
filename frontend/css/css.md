@@ -337,7 +337,7 @@ div {
 ## Tips:
 
 ### Project done on base DIO's class:
-[Html and CSS Intro](https://github.com/viniciussoaresti/viniciussoaresti.github.io)
+[Html and CSS Intro](https://github.com/viniciussoaresti/htmlCssIntro)
 
 ### a11y:
 
