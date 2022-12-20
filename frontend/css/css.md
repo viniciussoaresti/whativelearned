@@ -26,6 +26,8 @@ The standard Cascading Style Sheet for web pages.
   - [Padding:](#padding)
   - [Border:](#border)
   - [Outline:](#outline)
+  - [Background image:](#background-image)
+    - [Gradient](#gradient)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -359,6 +361,26 @@ The outline differs to a border because:
 2. Can be different than rectangular;
 3. Doesn't allow for individual adjustments;
 4. It's mostly used by the user agent for accessibility.
+
+## Background image:
+
+Instead of using just a `background-color`, some properties used to set background
+images are:  `background-image`, `background-image-repeat`, `background-position`, `background-size`, `background-origin`, `background-clip` and `background-attachment`.
+It's nice to pay around with them.
+
+### Gradient
+
+We can apply a gradient to the background:
+
+```css
+main {
+    background: linear-gradient(18deg, red, yellow);
+    /* or */
+    background: radial-gradient(red, yellow);
+}
+```
+
+And even put multiple background values divided by commas on the background tag.
 
 ## Tips:
 
