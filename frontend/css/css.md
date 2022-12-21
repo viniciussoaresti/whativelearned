@@ -30,6 +30,7 @@ The standard Cascading Style Sheet for web pages.
     - [Gradient](#gradient)
     - [Video, audio, iframe and images](#video-audio-iframe-and-images)
       - [Video:](#video)
+      - [Audio:](#audio)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -411,6 +412,18 @@ configuration attributes, example:
     <a href="/media/cc0-videos/flower.mp4">MP4</a>
     video.
 </video>
+```
+
+#### Audio:
+
+We can define audio tags on our html, something like the video tag, example:
+
+```html
+<audio controls autoplay muted loop>
+    <source src="./audio.mp3" type="audio/mp3">
+    <source src="./audio.ogg" type="audio/ogg">
+    <p>Your browser doesn't support audio</p>
+</audio>
 ```
 
 ## Tips:
