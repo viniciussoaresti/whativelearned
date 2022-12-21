@@ -28,6 +28,8 @@ The standard Cascading Style Sheet for web pages.
   - [Outline:](#outline)
   - [Background image:](#background-image)
     - [Gradient](#gradient)
+    - [Video, audio, iframe and images](#video-audio-iframe-and-images)
+      - [Video:](#video)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -381,6 +383,35 @@ main {
 ```
 
 And even put multiple background values divided by commas on the background tag.
+
+### Video, audio, iframe and images
+
+#### Video:
+
+We can define video tags on our html, with controls enabled or not (with just a 
+flag), fallback content (if the video doesn't work), and with many other
+configuration attributes, example:
+
+```html
+<video controls 
+    width="200"
+    height="400"
+    autoplay
+    preload="auto"
+    loop
+    muted
+    poster="./icon.jpg">
+    <source src="/media/cc0-videos/flower.webm"
+            type="video/webm">
+    <source src="/media/cc0-videos/flower.mp4"
+            type="video/mp4">
+    Download the
+    <a href="/media/cc0-videos/flower.webm">WEBM</a>
+    or
+    <a href="/media/cc0-videos/flower.mp4">MP4</a>
+    video.
+</video>
+```
 
 ## Tips:
 
