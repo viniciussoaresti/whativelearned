@@ -32,6 +32,7 @@ The standard Cascading Style Sheet for web pages.
       - [Video:](#video)
       - [Audio:](#audio)
       - [Iframe:](#iframe)
+      - [Images:](#images)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -442,6 +443,21 @@ frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen>
 </iframe>
+```
+
+#### Images:
+
+We can define images on our html, and even make them behave as a link:
+
+```html
+<a href="google.com">
+    <img 
+    src="./img.jpg"
+    alt="Image alternative text when not loaded"
+    title="Hold the mouse!"
+    height="250px"
+    width="200px">
+</a>
 ```
 
 ## Tips:
