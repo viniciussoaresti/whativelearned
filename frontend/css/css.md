@@ -31,6 +31,7 @@ The standard Cascading Style Sheet for web pages.
     - [Video, audio, iframe and images](#video-audio-iframe-and-images)
       - [Video:](#video)
       - [Audio:](#audio)
+      - [Iframe:](#iframe)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -424,6 +425,23 @@ We can define audio tags on our html, something like the video tag, example:
     <source src="./audio.ogg" type="audio/ogg">
     <p>Your browser doesn't support audio</p>
 </audio>
+```
+
+#### Iframe:
+
+We can define inline frame elements on our html, bringing external content to
+our html:
+
+```html
+<iframe 
+width="560"
+height="315"
+src="https://www.youtube.com/embed/3heO9XZpp2E"
+title="Tim Bernardes being wonderful"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>
 ```
 
 ## Tips:
