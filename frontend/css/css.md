@@ -28,11 +28,12 @@ The standard Cascading Style Sheet for web pages.
   - [Outline:](#outline)
   - [Background image:](#background-image)
     - [Gradient](#gradient)
-    - [Video, audio, iframe and images](#video-audio-iframe-and-images)
+    - [Video, audio, iframe, images and figures](#video-audio-iframe-images-and-figures)
       - [Video:](#video)
       - [Audio:](#audio)
       - [Iframe:](#iframe)
       - [Images:](#images)
+      - [Figures:](#figures)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -387,7 +388,7 @@ main {
 
 And even put multiple background values divided by commas on the background tag.
 
-### Video, audio, iframe and images
+### Video, audio, iframe, images and figures
 
 #### Video:
 
@@ -457,6 +458,24 @@ We can define images on our html, and even make them behave as a link:
     title="Hold the mouse!"
     height="250px"
     width="200px">
+</a>
+```
+
+#### Figures:
+
+Figures are semantic ways of defining images with captions on our html:
+
+```html
+<a href="google.com">
+    <figure>
+        <img 
+        src="./img.jpg"
+        alt="Image alternative text when not loaded"
+        title="Hold the mouse!"
+        height="250px"
+        width="200px">
+        <figcaption>Image, by someone</figcaption>
+    </figure>
 </a>
 ```
 
