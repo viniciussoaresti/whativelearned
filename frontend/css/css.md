@@ -28,12 +28,13 @@ The standard Cascading Style Sheet for web pages.
   - [Outline:](#outline)
   - [Background image:](#background-image)
     - [Gradient](#gradient)
-    - [Video, audio, iframe, images and figures](#video-audio-iframe-images-and-figures)
+    - [Video, audio, iframe, images, figures and SVG:](#video-audio-iframe-images-figures-and-svg)
       - [Video:](#video)
       - [Audio:](#audio)
       - [Iframe:](#iframe)
       - [Images:](#images)
       - [Figures:](#figures)
+      - [SVG:](#svg)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -388,7 +389,7 @@ main {
 
 And even put multiple background values divided by commas on the background tag.
 
-### Video, audio, iframe, images and figures
+### Video, audio, iframe, images, figures and SVG:
 
 #### Video:
 
@@ -477,6 +478,37 @@ Figures are semantic ways of defining images with captions on our html:
         <figcaption>Image, by someone</figcaption>
     </figure>
 </a>
+```
+
+#### SVG:
+
+Scalable Vector Graphics are images rendered via algorithms, thus having some
+benefits over standard images on some use cases. We don't usually code it by
+hand on the html, but here's an example:
+
+```html
+<svg width="100px" height="100px">
+    <circle cx="50" cy="50" rw="40" stroke="green"
+    stroke-width="4" fill="yellow"/>
+</svg>
+```
+
+Using a file is much more convenient:
+
+```html
+<img src="./ball.svg" alt="">
+```
+
+```html
+<svg
+version="1.1"
+baseProfile="full" 
+width="100px" 
+height="100px"
+xmlns="https://w3.org/2000/svg">
+    <circle cx="50" cy="50" r="40" stroke="green"
+    stroke-width="4" fill="yellow"/>
+</svg>
 ```
 
 ## Tips:
