@@ -35,6 +35,15 @@ The standard Cascading Style Sheet for web pages.
       - [Images:](#images)
       - [Figures:](#figures)
       - [SVG:](#svg)
+    - [Positioning:](#positioning)
+      - [Position attribute:](#position-attribute)
+        - [Static:](#static)
+        - [Relative:](#relative)
+        - [Absolute:](#absolute)
+        - [Fixed:](#fixed)
+        - [Element stacking:](#element-stacking)
+      - [Flex:](#flex)
+      - [Grid:](#grid)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -509,6 +518,144 @@ xmlns="https://w3.org/2000/svg">
     <circle cx="50" cy="50" r="40" stroke="green"
     stroke-width="4" fill="yellow"/>
 </svg>
+```
+
+### Positioning:
+
+#### Position attribute:
+
+##### Static:
+
+For default, all elements have the `static` property, staying all on top of the other.
+
+##### Relative:
+
+For the relative property, it allows us to use 5 other properties to set up our elements:
+
+- Left;
+- Right;
+- Top;
+- Bottom;
+- Z-index.
+
+But what would be the actual space element remains used.
+
+##### Absolute:
+
+The same as the relative property, but putting the element on another level,
+removing the space it would use otherwise. Absolute means on all the page, but if
+for example the element has a parent with a relative positioning, it stays attached
+to the parent element. Example:
+
+```html
+<!-- html !-->
+<body>
+    <main>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </main>
+</body>
+```
+
+```css
+/* css */
+.box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+main {
+    margin-top: 100px;
+    position: relative;
+}
+
+.box1 {
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    background-color: blue;
+}
+```
+
+##### Fixed:
+
+The element stays put even when scrolling the page, and it allows the other positioning
+properties as well.
+
+##### Element stacking:
+
+Z-index usage.
+
+#### Flex:
+
+Many things changed with the flexbox introduction, with the parent element being 
+able to manipulate their children positioning, with the default being horizontal.
+
+```css
+/* css */
+div.parent {
+    display: flex;
+}
+/* we can use flex-direction, justify-content, align-items... */
+```
+
+#### Grid:
+
+"CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward", [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
+
+```html
+<!-- html !-->
+<body>
+    <header>Header</header>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+```
+
+```css
+/* css */
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-rows: 30px 1fr 40px;
+    grid-template-columns: 1fr 80px;
+}
+
+header {
+    grid-area: header;
+    background-color: red;
+}
+
+main {
+    grid-area: main;
+    background-color: green;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: yellow;
+}
 ```
 
 ## Tips:
