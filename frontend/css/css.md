@@ -776,6 +776,17 @@ p {
 
 ## Forms:
 
+Initiating:
+
+```html
+<form id="contact" action="">
+    <fieldset form="contact" name="inputs-contact">
+        <legend>Contact</legend>
+    </fieldset>
+    <button></button>
+</form>
+```
+
 ## Tips:
 
 ### Base css for all projects:
