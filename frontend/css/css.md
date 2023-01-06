@@ -44,6 +44,17 @@ The standard Cascading Style Sheet for web pages.
         - [Element stacking:](#element-stacking)
       - [Flex:](#flex)
       - [Grid:](#grid)
+    - [Texts:](#texts)
+      - [More styles:](#more-styles)
+        - [Font-variant:](#font-variant)
+        - [Font-stretch:](#font-stretch)
+        - [Letter-spacing and Word-spacing:](#letter-spacing-and-word-spacing)
+        - [Line height:](#line-height)
+        - [Text transform:](#text-transform)
+        - [Text-decoration:](#text-decoration)
+        - [Text-align:](#text-align)
+        - [Text-shadow:](#text-shadow)
+        - [Shorthand:](#shorthand-1)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [Project done on base DIO's class:](#project-done-on-base-dios-class)
@@ -655,6 +666,111 @@ aside {
 footer {
     grid-area: footer;
     background-color: yellow;
+}
+```
+
+### Texts:
+
+Basic font attributes:
+- Family: lists fonts in priority order, having a fallback font:
+  - ```font-family: "Times New Roman", Times, sans-serif```.
+- Weight: normal, bold, bolder, etc.;
+- Style: normal, italic or oblique;
+- Size: size in px, rem, em, etc;
+
+Remembering we can use external fonts via @font-face, @import and links for example.
+Links being the most common usage.
+
+#### More styles:
+
+##### Font-variant:
+
+```css
+p {
+	font-variant: small-caps;
+}
+```
+
+[Font Variants](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant).
+
+##### Font-stretch:
+
+```css
+p {
+	font-stretch: expanded;
+}
+```
+
+[Font Stretch](https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch).
+
+##### Letter-spacing and Word-spacing:
+
+```css
+p {
+	letter-spacing: 4px;
+    word-spacing: 1em;
+}
+```
+
+##### Line height:
+
+```css
+p {
+	line-height: 1.5;
+}
+```
+
+##### Text transform:
+
+```css
+p {
+	text-transform: uppercase;
+    /* none | capitalize | uppercase | lowercase | full-width | full-size-kana*/
+}
+```
+
+##### Text-decoration:
+
+Accepts multiple values.
+
+```css
+p {
+  text-decoration: wavy overline blue; 
+  /* line: underline | overline | line-through */
+  /* style: wavy | dotted | double | dashed | solid */
+  /* color: (color) */
+}
+```
+
+##### Text-align:
+
+```css
+p {
+	text-align: center;
+    /* start | end | left | right | center | justify | match-parent */
+}
+```
+
+##### Text-shadow:
+
+Accepts multiple values.
+
+```css
+p {
+  text-shadow: 1px 1px 1px red,
+	       2px 2px 1px green; /* offset-x | offset-y | blur-radius | color */
+}
+```
+
+##### Shorthand:
+
+The order for defining font properties.
+
+```css
+p {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+  /* font-style, font-variant, font-weight, font-stretch, font-size, line-height
+   and font-family */
 }
 ```
 
