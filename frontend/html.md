@@ -13,6 +13,7 @@ The standard for web pages.
     - [Title:](#title)
   - [Reserved characters:](#reserved-characters)
   - [SEO and Semantics:](#seo-and-semantics)
+  - [Forms:](#forms)
   - [Interesting tags I've not seen before:](#interesting-tags-ive-not-seen-before)
     - [Blockquote and quote (q):](#blockquote-and-quote-q)
     - [Abbreviation:](#abbreviation)
@@ -54,6 +55,19 @@ Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla'
 ## SEO and Semantics:
 
 Writing a semantic HTML page can drastically improve SEO. Check [this](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) link for further explanation, and [this](https://www.w3schools.com/TAgs/default.asp) one for the full elements reference.
+
+## Forms:
+
+Initiating:
+
+```html
+<form id="contact" action="">
+    <fieldset form="contact" name="inputs-contact">
+        <legend>Contact</legend>
+    </fieldset>
+    <button></button>
+</form>
+```
 
 ## Interesting tags I've not seen before:
 
