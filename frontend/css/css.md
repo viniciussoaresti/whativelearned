@@ -55,7 +55,6 @@ The standard Cascading Style Sheet for web pages.
       - [Text-align:](#text-align)
       - [Text-shadow:](#text-shadow)
       - [Shorthand:](#shorthand-1)
-  - [Forms:](#forms)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [a11y:](#a11y)
@@ -772,19 +771,6 @@ p {
   /* font-style, font-variant, font-weight, font-stretch, font-size, line-height
    and font-family */
 }
-```
-
-## Forms:
-
-Initiating:
-
-```html
-<form id="contact" action="">
-    <fieldset form="contact" name="inputs-contact">
-        <legend>Contact</legend>
-    </fieldset>
-    <button></button>
-</form>
 ```
 
 ## Tips:
