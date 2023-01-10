@@ -23,6 +23,10 @@ The standard for web pages.
   - [Meta tag:](#meta-tag)
     - [Meta SEO:](#meta-seo)
     - [Meta Social Media:](#meta-social-media)
+  - [Forms:](#forms)
+    - [Label:](#label)
+    - [Button:](#button)
+    - [Datalist](#datalist)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
@@ -150,6 +154,72 @@ We can use some configuration for specific social media sharing, like Facebook, 
 
 And for twitter:
 `<meta name="twitter:title" content="Vinicius Soares Web Developer">`
+
+## Forms:
+
+Initiating:
+
+```html
+<form id="contact" action="" method="POST"> 
+  <!-- action -> path (http://site./index/contacts) !-->
+    <fieldset form="contact" name="inputs-contact"> 
+    <!-- can have the disabled property which doesn't allow input !-->
+        <legend>Contact</legend>
+    </fieldset>
+    <button></button>
+</form>
+```
+
+### Label:
+
+Adds a11y and identifies data:
+
+```html
+<label>
+  Name:
+  <input type="text">
+</label>
+<!--or, only working with some specific elements like input, meter, output..!-->
+<label for="name"> Name: </label>
+<input id="name" type="text">
+```
+
+### Button:
+
+We can use the type `submit` or `button` for submitting the form, or `reset`
+to reset the values written in the form.
+
+```html
+<button type="submit">Submit</button>
+```
+
+There are other attributes like `autofocus`, `disabled`, `name`, `value` and 
+`form`. `Name` describes the name of the value in the value tag, and `form`
+links the button to the form:
+
+```html
+<form action="" id="my-form"></form>
+<button type="submit" form="my-form">Submit</button>
+```
+
+### Datalist
+
+It's a list of suggestions for the user to select. Some of the inputs that
+support this are `text`, `search`, `url`, `number` and many others, while
+`radio`, `checkbox` or other buttons don't.
+
+```html
+<input type='text'
+    list='fruits-data'
+    placeholder='Pick a fruit'>
+    <datalist id='fruits-data'>
+        <option>apple</option>
+        <option>banana</option>
+        <option>mango</option>
+        <option>orange</option>
+        <option>cherry</option>
+    </datalist>
+```
 
 ## Visual code shortcuts:
 

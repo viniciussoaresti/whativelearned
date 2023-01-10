@@ -35,18 +35,28 @@ The standard Cascading Style Sheet for web pages.
       - [Images:](#images)
       - [Figures:](#figures)
       - [SVG:](#svg)
-    - [Positioning:](#positioning)
-      - [Position attribute:](#position-attribute)
-        - [Static:](#static)
-        - [Relative:](#relative)
-        - [Absolute:](#absolute)
-        - [Fixed:](#fixed)
-        - [Element stacking:](#element-stacking)
-      - [Flex:](#flex)
-      - [Grid:](#grid)
+  - [Positioning:](#positioning)
+    - [Position attribute:](#position-attribute)
+      - [Static:](#static)
+      - [Relative:](#relative)
+      - [Absolute:](#absolute)
+      - [Fixed:](#fixed)
+      - [Element stacking:](#element-stacking)
+    - [Flex:](#flex)
+    - [Grid:](#grid)
+  - [Texts:](#texts)
+    - [More styles:](#more-styles)
+      - [Font-variant:](#font-variant)
+      - [Font-stretch:](#font-stretch)
+      - [Letter-spacing and Word-spacing:](#letter-spacing-and-word-spacing)
+      - [Line height:](#line-height)
+      - [Text transform:](#text-transform)
+      - [Text-decoration:](#text-decoration)
+      - [Text-align:](#text-align)
+      - [Text-shadow:](#text-shadow)
+      - [Shorthand:](#shorthand-1)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
-    - [Project done on base DIO's class:](#project-done-on-base-dios-class)
     - [a11y:](#a11y)
 
 ## Example code on CSS:
@@ -520,15 +530,15 @@ xmlns="https://w3.org/2000/svg">
 </svg>
 ```
 
-### Positioning:
+## Positioning:
 
-#### Position attribute:
+### Position attribute:
 
-##### Static:
+#### Static:
 
 For default, all elements have the `static` property, staying all on top of the other.
 
-##### Relative:
+#### Relative:
 
 For the relative property, it allows us to use 5 other properties to set up our elements:
 
@@ -540,7 +550,7 @@ For the relative property, it allows us to use 5 other properties to set up our 
 
 But what would be the actual space element remains used.
 
-##### Absolute:
+#### Absolute:
 
 The same as the relative property, but putting the element on another level,
 removing the space it would use otherwise. Absolute means on all the page, but if
@@ -587,16 +597,16 @@ main {
 }
 ```
 
-##### Fixed:
+#### Fixed:
 
 The element stays put even when scrolling the page, and it allows the other positioning
 properties as well.
 
-##### Element stacking:
+#### Element stacking:
 
 Z-index usage.
 
-#### Flex:
+### Flex:
 
 Many things changed with the flexbox introduction, with the parent element being 
 able to manipulate their children positioning, with the default being horizontal.
@@ -609,7 +619,7 @@ div.parent {
 /* we can use flex-direction, justify-content, align-items... */
 ```
 
-#### Grid:
+### Grid:
 
 "CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward", [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
@@ -658,6 +668,111 @@ footer {
 }
 ```
 
+## Texts:
+
+Basic font attributes:
+- Family: lists fonts in priority order, having a fallback font:
+  - ```font-family: "Times New Roman", Times, sans-serif```.
+- Weight: normal, bold, bolder, etc.;
+- Style: normal, italic or oblique;
+- Size: size in px, rem, em, etc;
+
+Remembering we can use external fonts via @font-face, @import and links for example.
+Links being the most common usage.
+
+### More styles:
+
+#### Font-variant:
+
+```css
+p {
+	font-variant: small-caps;
+}
+```
+
+[Font Variants](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant).
+
+#### Font-stretch:
+
+```css
+p {
+	font-stretch: expanded;
+}
+```
+
+[Font Stretch](https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch).
+
+#### Letter-spacing and Word-spacing:
+
+```css
+p {
+	letter-spacing: 4px;
+    word-spacing: 1em;
+}
+```
+
+#### Line height:
+
+```css
+p {
+	line-height: 1.5;
+}
+```
+
+#### Text transform:
+
+```css
+p {
+	text-transform: uppercase;
+    /* none | capitalize | uppercase | lowercase | full-width | full-size-kana*/
+}
+```
+
+#### Text-decoration:
+
+Accepts multiple values.
+
+```css
+p {
+  text-decoration: wavy overline blue; 
+  /* line: underline | overline | line-through */
+  /* style: wavy | dotted | double | dashed | solid */
+  /* color: (color) */
+}
+```
+
+#### Text-align:
+
+```css
+p {
+	text-align: center;
+    /* start | end | left | right | center | justify | match-parent */
+}
+```
+
+#### Text-shadow:
+
+Accepts multiple values.
+
+```css
+p {
+  text-shadow: 1px 1px 1px red,
+	       2px 2px 1px green; /* offset-x | offset-y | blur-radius | color */
+}
+```
+
+#### Shorthand:
+
+The order for defining font properties.
+
+```css
+p {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+  /* font-style, font-variant, font-weight, font-stretch, font-size, line-height
+   and font-family */
+}
+```
+
 ## Tips:
 
 ### Base css for all projects:
@@ -674,9 +789,6 @@ footer {
   */
 }
 ```
-
-### Project done on base DIO's class:
-[Html and CSS Intro](https://github.com/viniciussoaresti/htmlCssIntro)
 
 ### a11y:
 
