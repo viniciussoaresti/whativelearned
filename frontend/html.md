@@ -27,6 +27,11 @@ The standard for web pages.
     - [Label:](#label)
     - [Button:](#button)
     - [Datalist](#datalist)
+    - [Input:](#input)
+      - [Autocomplete](#autocomplete)
+      - [Autofocus](#autofocus)
+      - [Other attributes](#other-attributes)
+      - [Form and name:](#form-and-name)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
@@ -219,6 +224,44 @@ support this are `text`, `search`, `url`, `number` and many others, while
         <option>orange</option>
         <option>cherry</option>
     </datalist>
+```
+
+### Input:
+
+One of the most used properties, with a lot of varieties on the type:
+
+```html
+<input type='date'>
+```
+
+#### Autocomplete
+
+Attribute that enables the autocomplete feature on the browser, has a lot of
+possible values, it's good to check the documentation:
+
+```html
+<input type='email' autocomplete='email'>
+```
+
+#### Autofocus
+
+The first element found with this attribute gains input focus from the browser:
+
+```html
+<input type='email' autocomplete='email' autofocus>
+```
+
+#### Other attributes
+
+Disabled, readonly, value.
+
+#### Form and name:
+
+Specify the form and the name of the value passed to the form:
+
+```html
+<form id="my-form"></form>
+<input name="userEmail" form="my-form" type='email' autocomplete='email' autofocus>
 ```
 
 ## Visual code shortcuts:
