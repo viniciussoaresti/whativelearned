@@ -25,7 +25,13 @@
     - [Running scripts:](#running-scripts)
     - [Installing packages globally:](#installing-packages-globally)
     - [Semantic versioning:](#semantic-versioning)
-  - [EventEmitter:](#eventemitter)
+  - [Timers:](#timers)
+    - [setTimeout:](#settimeout)
+    - [clearTimeout:](#cleartimeout)
+    - [setInterval:](#setinterval)
+    - [clearInterval:](#clearinterval)
+  - [Events:](#events)
+    - [Event Emmiter:](#event-emmiter)
 
 # Hello World:
 
@@ -159,21 +165,71 @@ We have some notations for the dependencies update:
 Which we can use, checking before with `npm outdated`, with `npm upgrade`.
 This doesn't change the package.json, but the package-lock.json.
 
-## EventEmitter:
+## Timers:
 
-It's a class that allow us to emit and 'subscribe' to events, thus permitting us to handle the events that are happening and do something when it does.
+### setTimeout:
 
-```javascript
-const EventEmitter = require('events');
-const emitter = new EventEmitter();
-emitter.on('User logged', data => { 
-    console.log(data);
-});
-emitter.emit('User logged', {user: 'Vinícius Soares'});
+Runs a function after x milliseconds:
 
-/*
-On the emit, the 'User logged' event is emitted, and since the
-emitter is 'subscribed' to this event, we get 
-{user: 'Vinícius Soares'} on our console.
-*/
+```js
+const timeOut = 3000;
+const finished = () => console.log("done");
+setTimeout(finished, timeOut);
+```
+
+### clearTimeout:
+
+Cancels a timeout:
+
+```js
+const timeOut = 3000;
+const finished = () => console.log("done");
+let timer = setTimeout(finished, timeOut);
+clearTimeout(timer);
+```
+
+### setInterval:
+
+Sets a function to be run in an interval of time:
+
+```js
+const timeOut = 1000;
+const checking = () => console.log("checking!");
+setInterval(checking, timeOut);
+```
+
+### clearInterval:
+
+```js
+const timeOut = 1000;
+const checking = () => console.log("checking!");
+let interval = setInterval(checking, timeOut);
+clearInterval(interval);
+```
+
+## Events:
+
+In node.js we have the event module, which we can use to fire and listen to 
+events, and define an action when the event is triggered. It serves as a base to
+other modules like http, stream, file system, etc.
+
+### Event Emmiter:
+
+Defining an event emitter, emitting an event and listening to it:
+
+```js
+const { EventEmitter } = require('events');
+const ev = new EventEmitter();
+ev.on("saySomething", (message) => {
+    console.log("listened you: " + message);
+})
+ev.emit("saySomething", "message");
+```
+
+Listening only to the first event emmited:
+
+```js
+ev.once("saySomething", (message) => {
+    console.log("listened you: " + message);
+})
 ```
