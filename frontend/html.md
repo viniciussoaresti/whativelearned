@@ -32,6 +32,7 @@ The standard for web pages.
       - [Autofocus](#autofocus)
       - [Other attributes](#other-attributes)
       - [Form and name:](#form-and-name)
+      - [Password:](#password)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
@@ -253,7 +254,7 @@ The first element found with this attribute gains input focus from the browser:
 
 #### Other attributes
 
-Disabled, readonly, value.
+Disabled, readonly, value, required, placeholder.
 
 #### Form and name:
 
@@ -263,6 +264,10 @@ Specify the form and the name of the value passed to the form:
 <form id="my-form"></form>
 <input name="userEmail" form="my-form" type='email' autocomplete='email' autofocus>
 ```
+
+#### Password:
+
+
 
 ## Visual code shortcuts:
 
