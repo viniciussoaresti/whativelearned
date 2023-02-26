@@ -33,6 +33,20 @@ The standard for web pages.
       - [Other attributes](#other-attributes)
       - [Form and name:](#form-and-name)
       - [Password:](#password)
+      - [Email:](#email)
+      - [Url:](#url)
+      - [File:](#file)
+      - [Color:](#color)
+      - [Checkbox:](#checkbox)
+      - [Hidden:](#hidden-1)
+      - [Radio:](#radio)
+      - [Textarea:](#textarea)
+      - [Search:](#search)
+      - [Number:](#number)
+      - [Range:](#range)
+      - [Input types that don't have a great browser support yet:](#input-types-that-dont-have-a-great-browser-support-yet)
+    - [Select:](#select)
+      - [Optgroup:](#optgroup)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
@@ -254,7 +268,7 @@ The first element found with this attribute gains input focus from the browser:
 
 #### Other attributes
 
-Disabled, readonly, value, required, placeholder.
+`Disabled`, `readonly`, `value`, `required`, `placeholder`.
 
 #### Form and name:
 
@@ -267,7 +281,142 @@ Specify the form and the name of the value passed to the form:
 
 #### Password:
 
+Accepts `minlength`, `maxlength`, `size` (visual length), `pattern` (regex to validate password),
+`title` (message informing of the regex conditions), `placeholder`, `readonly`,
+`disabled`, `required`, `inputmode` (input mode for smartphones) and `autocomplete`
+(on, off and new-password options) attributes.
 
+#### Email:
+
+Accepts `placeholder`, `readonly`, `disabled`, `value`, `required`,
+`multiple` (boolean that informs this field receives multiple emails),
+`minlength`, `maxlength`, `size` (visual length), 
+`pattern` (regex to validate email) and `list` (receiving emails from a datalist)
+attributes.
+
+#### Url:
+
+Accepts `placeholder`, `readonly`, `disabled`, `value`, `required`,
+`minlength`, `maxlength`, `size` (visual length), 
+`pattern` (regex to validate email), `list` (receiving emails from a datalist)
+and spellcheck (enables spell check for the url) attributes.
+
+#### File:
+
+Accepts `value` (contains the file to be sent), `files` (the list of files),
+`accept` (specifies the file types to be accepted, like video/*) and 
+`multiple` (boolean that enables sending multiple files) attributes.
+
+Careful when using the file input, as the forms need to be configured like this:
+
+```html
+<form action="" method='post' enctype='multipart/form-data'>
+  <input type="file">
+</form>
+```
+
+#### Color:
+
+Accepts `value` and `list` (receiving colors from a datalist) attributes.
+
+#### Checkbox:
+
+Accepts `value` and `checked` attributes.
+
+Using checkboxes for multiple values:
+
+```html
+<fieldset>
+        <legend>Choose your interests:</legend>
+        <div>
+            <input type="checkbox" id='coding' name='interest' value='coding' checked>
+            <label for="coding">Coding</label>
+        </div>
+        <div>
+            <input type="checkbox" id='music' name='interest' value='music' checked>
+            <label for="music">Music</label>
+        </div>
+    </fieldset>
+```
+
+#### Hidden:
+
+Field hidden to the user.
+
+#### Radio:
+
+Select an option from many. Main attributes: `checked` and `value`.
+
+```html
+<fieldset>
+  <legend>Let's have a coffee?</legend>
+  <label for="yes">Yes</label>
+  <input type="radio" id='yes' name='coffee' value='yes'>
+  <label for="no">No</label>
+  <input type="radio" id='no' name='coffee' value='no' checked>
+</fieldset>
+```
+
+#### Textarea:
+
+Accepts `id`, `name`, `rows`, `cols`, `minlength`, `maxlength` and `wrap` attributes,
+alongside other input attributes like `autocomplete`, `autofocus`, `placeholder`,
+`required`, etc.
+
+#### Search:
+
+Accepts `list` (datalist), `pattern` and `aria-label` (hidden label for screen 
+readers) attributes (alongside other input attributes).
+
+#### Number:
+
+Accepts `min`, `max`, `step` and `list` attributes (alongside other input 
+attributes).
+
+#### Range:
+
+Number selected with a slider.
+
+Accepts `min`, `max`, `step` and `list` attributes (alongside other input 
+attributes).
+
+#### Input types that don't have a great browser support yet:
+
+`Date`, `datetime-local`, `month`, `time`, `week`.
+
+### Select:
+
+Select one or many options.
+
+```html
+<label for="carselect">Which car model do you like?</label>
+  <select name="carmodel" id="carselect" multiple size="2">
+  <option value="">Select the model</option>
+  <option value="fiat">Uno</option>
+  <option value="audi">A3</option>
+  <option value="bmw">X6</option>
+</select>
+```
+
+#### Optgroup:
+
+Grouping of options on select:
+
+```html
+<label for="petsselect">Please choose one or more pets:</label>
+<select name="pets" id="petsselect" multiple size='4'>
+  <optgroup label='4-legged pets'>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="hamster" disabled>Hamster</option>
+  </optgroup>
+  <optgroup label='Flying pets'>
+    <option value="parrot">Parrot</option>
+    <option value="macaw">Macaw</option>
+    <option value="albatross">Albatross</option>
+  </optgroup>
+</select>
+```
 
 ## Visual code shortcuts:
 
