@@ -24,7 +24,8 @@ Javascript's a multi-paradigm language, and as such, has the ability to be coded
     - [Symbols (ES6+):](#symbols-es6)
     - [Generator:](#generator)
     - [Arrow Functions (ES6+):](#arrow-functions-es6)
-    - [For of:](#for-of)
+    - [For in and for of:](#for-in-and-for-of)
+    - [Delete (for objects):](#delete-for-objects)
     - [Object.freeze and Object.seal:](#objectfreeze-and-objectseal)
     - [Default Function Arguments (ES6+):](#default-function-arguments-es6)
     - [Enhanced Object Literals (ES6+):](#enhanced-object-literals-es6)
@@ -527,9 +528,10 @@ obj.showContext(); //returns 'after 1000ms', after 1000ms
 
 ```
 
-### For of:
+### For in and for of:
 
-Interesting concept, going only through enumerable values, not properties as does for in.
+Interesting concept, for of goes only through enumerable values, 
+not properties as does for in.
 
 ```javascript
 let arr = [3,5,7];
@@ -544,6 +546,17 @@ for(let i of arr){
 }
 
 /* As seen on DIO'S Avanade Angular Developer Bootcamp*/
+```
+
+### Delete (for objects):
+
+```javascript
+let object = {
+  name: "name",
+  age: 17
+}
+delete object.age;
+//object now has only the name property
 ```
 
 ### Object.freeze and Object.seal:
