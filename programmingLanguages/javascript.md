@@ -819,7 +819,6 @@ I've know until now about the setTimeout function, but the setInterval function 
 
 "The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds). The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.", [W3schools](https://www.w3schools.com/jsref/met_win_setinterval.asp).
 
-
 ### Type conversion:
 
 ```js
