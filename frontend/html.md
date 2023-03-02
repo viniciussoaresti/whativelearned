@@ -418,6 +418,8 @@ Grouping of options on select:
 </select>
 ```
 
+
+
 ## Visual code shortcuts:
 
 - div#id generates a div with the "id" id;
