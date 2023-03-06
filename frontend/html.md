@@ -466,11 +466,26 @@ glossaries, extra links, author biography, profile information.
 
 #### Footer:
 
-Foot of the page.
+Foot of the page, generally having page author information, copyright, contacts,
+sitemap and a back to top button. Can be put on other locations such as inside 
+an article.
 
 #### Section:
 
+Section which generally has a title inside. Use case example:
 
+```html
+<main>
+    <article>
+        <h1>Recipe 1</h1>
+        <p>Recipe description</p>
+        <section>
+            <h2>How to:</h2>
+            <p>How to</p>
+        </section>
+    </article>
+</main>
+```
 
 ## Visual code shortcuts:
 
