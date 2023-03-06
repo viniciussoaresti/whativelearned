@@ -12,7 +12,6 @@ The standard for web pages.
     - [Tabindex:](#tabindex)
     - [Title:](#title)
   - [Reserved characters:](#reserved-characters)
-  - [SEO and Semantics:](#seo-and-semantics)
   - [Interesting tags I've not seen before:](#interesting-tags-ive-not-seen-before)
     - [Blockquote and quote (q):](#blockquote-and-quote-q)
     - [Abbreviation:](#abbreviation)
@@ -47,6 +46,16 @@ The standard for web pages.
       - [Input types that don't have a great browser support yet:](#input-types-that-dont-have-a-great-browser-support-yet)
     - [Select:](#select)
       - [Optgroup:](#optgroup)
+  - [SEO and Semantics:](#seo-and-semantics)
+    - [Semantics:](#semantics)
+      - [Blockquote:](#blockquote)
+      - [Header:](#header)
+      - [Nav:](#nav)
+      - [Main:](#main)
+      - [Article:](#article)
+      - [Aside:](#aside)
+      - [Footer:](#footer)
+      - [Section:](#section)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Global Attributes:
@@ -74,10 +83,6 @@ We can define a title to be shown when hovering over an element.
 ## Reserved characters:
 
 Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla' way, we can put them using [this](https://dev.w3.org/html5/html-author/charref) reference, for example.
-
-## SEO and Semantics:
-
-Writing a semantic HTML page can drastically improve SEO. Check [this](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) link for further explanation, and [this](https://www.w3schools.com/TAgs/default.asp) one for the full elements reference.
 
 ## Interesting tags I've not seen before:
 
@@ -417,6 +422,53 @@ Grouping of options on select:
   </optgroup>
 </select>
 ```
+
+## SEO and Semantics:
+
+Writing a semantic HTML page can drastically improve SEO. Check [this](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) link for further explanation, and [this](https://www.w3schools.com/TAgs/default.asp) one for the full elements reference.
+
+### Semantics:
+
+#### Blockquote:
+
+Nice for citations:
+
+```html
+<blockquote>
+Nós (programadores) somos pagos para resolver problemas,
+não para memorizar soluções.
+												 <cite>─ Mayk Brito</cite>
+</blockquote>
+```
+
+#### Header:
+
+Top of the page generally with some logo or information. Can be used inside
+other semantic elements like article, section.
+
+#### Nav:
+
+Navigation part, such as the main navigation menu. Can be used on other parts,
+but it is highly indicated to keep nav as an important navigation section.
+
+#### Main:
+
+Main content, used only once per page, inside the body tag.
+
+#### Article:
+
+Independent content that can be grouped with other articles if they make sense.
+
+#### Aside:
+
+Lateral content, generally related to the main content, such as explanations,
+glossaries, extra links, author biography, profile information.
+
+#### Footer:
+
+Foot of the page.
+
+#### Section:
 
 
 
