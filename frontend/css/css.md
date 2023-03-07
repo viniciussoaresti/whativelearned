@@ -40,8 +40,6 @@ The standard Cascading Style Sheet for web pages.
       - [Absolute:](#absolute)
       - [Fixed:](#fixed)
       - [Element stacking:](#element-stacking)
-    - [Flex:](#flex)
-    - [Grid:](#grid)
   - [Texts:](#texts)
     - [More styles:](#more-styles)
       - [Font-variant:](#font-variant)
@@ -70,6 +68,10 @@ The standard Cascading Style Sheet for web pages.
       - [Before:](#before)
       - [After:](#after)
       - [First-line:](#first-line)
+  - [Flexbox:](#flexbox)
+    - [Flex direction:](#flex-direction)
+    - [Flex sizing:](#flex-sizing)
+  - [Grid:](#grid)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [a11y:](#a11y)
@@ -601,68 +603,6 @@ properties as well.
 
 Z-index usage.
 
-### Flex:
-
-Many things changed with the flexbox introduction, with the parent element being 
-able to manipulate their children positioning, with the default being horizontal.
-
-```css
-/* css */
-div.parent {
-    display: flex;
-}
-/* we can use flex-direction, justify-content, align-items... */
-```
-
-### Grid:
-
-"CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward", [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
-
-```html
-<!-- html !-->
-<body>
-    <header>Header</header>
-    <main>Main</main>
-    <aside>Aside</aside>
-    <footer>Footer</footer>
-</body>
-```
-
-```css
-/* css */
-body {
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main aside"
-    "footer footer";
-    grid-template-rows: 30px 1fr 40px;
-    grid-template-columns: 1fr 80px;
-}
-
-header {
-    grid-area: header;
-    background-color: red;
-}
-
-main {
-    grid-area: main;
-    background-color: green;
-}
-
-aside {
-    grid-area: aside;
-    background-color: blue;
-}
-
-footer {
-    grid-area: footer;
-    background-color: yellow;
-}
-```
-
 ## Texts:
 
 Basic font attributes:
@@ -916,6 +856,82 @@ And we also have:
 ```css
 p::first-line {
 	font-weight: bold;
+}
+```
+
+## Flexbox:
+
+Many things changed with the flexbox introduction, with the parent element being 
+able to manipulate their children positioning, with the default being horizontal.
+
+```css
+/* css */
+div.parent {
+    display: flex;
+}
+/* we can use flex-direction, justify-content, align-items... */
+```
+
+### Flex direction:
+
+Changes the child items positioning, with such as with `column`.
+
+### Flex sizing:
+
+Alters dynamically the height and width of the flex elements:
+
+```css
+.item {
+    flex: 1;
+}
+```
+
+## Grid:
+
+"CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward", [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
+
+```html
+<!-- html !-->
+<body>
+    <header>Header</header>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+```
+
+```css
+/* css */
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-rows: 30px 1fr 40px;
+    grid-template-columns: 1fr 80px;
+}
+
+header {
+    grid-area: header;
+    background-color: red;
+}
+
+main {
+    grid-area: main;
+    background-color: green;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: yellow;
 }
 ```
 
