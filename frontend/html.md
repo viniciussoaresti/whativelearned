@@ -491,3 +491,4 @@ Section which generally has a title inside. Use case example:
 
 - div#id generates a div with the "id" id;
 - div.class generates a div with the "class" class;
+- element*n generates n times an element.

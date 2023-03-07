@@ -6,8 +6,6 @@ The standard Cascading Style Sheet for web pages.
 - [CSS](#css)
 - [Contents](#contents)
   - [Example code on CSS:](#example-code-on-css)
-  - [CSS selectors:](#css-selectors)
-  - [Grouping Selectors:](#grouping-selectors)
   - [Adding CSS to HTML (on the html file):](#adding-css-to-html-on-the-html-file)
   - [The import tag:](#the-import-tag)
   - [Why cascading?:](#why-cascading)
@@ -55,6 +53,23 @@ The standard Cascading Style Sheet for web pages.
       - [Text-align:](#text-align)
       - [Text-shadow:](#text-shadow)
       - [Shorthand:](#shorthand-1)
+  - [CSS selectors:](#css-selectors)
+    - [Grouping Selectors:](#grouping-selectors)
+    - [Combinators:](#combinators)
+      - [Descendant combinator:](#descendant-combinator)
+      - [Child combinator:](#child-combinator)
+      - [Adjacent sibling combinator:](#adjacent-sibling-combinator)
+      - [General sibling combinator:](#general-sibling-combinator)
+    - [Pseudo-class selector:](#pseudo-class-selector)
+      - [First child:](#first-child)
+      - [Nth of type:](#nth-of-type)
+      - [Nth child:](#nth-child)
+      - [Nth child odd and even:](#nth-child-odd-and-even)
+      - [Hover, focus, disabled and required:](#hover-focus-disabled-and-required)
+    - [Pseudo-element selector:](#pseudo-element-selector)
+      - [Before:](#before)
+      - [After:](#after)
+      - [First-line:](#first-line)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
     - [a11y:](#a11y)
@@ -64,26 +79,6 @@ The standard Cascading Style Sheet for web pages.
 ```css 
 /* i'm a comment */
 h1  {
-    color: blue;
-    font-size: 60px;
-    background: gray;
-}
-```
-
-## CSS selectors:
-
-- `*` (Global);
-- `h1, div, p` (Element selector);
-- `#div-01` (Id selector);
-- `.textDivs` (Class selector);
-- Attribute, pseudo-class, pseudo-element, and many more selectors;
-
-## Grouping Selectors:
-
-```css 
-/* applies the same declaration (properties and 
-property values) to all listed elements */
-h1, h2, div  {
     color: blue;
     font-size: 60px;
     background: gray;
@@ -770,6 +765,157 @@ p {
   font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
   /* font-style, font-variant, font-weight, font-stretch, font-size, line-height
    and font-family */
+}
+```
+
+## CSS selectors:
+
+- `*` (Global);
+- `h1, div, p` (Element selector);
+- `#div-01` (Id selector);
+- `.textDivs` (Class selector);
+- `['attribute']` (Attribute selector);
+- `p:hover` (Pseudo-class selector);
+- `p::first-line` (Pseudo-element selector);
+- and many more selectors;
+
+### Grouping Selectors:
+
+```css 
+/* applies the same declaration (properties and 
+property values) to all listed elements */
+h1, h2, div  {
+    color: blue;
+    font-size: 60px;
+    background: gray;
+}
+```
+
+### Combinators:
+
+#### Descendant combinator:
+
+Searches for an element inside another, even if there are other elements on the
+way.
+
+```css
+body article h2{
+
+}
+```
+
+#### Child combinator:
+
+Searches for an element that is direct child of another, not considering any 
+other elements after the direct child.
+
+```css
+body > ul > li{
+
+}
+```
+
+#### Adjacent sibling combinator:
+
+Selects only the element on the right side that is a direct element on the 
+hierarchy (selects the first sibling occurrence).
+
+```css
+h1 + p{
+
+}
+```
+
+#### General sibling combinator:
+
+Selects all the element siblings specified.
+
+```css
+h1 ~ p{
+
+}
+```
+
+### Pseudo-class selector:
+
+#### First child:
+
+Selects the first child of an element group:
+
+```css
+ul li:first-child {
+  font-weight: bold;
+}
+```
+
+#### Nth of type:
+
+Selects the 'n'th element of an element group:
+
+```css
+ul li:nth-of-type(1) {
+  font-weight: bold;
+}
+```
+
+#### Nth child:
+
+Selects the 'n'th child element of an element:
+
+```css
+ul li:nth-child(2) {
+  font-weight: bold;
+}
+```
+
+#### Nth child odd and even:
+
+Selects the odd or even child elements of an element:
+
+```css
+ul li:nth-child(odd) { /*ul li:nth-child(even)*/
+  font-weight: bold;
+}
+```
+
+#### Hover, focus, disabled and required:
+
+Selects elements when having hover or focus, or when having disabled or required
+attributes:
+
+```css
+input:focus {
+  border-color: red;
+}
+```
+
+### Pseudo-element selector:
+
+We can add html elements via css:
+
+#### Before:
+
+```css
+li::before {
+  content: "> "
+}
+```
+
+#### After:
+
+```css
+li::after{
+  content: ";"
+}
+```
+
+And we also have:
+
+#### First-line:
+
+```css
+p::first-line {
+	font-weight: bold;
 }
 ```
 
