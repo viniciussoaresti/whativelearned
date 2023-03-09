@@ -970,7 +970,7 @@ Space between elements:
 Base width for flex elements.
 
 ```css
-.container .item{
+.container .item {
     display: flex;
     flex-basis: 10px; /*%, em, others*/
 }
@@ -995,15 +995,41 @@ blank space.
 
 #### Flex-shrink:
 
+Item shrink property. 0 makes the item occupy all the space it should, 1 is the
+default making it shrink proportionally, and 2+ further shrinks the element. 
 
+```css
+.container .item:nth-child(1){
+    display: flex;
+    flex-shrink: 0;
+}
+
+.container .item:nth-child(2){
+    display: flex;
+    flex-shrink: 2;
+}
+```
 
 #### Flex:
 
+Shorthand for flex grow, shrink and basis:
 
+```css
+.container .item{
+    display: flex;
+    flex: 1 1 0; /*grow, shrink and basis*/
+}
+```
 
 #### Order:
 
+Defines order, from negative values to positive ones.
 
+```css
+.container .item:nth-child(1){
+    order: 2; /*default*/
+}
+```
 
 ## Grid:
 
