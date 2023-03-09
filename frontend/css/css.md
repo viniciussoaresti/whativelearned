@@ -71,6 +71,19 @@ The standard Cascading Style Sheet for web pages.
   - [Flexbox:](#flexbox)
     - [Flex direction:](#flex-direction)
     - [Flex sizing:](#flex-sizing)
+    - [Flex container:](#flex-container)
+      - [Flex-direction:](#flex-direction-1)
+      - [Flex-wrap:](#flex-wrap)
+      - [Flex-flow:](#flex-flow)
+      - [Justify content:](#justify-content)
+      - [Align items:](#align-items)
+      - [Gap:](#gap)
+    - [Flex item:](#flex-item)
+      - [Flex-basis:](#flex-basis)
+      - [Flex-grow:](#flex-grow)
+      - [Flex-shrink:](#flex-shrink)
+      - [Flex:](#flex)
+      - [Order:](#order)
   - [Grid:](#grid)
   - [Tips:](#tips)
     - [Base css for all projects:](#base-css-for-all-projects)
@@ -885,6 +898,112 @@ Alters dynamically the height and width of the flex elements:
     flex: 1;
 }
 ```
+
+### Flex container:
+
+#### Flex-direction:
+
+```css
+.container {
+    flex-direction: row; /*row-reverse, column, column-reverse*/
+}
+```
+
+#### Flex-wrap:
+
+Adapt content to multiple lines if needed:
+
+```css
+.container {
+    flex-wrap: wrap; /*wrap-reverse*/
+}
+```
+
+#### Flex-flow:
+
+Enables shorthand for `direction` and `wrap`:
+
+```css
+.container {
+    flex-flow: column wrap;
+}
+```
+
+#### Justify content:
+
+Element distribution inside the container, on the main axis:
+
+```css
+.container {
+    display: flex;
+    justify-content: flex-start; /*flex-end, center, space-around, 
+    space-between, space-evenly*/
+}
+```
+
+#### Align items:
+
+Element distribution inside the container, on the other axis:
+
+```css
+.container {
+    display: flex;
+    justify-content: stretch; /*flex-start, flex-end, center*/
+}
+```
+
+#### Gap:
+
+Space between elements:
+
+```css
+.container {
+    display: flex;
+    gap: 10px; /*%, em, others*/
+}
+```
+
+### Flex item:
+
+#### Flex-basis:
+
+Base width for flex elements.
+
+```css
+.container .item{
+    display: flex;
+    flex-basis: 10px; /*%, em, others*/
+}
+```
+
+#### Flex-grow:
+
+Item growth related to blank spaces. Each value represents a fraction of the
+blank space.
+
+```css
+.container .item:nth-child(1){
+    display: flex;
+    flex-grow: 1;
+}
+
+.container .item:nth-child(2){
+    display: flex;
+    flex-grow: 2;
+}
+```
+
+#### Flex-shrink:
+
+
+
+#### Flex:
+
+
+
+#### Order:
+
+
 
 ## Grid:
 
