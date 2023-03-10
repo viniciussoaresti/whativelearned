@@ -796,7 +796,7 @@ h1 ~ p{
 Selects the first child of an element group:
 
 ```css
-ul li:first-child {
+ul li :first-child {
   font-weight: bold;
 }
 ```
@@ -806,7 +806,7 @@ ul li:first-child {
 Selects the 'n'th element of an element group:
 
 ```css
-ul li:nth-of-type(1) {
+ul li :nth-of-type(1) {
   font-weight: bold;
 }
 ```
@@ -816,7 +816,7 @@ ul li:nth-of-type(1) {
 Selects the 'n'th child element of an element:
 
 ```css
-ul li:nth-child(2) {
+ul li :nth-child(2) {
   font-weight: bold;
 }
 ```
@@ -826,7 +826,7 @@ ul li:nth-child(2) {
 Selects the odd or even child elements of an element:
 
 ```css
-ul li:nth-child(odd) { /*ul li:nth-child(even)*/
+ul li :nth-child(odd) { /*ul li:nth-child(even)*/
   font-weight: bold;
 }
 ```
@@ -837,7 +837,7 @@ Selects elements when having hover or focus, or when having disabled or required
 attributes:
 
 ```css
-input:focus {
+input :focus {
   border-color: red;
 }
 ```
@@ -849,7 +849,7 @@ We can add html elements via css:
 #### Before:
 
 ```css
-li::before {
+li ::before {
   content: "> "
 }
 ```
@@ -857,7 +857,7 @@ li::before {
 #### After:
 
 ```css
-li::after{
+li ::after{
   content: ";"
 }
 ```
@@ -867,7 +867,7 @@ And we also have:
 #### First-line:
 
 ```css
-p::first-line {
+p ::first-line {
 	font-weight: bold;
 }
 ```
@@ -982,12 +982,12 @@ Item growth related to blank spaces. Each value represents a fraction of the
 blank space.
 
 ```css
-.container .item:nth-child(1){
+.container .item :nth-child(1){
     display: flex;
     flex-grow: 1;
 }
 
-.container .item:nth-child(2){
+.container .item :nth-child(2){
     display: flex;
     flex-grow: 2;
 }
@@ -999,12 +999,12 @@ Item shrink property. 0 makes the item occupy all the space it should, 1 is the
 default making it shrink proportionally, and 2+ further shrinks the element. 
 
 ```css
-.container .item:nth-child(1){
+.container .item :nth-child(1){
     display: flex;
     flex-shrink: 0;
 }
 
-.container .item:nth-child(2){
+.container .item :nth-child(2){
     display: flex;
     flex-shrink: 2;
 }
@@ -1015,7 +1015,7 @@ default making it shrink proportionally, and 2+ further shrinks the element.
 Shorthand for flex grow, shrink and basis:
 
 ```css
-.container .item{
+.container .item {
     display: flex;
     flex: 1 1 0; /*grow, shrink and basis*/
 }
@@ -1026,7 +1026,7 @@ Shorthand for flex grow, shrink and basis:
 Defines order, from negative values to positive ones.
 
 ```css
-.container .item:nth-child(1){
+.container .item :nth-child(1){
     order: 2; /*default*/
 }
 ```
