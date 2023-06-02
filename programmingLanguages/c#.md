@@ -4,7 +4,7 @@
 
 # Contents:
 
-- [C](#c)
+- [C#](#c)
 - [Contents:](#contents)
   - [Concepts:](#concepts)
     - [C# and .NET:](#c-and-net)
