@@ -32,6 +32,15 @@
     - [clearInterval:](#clearinterval)
   - [Events:](#events)
     - [Event Emmiter:](#event-emmiter)
+- [EJS:](#ejs)
+  - [Install](#install)
+  - [Using:](#using)
+  - [Separating layout parts:](#separating-layout-parts)
+    - [Folder organization:](#folder-organization)
+  - [Live Reload](#live-reload)
+  - [Passing objects to ejs:](#passing-objects-to-ejs)
+    - [Omiting object:](#omiting-object)
+    - [Foreach:](#foreach)
 
 # Hello World:
 
@@ -232,4 +241,247 @@ Listening only to the first event emmited:
 ev.once("saySomething", (message) => {
     console.log("listened you: " + message);
 })
+```
+
+# EJS:
+
+Embedded JavaScript (EJS) templates. Modelling language for HTML pages creation utilizing JS.
+
+## Install
+
+Install using `npm i ejs`.
+
+We also need to have a server in place, which we can achieve with express (`npm i express`).
+
+## Using:
+
+To use it, we need to change any html file extensions to `.ejs`, put them on a `views` folder and specify a server to
+render it:
+
+```js
+//server.js
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+    res.render('index');
+});
+
+app.listen(8080);
+```
+
+I've found some problems when linking css files, and it seems like when adding static files (like JS, CSS or images),
+we need to use a folder (most commonly the 'public' folder) to store them and define it on the express definitions:
+
+```js
+//server.js
+app.use(express.static("public"));
+```
+
+And in the ejs file:
+
+```html
+<!-- index.ejs !-->
+<link rel="stylesheet" href="css/style.css"> <!-- the style.css is located on /public/css/-->
+```
+
+## Separating layout parts:
+
+We can separate layout parts and include them on other parts of html pages with ejs. For example:
+
+```html
+<!-- index.ejs !-->
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('head'); %>
+
+<body class='container'>
+
+
+    <main>
+        <div>
+            <h1>Page title</h1>
+            <p>Content</p>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
+```
+
+```html
+<!-- head.ejs !-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+```
+
+### Folder organization:
+
+Good practice in ejs:
+
+Separate full pages and partials (like headers, footers, etc.) inside the views folder, within their own folders.
+
+## Live Reload
+
+Oh, did I forget to mention that all the edits you make are made to the server without having to restart the server? Neat.
+It's not a **live** live reload, refreshing the browser automatically, but it's almost as good.
+
+## Passing objects to ejs:
+
+We're able to pass objects from one page to another, like the following example:
+
+```html
+<!-- index.ejs !-->
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body class='container'>
+
+    <%- include('../partials/header', {page: 'Home'}); %>
+
+    <main>
+        <div class='container-fluid text-sm-center p-5 bg-secondary'>
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+        </div>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+</body>
+
+</html>
+```
+
+```html
+<!-- header.ejs !-->
+<header>
+    <p>Page: <%- page %> </p>
+    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+        <a class='navbar-brand' href="/">EJS</a>
+        <ul class='navbar-nav mr-auto'>
+            <li class='nav-item'><a class='nav-link' href='/'>Home</a></li>
+            <li class='nav-item'><a class='nav-link' href='/about'>About</a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+When using it, be sure to always send the object each page will receive, or else it'll error.
+
+### Omiting object:
+
+Sometimes on a page we won't need to send an object, so we can adapt the code to comply. Note the `=` change on the
+`header.ejs` include declaration, specifying that this content will be received dynamically:
+
+```html
+<!-- header.ejs !-->
+<header>
+    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+        <a class='navbar-brand' href="/">EJS</a>
+        <ul class='navbar-nav mr-auto'>
+            <li class='nav-item'><a class='nav-link' href='/'>Home</a></li>
+            <li class='nav-item'><a class='nav-link' href='/about'>About</a></li>
+        </ul>
+    </nav>
+    <p>Page: <%= typeof page != 'undefined' ? page : 'Home' %> </p>
+</header>
+```
+
+### Foreach:
+
+Foreach example consuming items from the backend:
+
+```html
+<!-- index.ejs !-->
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body class='container'>
+
+    <%- include('../partials/header', {page: 'Home'}); %>
+
+    <main>
+        <div class='container-fluid text-sm-center p-5 bg-secondary'>
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+        </div>
+        <ul>
+            <% items.forEach((item)=>{ %>
+            <li>
+                <strong><%= item.title %>:</strong> <%= item.message %>
+            </li>
+            <% }) %>
+        </ul>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+</body>
+
+</html>
+```
+
+```js
+//server.js
+const express = require('express');
+const app = express();
+
+app.use(express.static("public"));
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+    const items = [
+        {
+            title: 'D',
+            message: 'Develop'
+        },
+        {
+            title: 'E',
+            message: 'EJS'
+        },
+        {
+            title: 'M',
+            message: 'Mindfully'
+        },
+        {
+            title: 'A',
+            message: 'After'
+        },
+        {
+            title: 'I',
+            message: 'Initial'
+        },
+        {
+            title: 'S',
+            message: 'Studies'
+        }
+    ]
+    res.render('pages/index', { items: items });
+});
+
+app.get('/about', function (req, res) {
+    res.render('pages/about');
+});
+
+app.listen(8080);
 ```
