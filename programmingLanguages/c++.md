@@ -19,6 +19,15 @@ language", [Learn CPP](https://www.learncpp.com/cpp-tutorial/introduction-to-cpl
   - [Input/output library](#inputoutput-library)
     - [std::cout:](#stdcout)
     - [std::cin:](#stdcin)
+  - [Nested functions:](#nested-functions)
+  - [Double return:](#double-return)
+  - [Function order matters! And a lot!](#function-order-matters-and-a-lot)
+  - [Multiple code files:](#multiple-code-files)
+  - [Namespaces:](#namespaces)
+    - [Global namespace:](#global-namespace)
+    - [Using namespaces:](#using-namespaces)
+  - [Preprocessor:](#preprocessor)
+  - [Header Files:](#header-files)
 
 # Hello world:
 
@@ -166,3 +175,238 @@ int main()
     return 0;
 }//https://www.learncpp.com/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl/
 ```
+
+## Nested functions:
+
+Nested functions like the following example in Javascript:
+
+```js
+function doSomething(){
+    function doSomethingAgain(){
+        console.log('a');
+    }
+    doSomethingAgain();
+}
+doSomething();
+```
+
+Are not supported in C++. The following code does not compile:
+
+```C++
+#include <iostream>
+
+int main()
+{
+    void foo() // Illegal: this function is nested inside function main()
+    {
+        std::cout << "foo!\n";
+    }
+
+    foo(); // function call to foo()
+    return 0;
+}//https://www.learncpp.com/cpp-tutorial/introduction-to-functions/
+```
+
+## Double return:
+
+I expected that when using double returns both in JS and in C++, they would
+generate an error, but that's not the case. This:
+
+```C++
+#include <iostream>
+
+int getNumbers()
+{
+    return 5;
+    return 7;
+}
+
+int main()
+{
+    std::cout << getNumbers() << '\n';
+    std::cout << getNumbers() << '\n';
+
+    return 0;
+}//https://www.learncpp.com/cpp-tutorial/function-return-values-value-returning-functions/
+```
+
+Compiles and executes fine, it just ignores the second return statement (and 
+everything that could possibly be put after the initial return).
+
+## Function order matters! And a lot!
+
+For example the following code:
+
+```C++
+#include <iostream>
+
+int main()
+{
+    std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
+    return 0;
+}
+
+int add(int x, int y)
+{
+    return x + y;
+}//https://www.learncpp.com/cpp-tutorial/forward-declarations/
+```
+
+Doesn't compile, generating the error "C3861: 'add': identifier not found".
+
+Since the compiler "compiles the contents of code files sequentially, when the
+compiler reaches the function call to add on line 5 of main, it doesn’t know what
+add is, because we haven’t defined add until line 9!", 
+[Learn CPP](https://www.learncpp.com/cpp-tutorial/forward-declarations/).
+
+This could be "easily" solved by simply reordering the functions, but if we have
+a problem where for example a function 'A' uses function 'B' and the reverse is
+also true, this wouldn't solve it.
+
+The solution is using what is called a 'forward declaration':
+
+```C++
+#include <iostream>
+
+int add(int x, int y); // forward declaration of add() (using a function declaration)
+
+int main()
+{
+    std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n'; // this works because we forward declared add() above
+    return 0;
+}
+
+int add(int x, int y) // even though the body of add() isn't defined until here
+{
+    return x + y;
+}//https://www.learncpp.com/cpp-tutorial/forward-declarations/
+```
+
+## Multiple code files:
+
+The IDE makes the work of linking them together to you, so the following:
+
+```C++
+//main.cpp
+#include <iostream>
+
+int add(int x, int y); // needed so main.cpp knows that add() is a function defined elsewhere
+
+int main()
+{
+    std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
+    return 0;
+}//https://www.learncpp.com/cpp-tutorial/programs-with-multiple-code-files/
+```
+
+```C++
+//add.cpp
+int add(int x, int y)
+{
+    return x + y;
+}//https://www.learncpp.com/cpp-tutorial/programs-with-multiple-code-files/
+```
+
+Works as intended. Just be sure to use the forward declaration.
+
+## Namespaces:
+
+"A namespace is a region that allows you to declare names inside of it for the
+purpose of disambiguation. The namespace provides a scope region (called
+namespace scope) to the names declared inside of it -- which simply means that
+any name declared inside the namespace won’t be mistaken for identical names
+in other scopes", [LearnCPP](https://www.learncpp.com/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces/).
+
+### Global namespace:
+
+"In C++, any name that is not defined inside a class, function, or a namespace
+is considered to be part of an implicitly defined namespace called the global
+namespace (sometimes also called the global scope)", [LearnCPP](https://www.learncpp.com/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces/).
+
+Some important details:
+
+```C++
+#include <iostream> // handled by preprocessor
+
+// All of the following statements are part of the global namespace
+void foo();    // okay: function forward declaration in the global namespace
+int x;         // compiles but strongly discouraged: uninitialized variable definition in the global namespace
+int y { 5 };   // compiles but discouraged: variable definition with initializer in the global namespace
+x = 5;         // compile error: executable statements are not allowed in the global namespace
+
+int main()     // okay: function definition in the global namespace
+{
+    return 0;
+}
+
+void goo();    // okay: another function forward declaration in the global namespace
+//https://www.learncpp.com/cpp-tutorial/naming-collisions-and-an-introduction-to-namespaces/
+```
+
+### Using namespaces:
+
+We can specify namespaces the way we're usually doing, with the 'scope resolution
+operator': `::`.
+
+```C++
+std::cout << "Hello world!";
+```
+
+We can also use a 'using directive statement':
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!";
+    return 0;
+}
+```
+
+But this is strongly discouraged since even the C++ standards used the standard
+namespace to avoid naming conflicts and such.
+
+## Preprocessor:
+
+Before code is compiled, it is preprocessed. This phase of 'translation' doesn't
+necessarily understand or parses C++ code, but instead just prepares some stuff
+before compilation.
+
+For example, the `#include` directive is read by the preprocessor and it includes
+the contents of the specified file.
+
+We can use `#define` to create a macro, but it is generally unsafe to do so.
+
+It is also used to replace occurrences like:
+
+```C++
+#include <iostream>
+
+#define MY_NAME "Alex"
+
+int main()
+{
+    std::cout << "My name is: " << MY_NAME << '\n';
+
+    return 0;
+}
+```
+
+But this was used in legacy code and is no longer recommended.
+
+There's also `#ifdef, #ifndef, #endif, #if 0` but I don't think they'll be used
+frequently. If I change my mind I'll mention them again.
+
+## Header Files:
+
+"Header files allow us to put declarations in one location and then import them
+wherever we need them. This can save a lot of typing in multi-file programs",
+[LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
+
+They are generally written with the `.h` and `.hpp` extensions, or even without
+extensions at all.
+
+It's easy to create them through an IDE also, but 
