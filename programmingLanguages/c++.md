@@ -407,6 +407,68 @@ wherever we need them. This can save a lot of typing in multi-file programs",
 [LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
 
 They are generally written with the `.h` and `.hpp` extensions, or even without
-extensions at all.
+extensions at all. But `.h` is preferred.
 
-It's easy to create them through an IDE also, but 
+"Header files are often paired with code files, with the header file providing
+forward declarations for the corresponding code file. If a header file is paired
+with a code file, they should both have the same base name", 
+[LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
+
+It's easy to create them through an IDE also.
+
+In order to use it fully, we need to include it into the code file that contains
+the functions (it's a best practice) and declarations we need, and also on the
+code file we will use them. Example:
+
+```C++
+//add.h
+int add(int x, int y);
+```
+
+```C++
+//main.cpp
+#include "add.h" // Insert contents of add.h at this point.  
+//Note use of double quotes here.
+#include <iostream>
+
+int main()
+{
+    std::cout << "The sum of 3 and 4 is " << add(3, 4) << '\n';
+    return 0;
+}
+```
+
+```C++
+//add.cpp
+#include "add.h" // Insert contents of add.h at this point.  
+//Note use of double quotes here.
+
+int add(int x, int y)
+{
+    return x + y;
+}
+```
+
+"Use double quotes to include header files that you’ve written or are expected
+to be found in the current directory. Use angled brackets to include headers
+that come with your compiler, OS, or third-party libraries you’ve installed
+elsewhere on your system", [LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
+
+"When including a header file from the standard library, use the version without
+the .h extension if it exists. User-defined headers should still use a .h
+extension.
+
+If a header files without a .h extension defines names into the global namespace,
+avoid those names, as they may not be available in the global namespace on other
+compilers. Prefer the names defined in the std namespace instead.",
+[LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
+
+To include header files from other directories, a best practice is to set a
+include path or search directory in the IDE project settings.
+
+"Each file should explicitly #include all of the header files it needs to
+compile. Do not rely on headers included transitively from other headers", 
+[LearnCpp](https://www.learncpp.com/cpp-tutorial/header-files/).
+
+Consider reading the rest of the page mentioned before for additional details.
+
