@@ -58,9 +58,21 @@ SELECT * FROM student;
 
 ### UPDATE:
 
+```sql
+UPDATE student SET name="Mary", legalGuardian="Jake" WHERE cpf = 2345678901;
+```
+
 ### DELETE:
 
+```sql
+DELETE FROM student WHERE cpf = 2345678901;
+```
+
 ### INSERT INTO:
+
+```sql
+INSERT INTO student(name, cpf, legalGuardian) VALUES ("John", 1234567890, "Paul");
+```
 
 ### CREATE DATABASE:
 
@@ -108,7 +120,7 @@ SELECT * FROM student WHERE name like "j%";
 
 ### Comparison:
 
-`=`, `>`, `<`, `>=`, `<=`, `<>`;
+`=`, `>`, `<`, `>=`, `<=`, `!=`, `<>`;
 
 ### Compound:
 
@@ -116,7 +128,8 @@ SELECT * FROM student WHERE name like "j%";
 
 ### Logical:
 
-`ALL`, `AND`, `ANY`, `BETWEEN`, `EXISTS`, `IN`, `LIKE`, `NOT`, `OR`, `SOME`;
+`ALL`, `AND`, `ANY`, `BETWEEN`, `EXISTS`, `IN`, `LIKE`, `NOT`, `OR`, `SOME`,
+`NOT IN`, `IS NULL`, `IS NOT NULL`;
 
 ## Joins:
 
