@@ -43,7 +43,9 @@ Javascript's a multi-paradigm language, and as such, has the ability to be coded
 
 JS's a language that has first-class functions.
 
-That is, functions can be treated as any other variable, as described on [MDN](https://developer.mozilla.org/pt-BR/docs/Glossary/First-class_Function). Thus, beign able to be manipulated as an argument, returned by other funtions, and assigned to another variable.
+That is, functions can be treated as any other variable, as described on [MDN](https://developer.mozilla.org/pt-BR/docs/Glossary/First-class_Function). Thus,
+being able to be manipulated as an argument, returned by other functions, and
+assigned to another variable.
 
 ### Closure:
 
@@ -64,8 +66,6 @@ init();
 ### Currying
 
 "Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well. It's a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).", [Javascript.info](https://javascript.info/currying-partials).
-
-
 
 ```javascript
 function soma(a){
