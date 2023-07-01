@@ -28,6 +28,7 @@ language", [Learn CPP](https://www.learncpp.com/cpp-tutorial/introduction-to-cpl
     - [Using namespaces:](#using-namespaces)
   - [Preprocessor:](#preprocessor)
   - [Header Files:](#header-files)
+    - [Header Guards:](#header-guards)
 
 # Hello world:
 
@@ -472,3 +473,60 @@ compile. Do not rely on headers included transitively from other headers",
 
 Consider reading the rest of the page mentioned before for additional details.
 
+### Header Guards:
+
+Basically, header guards protect our code from adding the same headers twice,
+avoiding duplicate variable and function declarations. For example, if we have
+a header that includes the same header that we for some reason include again,
+it won't add it twice, generating compilation errors. It's a good practice to
+always have header guards.
+
+Example:
+
+```c++
+//square.h
+#ifndef SQUARE_H
+#define SQUARE_H
+
+int getSquareSides()
+{
+    return 4;
+}
+
+#endif
+
+//wave.h
+#ifndef WAVE_H
+#define WAVE_H
+
+#include "square.h"
+
+#endif
+
+//main.cpp
+#include "square.h"
+#include "wave.h"
+
+int main()
+{
+    return 0;
+}
+
+//https://www.learncpp.com/cpp-tutorial/header-guards/
+```
+In modern C++, this can also be achieved with a simpler syntax:
+
+```c++
+//square.h
+#pragma once
+
+int getSquareSides()
+{
+    return 4;
+}
+```
+
+While this is supported by most compilers, "because pragmas are not an official
+part of the C++ language (and may not be supported consistently, or at all on
+more esoteric platforms), others (such as Google) still recommend sticking
+with traditional header guards", [LearnCPP](https://www.learncpp.com/cpp-tutorial/header-guards/).
