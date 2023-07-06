@@ -50,10 +50,9 @@ The same as usual: `//` and `/* */`.
 
 ## Variables initialization:
 
-Copy initialization (`int a = 5;`) was sometimes not used and direct initialization
-(`int a(5);`) was preferred for performance reasons. But it has "generally fallen
-out of favor in modern C++",
-[Learn CPP](https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization/).
+Copy initialization (`int a = 5;`) was sometimes not used and direct
+initialization (`int a(5);`) was preferred for performance reasons. But it has 
+"generally fallen out of favor in modern C++", [Learn CPP](https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization/).
 Now the go-to is list initialization, that can attribute one or multiple values
 (`int width { 5 };` or `int width = { 5 };`).
 
@@ -530,3 +529,4 @@ While this is supported by most compilers, "because pragmas are not an official
 part of the C++ language (and may not be supported consistently, or at all on
 more esoteric platforms), others (such as Google) still recommend sticking
 with traditional header guards", [LearnCPP](https://www.learncpp.com/cpp-tutorial/header-guards/).
+

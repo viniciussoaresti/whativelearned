@@ -12,6 +12,7 @@ The version control software everybody loves.
   - [Adding remote to a not cloned, local repo:](#adding-remote-to-a-not-cloned-local-repo)
   - [Correcting last commit message or commit content:](#correcting-last-commit-message-or-commit-content)
   - [Retrieving files from previous commits:](#retrieving-files-from-previous-commits)
+  - [Updating submodules:](#updating-submodules)
 
 # Tips:
 
@@ -50,3 +51,13 @@ The contents of the modified staging area also change the commit.
 ## Retrieving files from previous commits:
 
 `git checkout (commitHash) -- (fileName)`
+
+## Updating submodules:
+
+Go to the submodule, update it with the latest commit (pulling from the branch) 
+you want, go back to the main repository and check the status with 
+`git submodule status`.
+
+Then if the status show something like: `+(commit hash) (submodule name)`, you
+can update the commit specified on the main repository with 
+`git submodule update`, good practice to use `git submodule update --recursive`.
