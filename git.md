@@ -97,6 +97,10 @@ And insert the squash commit message:
 # This is the 1st commit message:
 ```
 
+Then push the updates forcing them:
+
+`git push --force`
+
 ### Alternative way:
 Start the process with the rebase command, and specify how many commits will be 
 squashed with the ~ parameter (example with ~3, the past 3 commits after the
