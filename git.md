@@ -13,6 +13,7 @@ The version control software everybody loves.
   - [Correcting last commit message or commit content:](#correcting-last-commit-message-or-commit-content)
   - [Retrieving files from previous commits:](#retrieving-files-from-previous-commits)
   - [Updating submodules:](#updating-submodules)
+  - [Squashing commits:](#squashing-commits)
 
 # Tips:
 
@@ -61,3 +62,29 @@ you want, go back to the main repository and check the status with
 Then if the status show something like: `+(commit hash) (submodule name)`, you
 can update the commit specified on the main repository with 
 `git submodule update`, good practice to use `git submodule update --recursive`.
+
+## Squashing commits:
+
+Start the process with the rebase command, and specify how many commits will be 
+squashed with the ~ parameter:
+
+```shell
+git rebase -i HEAD~3
+```
+
+After it, do, for example:
+
+```shell
+pick bbc1bd9 TSW-186946: add display mode key name
+squash 3de7dce TSW-186946: add display mode ipc key type
+squash 72d422b TSW-186946: correct submodules
+```
+
+And insert the squash commit message:
+
+```shell
+(message)
+
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+```
