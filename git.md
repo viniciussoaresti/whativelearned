@@ -66,7 +66,8 @@ can update the commit specified on the main repository with
 ## Squashing commits:
 
 Start the process with the rebase command, and specify how many commits will be 
-squashed with the ~ parameter:
+squashed with the ~ parameter (example with ~3, the past 3 commits after the
+head commit will be squashed):
 
 ```shell
 git rebase -i HEAD~3
