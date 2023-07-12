@@ -14,6 +14,8 @@ The version control software everybody loves.
   - [Retrieving files from previous commits:](#retrieving-files-from-previous-commits)
   - [Updating submodules:](#updating-submodules)
   - [Squashing commits:](#squashing-commits)
+    - [Main way:](#main-way)
+    - [Alternative way:](#alternative-way)
 
 # Tips:
 
@@ -65,6 +67,37 @@ can update the commit specified on the main repository with
 
 ## Squashing commits:
 
+### Main way:
+
+To avoid some problems, we can follow gitflow and make the changes in a separate
+branch from main, and simply do:
+
+`git checkout main`
+
+`git pull (from main)`
+
+`git checkout <your-branch>`
+
+`git rebase main -i`
+
+After it, do, for example:
+
+```shell
+pick bbc1bd9 TSW-186946: add display mode key name
+squash 3de7dce TSW-186946: add display mode ipc key type
+squash 72d422b TSW-186946: correct submodules
+```
+
+And insert the squash commit message:
+
+```shell
+(message)
+
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+```
+
+### Alternative way:
 Start the process with the rebase command, and specify how many commits will be 
 squashed with the ~ parameter (example with ~3, the past 3 commits after the
 head commit will be squashed):
