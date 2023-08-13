@@ -11,8 +11,8 @@ Internet", [Wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web).
 - [Web Basic Concepts:](#web-basic-concepts)
   - [HTTP:](#http)
     - [Communication:](#communication)
-      - [HTTP Methods:](#http-methods)
-      - [HTTP Status Codes:](#http-status-codes)
+      - [HTTP Request Methods:](#http-request-methods)
+      - [HTTP Response Status Codes:](#http-response-status-codes)
   - [URL:](#url)
     - [URL vs URN vs URI:](#url-vs-urn-vs-uri)
   - [TCP:](#tcp)
@@ -44,15 +44,28 @@ opening a connection to make a request, then waiting until it receives a
 response. HTTP is a stateless protocol, meaning that the server does not keep
 any data (state) between two requests", [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP).
 
+There's a lot of debate around the stateful definition, as found [here](https://stackoverflow.com/questions/13200152/why-is-it-said-that-http-is-a-stateless-protocol),
+but as for this time, I'll agree that it's stateless because it's not mandatory
+to keep the state, just a possibility.
+
+It is also extensible, which means that many different responses can be obtained
+based on different headers and bodies.
+
 ### Communication:
 
 A request typically informs the method it's using (described below), together
 with its header and body (but they are optional).
 
+The request is sent to a resource URL, for example: 
+https://developer.mozilla.org.
+
 A response typically informs a status code (described below), together with its
 header and body (but they are optional).
 
-#### HTTP Methods:
+We can observe all of this process using the browser's developer tools, but,
+sometimes, some information is omitted. We can use `curl` to see more details.
+
+#### HTTP Request Methods:
 
 - (C) Post: Creates something;
 
@@ -60,9 +73,15 @@ header and body (but they are optional).
 
 - (U) Put: Updates something;
 
-- (D) Delete: Deletes something.
+- (D) Delete: Deletes something;
 
-#### HTTP Status Codes:
+- Options: ;
+
+- Head: ;
+
+- Patch: .
+
+#### HTTP Response Status Codes:
 
 - 1xx - Information;
 
@@ -100,7 +119,7 @@ Locator (URL), and Uniform Resource Name (URN);
 resource, but how to reach it on the internet—like http://, ftp://, mailto://;
 
 - A Uniform Resource Name (URN) is a type of URI that uses the specific naming
-scheme of urn:—like urn:isbn:0-486-27557-4 or urn:isbn:0-395-36341-1.
+scheme of urn, like urn:isbn:0-486-27557-4 or urn:isbn:0-395-36341-1.
 
 - So a URI or URN is like your name, and a URL is a specific subtype of URI
 that’s like your name combined with your address", [Daniel Miessler](https://danielmiessler.com/p/difference-between-uri-url/).
@@ -147,6 +166,8 @@ new shirts on H&M, and routes it through a different IP address.
 That's what makes a proxy so powerful. They can make all of your internet
 activity appear as if it's coming from a completely different location",
 [Free Code Camp](https://www.freecodecamp.org/news/what-is-a-proxy-server-in-english-please/).
+
+It can be a router, a 'server' functioning as cache, filter, load balancer, etc.  
 
 # Web Pages:
 ## Dynamic Web Pages:
