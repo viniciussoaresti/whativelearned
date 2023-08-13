@@ -67,19 +67,28 @@ sometimes, some information is omitted. We can use `curl` to see more details.
 
 #### HTTP Request Methods:
 
-- (C) Post: Creates something;
+- (C) Post: creates something;
 
-- (R) Get: Gets something;
+- (R) Get: gets something, and is characterized by being a 'safe' method, meaning that
+it doesn't change anything in the server, and by being 'idempotent', meaning that
+it can be called multiple times without changing the result of the first call.
+For example, multiple requests with the same body can sometimes return different
+status codes, but if it causes an effect on the first request, the second and 
+further ones won't cause any change to the server status;
 
-- (U) Put: Updates something;
+- (U) Put: creates or updates something entirely (ideally), and is characterized
+by being 'idempotent';
 
-- (D) Delete: Deletes something;
+- (D) Delete: deletes something, and is characterized by being 'idempotent';
 
-- Options: ;
+- Options: returns the options available in the called resource URL, on the
+response headers (doesn't have a body), and is characterized by being a 'safe'
+method;
 
-- Head: ;
+- Head: returns just the header of what would be the full response, and is
+characterized by being a 'safe' and  'idempotent' method;
 
-- Patch: .
+- Patch: partially modifies a resource, modifying for example just an attribute.
 
 #### HTTP Response Status Codes:
 
