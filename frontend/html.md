@@ -13,6 +13,7 @@ on the ones that I didn't knew.
 - [HTML](#html)
 - [Contents:](#contents)
   - [Comments:](#comments)
+  - [Void Elements:](#void-elements)
   - [Global Attributes:](#global-attributes)
     - [Contenteditable:](#contenteditable)
     - [Data-\*:](#data-)
@@ -72,6 +73,14 @@ Comments look like this:
 
 ```html
 <!-- TODO: Add link to cat photos -->
+```
+
+## Void Elements:
+
+Void elements don't have closing tags, like the img tag:
+
+```html
+<img>
 ```
 
 ## Global Attributes:
