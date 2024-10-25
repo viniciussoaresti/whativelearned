@@ -66,6 +66,7 @@ on the ones that I didn't knew.
       - [Aside:](#aside)
       - [Footer:](#footer)
       - [Section:](#section)
+      - [Figure:](#figure)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
 ## Comments:
@@ -517,6 +518,18 @@ Section which generally has a title inside. Use case example:
         </section>
     </article>
 </main>
+```
+
+#### Figure:
+
+Holds self-contained content, that are related to each other. This can help in
+SEO for faster image, video, code or other information localization.
+
+```html
+<figure>
+  <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+  <figcaption>Cats love lasagna.</figcaption>
+</figure>
 ```
 
 ## Visual code shortcuts:
