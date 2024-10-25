@@ -34,8 +34,8 @@ on the ones that I didn't knew.
     - [Meta Social Media:](#meta-social-media)
   - [Forms:](#forms)
     - [Input:](#input)
-    - [Label:](#label)
     - [Button:](#button)
+    - [Label:](#label)
     - [Datalist](#datalist)
       - [Autocomplete](#autocomplete)
       - [Autofocus](#autofocus)
@@ -256,23 +256,11 @@ The required attribute blocks the form submission without the specified input da
 <input type='date' name="date" placeholder="dd/mm/aaaa" required>
 ```
 
-### Label:
-
-Adds accessibility and identifies data:
-
-```html
-<label>
-  Name:
-  <input type="text">
-</label>
-<!--or, only working with some specific elements like input, meter, output..!-->
-<label for="name"> Name: </label>
-<input id="name" type="text">
-```
-
 ### Button:
 
-We can use the type `submit` or `button` for submitting the form, or `reset`
+Just using a normal button inside a form tag will submit it by default.
+
+We can also use the type `submit` or `button` for submitting the form, or `reset`
 to reset the values written in the form.
 
 ```html
@@ -286,6 +274,20 @@ links the button to the form:
 ```html
 <form action="" id="my-form"></form>
 <button type="submit" form="my-form">Submit</button>
+```
+
+### Label:
+
+Adds accessibility and identifies data:
+
+```html
+<label>
+  Name:
+  <input type="text">
+</label>
+<!--or, only working with some specific elements like input, meter, output..!-->
+<label for="name"> Name: </label>
+<input id="name" type="text">
 ```
 
 ### Datalist
