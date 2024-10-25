@@ -456,8 +456,8 @@ Writing a semantic HTML page can drastically improve SEO. Check [this](https://d
 ### SEO:
 
 Utilizing proper techniques to define the page content an help on the SEO, like
-always having an alt attribute defined within images, describing them in the best
-way possible.
+always having an alt attribute defined within images, and describing them in the
+best way possible, dividing the page content with main and section tags, and so on.
 
 ### Semantics:
 
