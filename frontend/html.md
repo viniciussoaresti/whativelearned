@@ -214,11 +214,13 @@ And for twitter:
 
 ## Forms:
 
-Initiating:
+A form example:
 
 ```html
 <form id="contact" action="" method="POST"> 
-  <!-- action -> path (http://site./index/contacts) !-->
+  <!-- the action attribute specifies to where the data should be sent
+  for example a specific path like http://site.com/index/contacts, so the
+  action would be /index/contacts !-->
     <fieldset form="contact" name="inputs-contact"> 
     <!-- can have the disabled property which doesn't allow input !-->
         <legend>Contact</legend>
