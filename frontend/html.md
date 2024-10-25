@@ -56,6 +56,7 @@ on the ones that I didn't knew.
     - [Select:](#select)
       - [Optgroup:](#optgroup)
   - [SEO and Semantics:](#seo-and-semantics)
+    - [SEO:](#seo)
     - [Semantics:](#semantics)
       - [Blockquote:](#blockquote)
       - [Header:](#header)
@@ -451,6 +452,12 @@ Grouping of options on select:
 ## SEO and Semantics:
 
 Writing a semantic HTML page can drastically improve SEO. Check [this](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) link for further explanation, and [this](https://www.w3schools.com/TAgs/default.asp) one for the full elements reference.
+
+### SEO:
+
+Utilizing proper techniques to define the page content an help on the SEO, like
+always having an alt attribute defined within images, describing them in the best
+way possible.
 
 ### Semantics:
 
