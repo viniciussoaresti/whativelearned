@@ -14,6 +14,7 @@ on the ones that I didn't knew.
 - [Contents:](#contents)
   - [Comments:](#comments)
   - [Void Elements:](#void-elements)
+  - [Strong vs em vs i:](#strong-vs-em-vs-i)
   - [Global Attributes:](#global-attributes)
     - [Contenteditable:](#contenteditable)
     - [Data-\*:](#data-)
@@ -84,6 +85,10 @@ Void elements don't have closing tags, like the img tag:
 ```html
 <img>
 ```
+## Strong vs em vs i:
+
+In order, the strong tag represents more urgent parts in a text, em just 
+emphasizes a part of the text, and the i tag differentiates a content part.
 
 ## Global Attributes:
 
