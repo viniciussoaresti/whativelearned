@@ -6,10 +6,13 @@ They are defined with tags, which open and close, and have content in it, like:
 ```html
 <h1>content</h1>
 ```
+There are many different tags in HTML, but I'll focus on the most complex ones or
+on the ones that I didn't knew.
 
 # Contents:
 - [HTML](#html)
 - [Contents:](#contents)
+  - [Comments:](#comments)
   - [Global Attributes:](#global-attributes)
     - [Contenteditable:](#contenteditable)
     - [Data-\*:](#data-)
@@ -62,6 +65,14 @@ They are defined with tags, which open and close, and have content in it, like:
       - [Footer:](#footer)
       - [Section:](#section)
   - [Visual code shortcuts:](#visual-code-shortcuts)
+
+## Comments:
+
+Comments look like this:
+
+```html
+<!-- TODO: Add link to cat photos -->
+```
 
 ## Global Attributes:
 
