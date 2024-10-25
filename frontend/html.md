@@ -1,6 +1,11 @@
 # HTML
 
-The standard for web pages.
+HTML, or Hypertext Markup Language, is how the websites structures are defined.
+They are defined with tags, which open and close, and have content in it, like:
+
+```html
+<h1>content</h1>
+```
 
 # Contents:
 - [HTML](#html)
