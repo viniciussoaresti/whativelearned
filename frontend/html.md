@@ -237,6 +237,25 @@ One of the most used properties, with a lot of varieties on the type:
 <input type='date'>
 ```
 
+The name attribute specifies the name of the attribute sent in the data to the
+form action path:
+
+```html
+<input type='date' name="date">
+```
+
+And the placeholder attribute specifies an example of what should be put:
+
+```html
+<input type='date' name="date" placeholder="dd/mm/aaaa">
+```
+
+The required attribute blocks the form submission without the specified input data.
+
+```html
+<input type='date' name="date" placeholder="dd/mm/aaaa" required>
+```
+
 ### Label:
 
 Adds accessibility and identifies data:
