@@ -27,7 +27,7 @@ on the ones that I didn't knew.
     - [Address:](#address)
     - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
     - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
-  - [Working with links:](#working-with-links)
+  - [Working with links on the same web page:](#working-with-links-on-the-same-web-page)
   - [Meta tag:](#meta-tag)
     - [Meta SEO:](#meta-seo)
     - [Meta Social Media:](#meta-social-media)
@@ -165,7 +165,7 @@ Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla'
 </pre>
 ```
 
-## Working with links:
+## Working with links on the same web page:
 
 ```html
 <p>Know more:</p>
