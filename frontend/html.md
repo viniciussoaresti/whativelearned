@@ -261,7 +261,7 @@ The required attribute blocks the form submission without the specified input da
 Just using a normal button inside a form tag will submit it by default.
 
 We can also use the type `submit` or `button` for submitting the form, or `reset`
-to reset the values written in the form.
+to reset the values written in the form. It's better to specify, always.
 
 ```html
 <button type="submit">Submit</button>
@@ -278,7 +278,7 @@ links the button to the form:
 
 ### Label:
 
-Adds accessibility and identifies data:
+Adds accessibility and identifies data, and can nest elements inside:
 
 ```html
 <label>
