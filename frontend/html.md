@@ -33,10 +33,10 @@ on the ones that I didn't knew.
     - [Meta SEO:](#meta-seo)
     - [Meta Social Media:](#meta-social-media)
   - [Forms:](#forms)
+    - [Input:](#input)
     - [Label:](#label)
     - [Button:](#button)
     - [Datalist](#datalist)
-    - [Input:](#input)
       - [Autocomplete](#autocomplete)
       - [Autofocus](#autofocus)
       - [Other attributes](#other-attributes)
@@ -229,9 +229,17 @@ A form example:
 </form>
 ```
 
+### Input:
+
+One of the most used properties, with a lot of varieties on the type:
+
+```html
+<input type='date'>
+```
+
 ### Label:
 
-Adds a11y and identifies data:
+Adds accessibility and identifies data:
 
 ```html
 <label>
@@ -278,14 +286,6 @@ support this are `text`, `search`, `url`, `number` and many others, while
         <option>orange</option>
         <option>cherry</option>
     </datalist>
-```
-
-### Input:
-
-One of the most used properties, with a lot of varieties on the type:
-
-```html
-<input type='date'>
 ```
 
 #### Autocomplete
