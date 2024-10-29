@@ -36,6 +36,7 @@ complex ones or on the ones that I didn't know until the time of reading about i
     - [Input:](#input)
     - [Button:](#button)
     - [Label:](#label)
+    - [Fieldset:](#fieldset)
     - [Datalist](#datalist)
     - [Autocomplete](#autocomplete)
     - [Autofocus](#autofocus)
@@ -296,6 +297,28 @@ Adds accessibility and identifies data, and can nest elements inside:
 <!--or, only working with some specific elements like input, meter, output..!-->
 <label for="name"> Name: </label>
 <input id="name" type="text">
+```
+
+### Fieldset:
+
+"Groups related inputs and labels together in a web form", [Freecodecamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-52):
+
+```html
+<fieldset>
+  <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+  <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+</fieldset>
+```
+
+It has a legend element that can be nested in, to inform about what the fieldset
+will be about: 
+
+```html
+<fieldset>
+  <legend>Is your cat an indoor or outdoor cat?</legend>
+  <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+  <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+</fieldset>
 ```
 
 ### Datalist
