@@ -12,6 +12,7 @@ complex ones or on the ones that I didn't know until the time of reading about i
 # Contents:
 - [HTML](#html)
 - [Contents:](#contents)
+  - [Head:](#head)
   - [Comments:](#comments)
   - [Void Elements:](#void-elements)
   - [Strong vs em vs i:](#strong-vs-em-vs-i)
@@ -70,6 +71,18 @@ complex ones or on the ones that I didn't know until the time of reading about i
       - [Section:](#section)
       - [Figure:](#figure)
   - [Visual code shortcuts:](#visual-code-shortcuts)
+
+## Head:
+
+The head tag specifies metadata about the page:
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Title</title>
+</head>
+```
 
 ## Comments:
 
