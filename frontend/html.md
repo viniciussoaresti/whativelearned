@@ -232,7 +232,8 @@ A form example:
 
 ### Input:
 
-One of the most used properties, with a lot of varieties on the type:
+One of the most used properties, with a lot of varieties on the type, like date,
+radio (button), checkbox, and others:
 
 ```html
 <input type='date'>
