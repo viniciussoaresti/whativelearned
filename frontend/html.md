@@ -6,8 +6,8 @@ They are defined with tags, which open and close, and have content in it, like:
 ```html
 <h1>content</h1>
 ```
-There are many different tags in HTML, but I'll focus on the most complex ones or
-on the ones that I didn't knew.
+There are many different tags and attributes in HTML, but I'll focus on the most
+complex ones or on the ones that I didn't know until the time of reading about it.
 
 # Contents:
 - [HTML](#html)
