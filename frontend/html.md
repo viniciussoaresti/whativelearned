@@ -37,23 +37,23 @@ on the ones that I didn't knew.
     - [Button:](#button)
     - [Label:](#label)
     - [Datalist](#datalist)
-      - [Autocomplete](#autocomplete)
-      - [Autofocus](#autofocus)
-      - [Other attributes](#other-attributes)
-      - [Form and name:](#form-and-name)
-      - [Password:](#password)
-      - [Email:](#email)
-      - [Url:](#url)
-      - [File:](#file)
-      - [Color:](#color)
-      - [Checkbox:](#checkbox)
-      - [Hidden:](#hidden-1)
-      - [Radio:](#radio)
-      - [Textarea:](#textarea)
-      - [Search:](#search)
-      - [Number:](#number)
-      - [Range:](#range)
-      - [Input types that don't have a great browser support yet:](#input-types-that-dont-have-a-great-browser-support-yet)
+    - [Autocomplete](#autocomplete)
+    - [Autofocus](#autofocus)
+    - [Other attributes](#other-attributes)
+    - [Form and name:](#form-and-name)
+    - [Password:](#password)
+    - [Email:](#email)
+    - [Url:](#url)
+    - [File:](#file)
+    - [Color:](#color)
+    - [Checkbox:](#checkbox)
+    - [Hidden:](#hidden-1)
+    - [Radio:](#radio)
+    - [Textarea:](#textarea)
+    - [Search:](#search)
+    - [Number:](#number)
+    - [Range:](#range)
+    - [Input types that don't have a great browser support yet:](#input-types-that-dont-have-a-great-browser-support-yet)
     - [Select:](#select)
       - [Optgroup:](#optgroup)
   - [SEO and Semantics:](#seo-and-semantics)
@@ -256,6 +256,14 @@ The required attribute blocks the form submission without the specified input da
 <input type='date' name="date" placeholder="dd/mm/aaaa" required>
 ```
 
+When using the radio button input, the options have to be named equally for them
+be selected only once:
+
+```html
+<label><input id="indoor-outdoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+```
+
 ### Button:
 
 Just using a normal button inside a form tag will submit it by default.
@@ -309,7 +317,7 @@ support this are `text`, `search`, `url`, `number` and many others, while
     </datalist>
 ```
 
-#### Autocomplete
+### Autocomplete
 
 Attribute that enables the autocomplete feature on the browser, has a lot of
 possible values, it's good to check the documentation:
@@ -318,7 +326,7 @@ possible values, it's good to check the documentation:
 <input type='email' autocomplete='email'>
 ```
 
-#### Autofocus
+### Autofocus
 
 The first element found with this attribute gains input focus from the browser:
 
@@ -326,11 +334,11 @@ The first element found with this attribute gains input focus from the browser:
 <input type='email' autocomplete='email' autofocus>
 ```
 
-#### Other attributes
+### Other attributes
 
 `Disabled`, `readonly`, `value`, `required`, `placeholder`.
 
-#### Form and name:
+### Form and name:
 
 Specify the form and the name of the value passed to the form:
 
@@ -339,14 +347,14 @@ Specify the form and the name of the value passed to the form:
 <input name="userEmail" form="my-form" type='email' autocomplete='email' autofocus>
 ```
 
-#### Password:
+### Password:
 
 Accepts `minlength`, `maxlength`, `size` (visual length), `pattern` (regex to validate password),
 `title` (message informing of the regex conditions), `placeholder`, `readonly`,
 `disabled`, `required`, `inputmode` (input mode for smartphones) and `autocomplete`
 (on, off and new-password options) attributes.
 
-#### Email:
+### Email:
 
 Accepts `placeholder`, `readonly`, `disabled`, `value`, `required`,
 `multiple` (boolean that informs this field receives multiple emails),
@@ -354,14 +362,14 @@ Accepts `placeholder`, `readonly`, `disabled`, `value`, `required`,
 `pattern` (regex to validate email) and `list` (receiving emails from a datalist)
 attributes.
 
-#### Url:
+### Url:
 
 Accepts `placeholder`, `readonly`, `disabled`, `value`, `required`,
 `minlength`, `maxlength`, `size` (visual length), 
 `pattern` (regex to validate email), `list` (receiving emails from a datalist)
 and spellcheck (enables spell check for the url) attributes.
 
-#### File:
+### File:
 
 Accepts `value` (contains the file to be sent), `files` (the list of files),
 `accept` (specifies the file types to be accepted, like video/*) and 
@@ -375,11 +383,11 @@ Careful when using the file input, as the forms need to be configured like this:
 </form>
 ```
 
-#### Color:
+### Color:
 
 Accepts `value` and `list` (receiving colors from a datalist) attributes.
 
-#### Checkbox:
+### Checkbox:
 
 Accepts `value` and `checked` attributes.
 
@@ -399,11 +407,11 @@ Using checkboxes for multiple values:
     </fieldset>
 ```
 
-#### Hidden:
+### Hidden:
 
 Field hidden to the user.
 
-#### Radio:
+### Radio:
 
 Select an option from many. Main attributes: `checked` and `value`.
 
@@ -417,30 +425,30 @@ Select an option from many. Main attributes: `checked` and `value`.
 </fieldset>
 ```
 
-#### Textarea:
+### Textarea:
 
 Accepts `id`, `name`, `rows`, `cols`, `minlength`, `maxlength` and `wrap` attributes,
 alongside other input attributes like `autocomplete`, `autofocus`, `placeholder`,
 `required`, etc.
 
-#### Search:
+### Search:
 
 Accepts `list` (datalist), `pattern` and `aria-label` (hidden label for screen 
 readers) attributes (alongside other input attributes).
 
-#### Number:
+### Number:
 
 Accepts `min`, `max`, `step` and `list` attributes (alongside other input 
 attributes).
 
-#### Range:
+### Range:
 
 Number selected with a slider.
 
 Accepts `min`, `max`, `step` and `list` attributes (alongside other input 
 attributes).
 
-#### Input types that don't have a great browser support yet:
+### Input types that don't have a great browser support yet:
 
 `Date`, `datetime-local`, `month`, `time`, `week`.
 
