@@ -266,6 +266,14 @@ be selected only once:
 <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
 ```
 
+We can add the checked attribute to the input radio and checkbox types, to make
+them selected by default:
+
+```html
+<label><input id="indoor-outdoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+```
+
 ### Button:
 
 Just using a normal button inside a form tag will submit it by default.
