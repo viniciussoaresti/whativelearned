@@ -294,9 +294,13 @@ Adds accessibility and identifies data, and can nest elements inside:
   Name:
   <input type="text">
 </label>
-<!--or, only working with some specific elements like input, meter, output..!-->
-<label for="name"> Name: </label>
+```
+
+Can be used to better specify and indent an input for example:
+
+```html
 <input id="name" type="text">
+<label for="name">Name:</label>
 ```
 
 ### Fieldset:
