@@ -12,6 +12,8 @@ complex ones or on the ones that I didn't know until the time of reading about i
 # Contents:
 - [HTML](#html)
 - [Contents:](#contents)
+  - [Doctype:](#doctype)
+  - [HTML (tag):](#html-tag)
   - [Head:](#head)
   - [Comments:](#comments)
   - [Void Elements:](#void-elements)
@@ -72,16 +74,39 @@ complex ones or on the ones that I didn't know until the time of reading about i
       - [Figure:](#figure)
   - [Visual code shortcuts:](#visual-code-shortcuts)
 
+## Doctype:
+
+This declaration is required to specify to the browsers that the page will be
+a HTML5 document, and is written on the first line of it:
+
+```html
+<!DOCTYPE html>
+```
+
+## HTML (tag):
+
+The whole page is inside this tag, and we can specify its language with the lang
+attribute:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+</html>
+```
+
 ## Head:
 
 The head tag specifies metadata about the page:
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Page Title</title>
 </head>
+</html>
 ```
 
 ## Comments:
