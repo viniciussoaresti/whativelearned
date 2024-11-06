@@ -5,7 +5,7 @@ The standard Cascading Style Sheet for web pages.
 
 - [CSS](#css)
 - [Contents](#contents)
-  - [Example code on CSS:](#example-code-on-css)
+  - [Example CSS:](#example-css)
   - [Adding CSS to HTML (on the html file):](#adding-css-to-html-on-the-html-file)
   - [The import tag:](#the-import-tag)
   - [Why cascading?:](#why-cascading)
@@ -89,7 +89,7 @@ The standard Cascading Style Sheet for web pages.
     - [Base css for all projects:](#base-css-for-all-projects)
     - [a11y:](#a11y)
 
-## Example code on CSS:
+## Example CSS:
 
 ```css 
 /* i'm a comment */
