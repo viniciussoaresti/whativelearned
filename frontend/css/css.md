@@ -28,6 +28,7 @@ The standard Cascading Style Sheet for web pages.
       - [After:](#after)
       - [First-line:](#first-line)
   - [Relative units:](#relative-units)
+  - [Auto value:](#auto-value)
   - [Specificity:](#specificity)
   - [!Important:](#important)
   - [At rules:](#at-rules)
@@ -331,6 +332,19 @@ em (font size): relative to the size of the font;
 rem (root em): relative to the font size of the root element;
 vw (viewport width): relative to the width of the viewport;
 vh (viewport height): relative to the height of the viewport", [FreeCodeCamp](https://www.freecodecamp.org/news/absolute-and-relative-css-units/).
+
+## Auto value:
+
+The `auto` value for properties like margin and padding set their value based on
+surrounding factors, like text length, element position, etc., increasing or 
+decreasing in size:
+
+```css
+.className {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
 
 ## Specificity:
 
