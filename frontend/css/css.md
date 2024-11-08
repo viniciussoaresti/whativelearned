@@ -27,13 +27,13 @@ The standard Cascading Style Sheet for web pages.
       - [Before:](#before)
       - [After:](#after)
       - [First-line:](#first-line)
+  - [Shorthand:](#shorthand)
   - [Relative units:](#relative-units)
   - [Auto value:](#auto-value)
   - [Display property:](#display-property)
   - [Specificity:](#specificity)
   - [!Important:](#important)
   - [At rules:](#at-rules)
-  - [Shorthand:](#shorthand)
   - [Vendor prefixes:](#vendor-prefixes)
   - [Accessing the root element:](#accessing-the-root-element)
   - [Cool thing about the percentage:](#cool-thing-about-the-percentage)
@@ -332,6 +332,45 @@ p ::first-line {
 }
 ```
 
+## Shorthand:
+
+Legible, short way of defining css.
+
+``` css
+/* example */
+h1 {
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+/* would become */
+h1 {
+    background: #000 url(images/bg.gif) no-repeat left top;
+}
+
+/* font example */
+h2  {
+    font: italic bold .8em/1.2 Arial, sans-serif;
+}
+
+/* padding example */
+.menu { 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* would become */
+.menu {
+    padding: 20px;
+}
+```
+
+See more on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#see_also).
+
 ## Relative units:
 
 "% (percentage): relative to the size of the parent element;
@@ -433,30 +472,6 @@ Some of them:
     /* rules here */
 };
 ```
-
-## Shorthand:
-
-Legible, short way of defining css.
-
-``` css
-/* example */
-h1 {
-    background-color: #000;
-    background-image: url(images/bg.gif);
-    background-repeat: no-repeat;
-    background-position: left top;
-}
-/* would be */
-h1 {
-    background: #000 url(images/bg.gif) no-repeat left top;
-}
-/* font example */
-h2  {
-    font: italic bold .8em/1.2 Arial, sans-serif;
-}
-```
-
-See more on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#see_also).
 
 ## Vendor prefixes:
 
