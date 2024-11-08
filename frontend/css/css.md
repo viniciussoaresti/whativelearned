@@ -412,6 +412,14 @@ horizontally:
 }
 ```
 
+Or the other way around:
+
+```css
+img {
+  display: block;
+}
+```
+
 ## Specificity:
 
 "Specificity is the algorithm used by browsers to determine the CSS declaration
