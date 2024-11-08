@@ -31,6 +31,7 @@ complex ones or on the ones that I didn't know until the time of reading about i
     - [Address:](#address)
     - [DL, DT and DD (lists with key-value pairs usualy):](#dl-dt-and-dd-lists-with-key-value-pairs-usualy)
     - [Pre (preformatted) and code  :](#pre-preformatted-and-code--)
+    - [Hr:](#hr)
   - [Working with links on the same web page:](#working-with-links-on-the-same-web-page)
   - [Meta tag:](#meta-tag)
     - [Meta SEO:](#meta-seo)
@@ -208,6 +209,14 @@ Characters like (< > & " " ' ') are reserved by HTML, to put them in a 'vanilla'
           this.
     </code>
 </pre>
+```
+
+### Hr:
+
+Semantically divides a content, also visually with a horizontal line:
+
+```html
+<hr/>
 ```
 
 ## Working with links on the same web page:
