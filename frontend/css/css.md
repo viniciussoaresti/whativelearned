@@ -164,7 +164,9 @@ h1 {
 
 ### Specificity:
 
-"Specificity is the algorithm used by browsers to determine the CSS declaration that is the most relevant to an element, which in turn, determines the property value to apply to the element", [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
+"Specificity is the algorithm used by browsers to determine the CSS declaration
+that is the most relevant to an element, which in turn, determines the property
+value to apply to the element", [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
 
 For example:
 
