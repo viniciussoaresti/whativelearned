@@ -131,7 +131,9 @@ Link to CSS file:
 
 ## The import tag:
 
-We can use the `@Import` tag to import something like fonts on css, but it's not very indicated, and is advised to import things on the html head file for optimization purposes:
+We can use the `@Import` tag to import something like fonts on css,
+but it's not very indicated, and is advised to import things on the html head 
+file for optimization purposes:
 
 ``` css
 @import 'https://fonts.googleapis.com/css?family=Tangerine'
