@@ -141,7 +141,8 @@ file for optimization purposes:
 
 ## Why cascading?:
 
-It's read on a top-down approach, also considering style origin (inline > style tag > style link), specificity and importance. For example:
+It's read on a top-down approach, also considering style origin 
+(inline > style tag > style link), specificity and importance. For example:
 
 ``` css
 h1 {
