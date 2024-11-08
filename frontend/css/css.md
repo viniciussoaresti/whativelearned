@@ -29,6 +29,7 @@ The standard Cascading Style Sheet for web pages.
       - [First-line:](#first-line)
   - [Relative units:](#relative-units)
   - [Auto value:](#auto-value)
+  - [Display property:](#display-property)
   - [Specificity:](#specificity)
   - [!Important:](#important)
   - [At rules:](#at-rules)
@@ -349,6 +350,18 @@ decreasing in size:
 .className {
   margin-left: auto;
   margin-right: auto;
+}
+```
+
+## Display property:
+
+We can use this property to change the behaviour, for example, of a block-level
+element to a inline-block element, allowing these elements to be stacked 
+horizontally:
+
+```css
+.item p {
+  display: inline-block;
 }
 ```
 
