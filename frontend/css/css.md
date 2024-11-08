@@ -18,11 +18,11 @@ The standard Cascading Style Sheet for web pages.
       - [Adjacent sibling combinator:](#adjacent-sibling-combinator)
       - [General sibling combinator:](#general-sibling-combinator)
     - [Pseudo-class selector:](#pseudo-class-selector)
+      - [Hover, focus, disabled and required:](#hover-focus-disabled-and-required)
       - [First child:](#first-child)
       - [Nth of type:](#nth-of-type)
       - [Nth child:](#nth-child)
       - [Nth child odd and even:](#nth-child-odd-and-even)
-      - [Hover, focus, disabled and required:](#hover-focus-disabled-and-required)
     - [Pseudo-element selector:](#pseudo-element-selector)
       - [Before:](#before)
       - [After:](#after)
@@ -251,6 +251,25 @@ h1 ~ p{
 
 ### Pseudo-class selector:
 
+#### Hover, focus, disabled and required:
+
+Selects elements when having hover or focus, or when having disabled or required
+attributes:
+
+```css
+/* example */
+
+input:focus {
+  border-color: red;
+}
+
+/* example */
+
+a:hover {
+    color: red;
+}
+```
+
 #### First child:
 
 Selects the first child of an element group:
@@ -288,17 +307,6 @@ Selects the odd or even child elements of an element:
 ```css
 ul li :nth-child(odd) { /*ul li:nth-child(even)*/
   font-weight: bold;
-}
-```
-
-#### Hover, focus, disabled and required:
-
-Selects elements when having hover or focus, or when having disabled or required
-attributes:
-
-```css
-input :focus {
-  border-color: red;
 }
 ```
 
