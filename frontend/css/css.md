@@ -30,6 +30,7 @@ The standard Cascading Style Sheet for web pages.
   - [Shorthand:](#shorthand)
   - [Relative units:](#relative-units)
   - [Auto value:](#auto-value)
+  - [Negative values:](#negative-values)
   - [Display property:](#display-property)
   - [Specificity:](#specificity)
   - [!Important:](#important)
@@ -397,6 +398,16 @@ decreasing in size:
 .className {
   margin-left: auto;
   margin-right: auto;
+}
+```
+
+## Negative values:
+
+A negative value can be used in properties:
+
+```css
+img {
+    margin-top: -25px;
 }
 ```
 
