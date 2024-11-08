@@ -5,11 +5,12 @@ The standard Cascading Style Sheet for web pages.
 
 - [CSS](#css)
 - [Contents](#contents)
-  - [Example CSS:](#example-css)
-  - [Adding CSS to HTML (on the html file):](#adding-css-to-html-on-the-html-file)
-  - [The import tag:](#the-import-tag)
-  - [Why cascading?:](#why-cascading)
-    - [Specificity:](#specificity)
+- [Example CSS:](#example-css)
+- [Adding CSS to HTML (on the html file):](#adding-css-to-html-on-the-html-file)
+- [The import tag:](#the-import-tag)
+- [Why cascading?:](#why-cascading)
+- [Ensuring mobile consistency:](#ensuring-mobile-consistency)
+  - [Specificity:](#specificity)
   - [!Important:](#important)
   - [At rules:](#at-rules)
   - [Shorthand:](#shorthand)
@@ -89,7 +90,7 @@ The standard Cascading Style Sheet for web pages.
     - [Base css for all projects:](#base-css-for-all-projects)
     - [a11y:](#a11y)
 
-## Example CSS:
+# Example CSS:
 
 ```css 
 /* i'm a comment */
@@ -100,7 +101,7 @@ h1  {
 }
 ```
 
-## Adding CSS to HTML (on the html file):
+# Adding CSS to HTML (on the html file):
 
 Inline:
 
@@ -128,7 +129,7 @@ Link to CSS file:
 </head>
 ```
 
-## The import tag:
+# The import tag:
 
 We can use the `@Import` tag to import something like fonts on css, but it's not very indicated, and is advised to import things on the html head file for optimization purposes:
 
@@ -136,7 +137,7 @@ We can use the `@Import` tag to import something like fonts on css, but it's not
 @import 'https://fonts.googleapis.com/css?family=Tangerine'
 ```
 
-## Why cascading?:
+# Why cascading?:
 
 It's read on a top-down approach, also considering style origin (inline > style tag > style link), specificity and importance. For example:
 
@@ -151,7 +152,7 @@ h1 {
 /* applies both declarations to the h1 element */
 ```
 
-``` css
+```css
 h1 {
     color: blue;
 }
@@ -161,8 +162,15 @@ h1 {
 }
 /* since red is the last property value, its applied */
 ```
+# Ensuring mobile consistency:
 
-### Specificity:
+We can ensure mobile consistency first with a specific head tag in the HTML:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+## Specificity:
 
 "Specificity is the algorithm used by browsers to determine the CSS declaration
 that is the most relevant to an element, which in turn, determines the property
