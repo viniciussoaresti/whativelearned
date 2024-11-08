@@ -27,12 +27,12 @@ The standard Cascading Style Sheet for web pages.
       - [Before:](#before)
       - [After:](#after)
       - [First-line:](#first-line)
+  - [Relative units:](#relative-units)
   - [Specificity:](#specificity)
   - [!Important:](#important)
   - [At rules:](#at-rules)
   - [Shorthand:](#shorthand)
   - [Vendor prefixes:](#vendor-prefixes)
-  - [Relative units:](#relative-units)
   - [Accessing the root element:](#accessing-the-root-element)
   - [Cool thing about the percentage:](#cool-thing-about-the-percentage)
   - [Box model:](#box-model)
@@ -324,6 +324,14 @@ p ::first-line {
 }
 ```
 
+## Relative units:
+
+"% (percentage): relative to the size of the parent element;
+em (font size): relative to the size of the font;
+rem (root em): relative to the font size of the root element;
+vw (viewport width): relative to the width of the viewport;
+vh (viewport height): relative to the height of the viewport", [FreeCodeCamp](https://www.freecodecamp.org/news/absolute-and-relative-css-units/).
+
 ## Specificity:
 
 "Specificity is the algorithm used by browsers to determine the CSS declaration
@@ -431,14 +439,6 @@ h1  {
 ```
 
 We can check this with some tools like [CanIUse](https://caniuse.com/).
-
-## Relative units:
-
-"% (percentage): relative to the size of the parent element;
-em (font size): relative to the size of the font;
-rem (root em): relative to the font size of the root element;
-vw (viewport width): relative to the width of the viewport;
-vh (viewport height): relative to the height of the viewport", [FreeCodeCamp](https://www.freecodecamp.org/news/absolute-and-relative-css-units/).
 
 ## Accessing the root element:
 
