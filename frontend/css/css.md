@@ -210,6 +210,12 @@ body article h2{
 }
 ```
 
+```css
+.item p{
+
+}
+```
+
 #### Child combinator:
 
 Searches for an element that is direct child of another, not considering any 
